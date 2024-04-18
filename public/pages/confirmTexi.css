@@ -1,0 +1,453 @@
+.confirm-texi .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.confirm-texi .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.confirm-texi .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.confirm-texi .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.confirm-texi .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.confirm-texi .container-4 {
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.confirm-texi .ui-bars-status-bars-white-base {
+  margin: 0 14.7px 12px 35.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50.3px);
+  box-sizing: border-box;
+}
+.confirm-texi .vector {
+  width: 24px;
+  height: 16.9px;
+}
+.confirm-texi .list-menu-1 {
+  margin: 3.6px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 16.9px;
+  box-sizing: border-box;
+}
+.confirm-texi .alaska {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.confirm-texi .bell-1 {
+  width: 24px;
+  height: 24px;
+}
+.confirm-texi .group-25 {
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.confirm-texi .image-5 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(91.157deg);
+  margin-bottom: 20.9px;
+  width: 24.5px;
+  height: 24.5px;
+}
+.confirm-texi .image-4 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(87.334deg);
+  margin-top: 20.2px;
+  width: 25.1px;
+  height: 25.1px;
+}
+.confirm-texi .container-3 {
+  margin: 0 0 19.9px 14.4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  width: 209.3px;
+  box-sizing: border-box;
+}
+.confirm-texi .image-3 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(87.778deg);
+  margin-bottom: 53.1px;
+  align-self: flex-start;
+  width: 24.9px;
+  height: 24.9px;
+}
+.confirm-texi .image-2 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(-6.119deg);
+  margin-bottom: 30.6px;
+  width: 26.4px;
+  height: 26.4px;
+}
+.confirm-texi .image-6 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(-13.483deg);
+  margin: 0 129.5px 36.1px 0;
+  align-self: center;
+  width: 28.9px;
+  height: 28.9px;
+}
+.confirm-texi .image-7 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(-97.483deg);
+  margin: 0 2.5px;
+  width: 26.9px;
+  height: 26.9px;
+}
+.confirm-texi .group-35 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 298.4px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.confirm-texi .line-5 {
+  border-radius: 2px;
+  transform: rotate(61.775deg);
+  position: absolute;
+  left: 53.5px;
+  top: 204.1px;
+  width: 230.8px;
+  height: 284.8px;
+}
+.confirm-texi .ellipse-61 {
+  box-shadow: 0px 0px 20px 0px rgba(255, 107, 74, 0.46);
+  border-radius: 6px;
+  background: #FF6B4A;
+  width: 12px;
+  height: 12px;
+}
+.confirm-texi .your-location-1 {
+  border-radius: 16px;
+  background: rgba(255, 107, 74, 0.1);
+  position: absolute;
+  right: 144px;
+  bottom: 229px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+}
+.confirm-texi .ellipse-6 {
+  box-shadow: 0px 0px 20px 0px rgba(255, 170, 42, 0.46);
+  border-radius: 6px;
+  background: #FFAA2A;
+  width: 12px;
+  height: 12px;
+}
+.confirm-texi .your-location {
+  border-radius: 16px;
+  background: rgba(255, 170, 42, 0.14);
+  position: absolute;
+  top: 278px;
+  right: 147px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+}
+.confirm-texi .select-payment {
+  margin-bottom: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.confirm-texi .group {
+  margin: 0 0 0.6px 11.3px;
+  width: 12.7px;
+  height: 12.7px;
+}
+.confirm-texi .vector-5 {
+  margin: 0.2px 1.1px 0.4px 0;
+  width: 5.5px;
+  height: 7.1px;
+}
+.confirm-texi .vector-4 {
+  width: 17.4px;
+  height: 7.7px;
+}
+.confirm-texi .group-1 {
+  margin-right: 0px;
+  display: flex;
+  flex-direction: row;
+  width: 24px;
+  box-sizing: border-box;
+}
+.confirm-texi .group-55 {
+  border-radius: 4px;
+  background: #FFFFFF;
+  position: relative;
+  margin: 2px 16px 1px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 9.5px 8px;
+  width: 40px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.confirm-texi .cash-payment {
+  margin-bottom: 7px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.confirm-texi .defult-method {
+  margin-right: 17.8px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #545C9B;
+}
+.confirm-texi .container-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.confirm-texi .container-2 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.confirm-texi .ellipse-8 {
+  border-radius: 5px;
+  background: #343B71;
+  width: 10px;
+  height: 10px;
+}
+.confirm-texi .group-54 {
+  border-radius: 11px;
+  background: #FFFFFF;
+  position: relative;
+  margin: 11px 0 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 6px;
+  width: 22px;
+  height: 22px;
+  box-sizing: border-box;
+}
+.confirm-texi .group-60 {
+  border-radius: 2px;
+  background: #282F62;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14px 16px 15px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.confirm-texi .group-57 {
+  width: 24px;
+  height: 16px;
+}
+.confirm-texi .group-58 {
+  border-radius: 4px;
+  background: #FFFFFF;
+  position: relative;
+  margin: 2px 0 1px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 13px 8px 11px 8px;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.confirm-texi .master-card {
+  margin-bottom: 7px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.confirm-texi .container-1 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #545C9B;
+}
+.confirm-texi .container-5 {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.confirm-texi .group-59 {
+  border-radius: 4px;
+  background: #282F62;
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14px 0 15px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.confirm-texi .line-11 {
+  background: #282F62;
+  width: 335px;
+  height: 1px;
+}
+.confirm-texi .group-63 {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+.confirm-texi .promo-code {
+  margin-bottom: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.confirm-texi .enter-promo-code {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #545C9B;
+}
+.confirm-texi .group-61 {
+  border-radius: 2px;
+  border: 1px solid #545C9B;
+  background: #282F62;
+  position: relative;
+  padding: 11px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.confirm-texi .group-62 {
+  border-radius: 2px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+.confirm-texi .confirm-taxi {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.294;
+  text-transform: uppercase;
+  color: #343B71;
+}
+.confirm-texi .group-33 {
+  border-radius: 2px;
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px 0 11px 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.confirm-texi .rectangle-2 {
+  border-radius: 100px;
+  margin-right: 1px;
+  width: 134px;
+  height: 5px;
+}
+.confirm-texi .container {
+  border-radius: 30px 30px 0 0;
+  background: #343B71;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 31px 20px 9px 20px;
+  box-sizing: border-box;
+}
+.confirm-texi .mask-group {
+  border-radius: 30px 30px 0 0;
+  background: url('../assets/images/fireShotCapture022GalleryMapboxWwwMapbox1.png') 50% / cover no-repeat;
+  position: relative;
+  padding: 187.8px 34px 234.1px 34px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.confirm-texi {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  box-sizing: border-box;
+}

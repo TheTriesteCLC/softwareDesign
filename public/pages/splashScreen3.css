@@ -1,0 +1,197 @@
+.splash-screen-3 .battery {
+  position: absolute;
+  top: 3.3px;
+  right: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.splash-screen-3 .wifi {
+  position: absolute;
+  top: 3.3px;
+  right: 29.4px;
+  width: 15.3px;
+  height: 11px;
+}
+.splash-screen-3 .mobile-signal {
+  position: absolute;
+  top: 3.7px;
+  right: 49.7px;
+  width: 17px;
+  height: 10.7px;
+}
+.splash-screen-3 .container {
+  position: relative;
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.splash-screen-3 .container-1 {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #000000;
+}
+.splash-screen-3 .time-style-1 {
+  position: absolute;
+  right: 0.8px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.splash-screen-3 .time-style {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.splash-screen-3 .mobile-signal-1 {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.splash-screen-3 .wifi-1 {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.splash-screen-3 .battery-1 {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.splash-screen-3 .ui-bars-status-bars-black-base {
+  position: relative;
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.splash-screen-3 .ui-bars-status-bars-white-base {
+  position: relative;
+  margin: 0 14.7px 28px 34.8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 49.4px);
+  box-sizing: border-box;
+}
+.splash-screen-3 .skip {
+  margin: 0 21.8px 199px 21.8px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.294;
+  text-transform: uppercase;
+  color: #343B71;
+}
+.splash-screen-3 .rectangle-49 {
+  background: linear-gradient(90deg, #F2F2F2, rgba(242, 242, 242, 0));
+  position: relative;
+  margin-bottom: 207px;
+  width: 375px;
+  height: 65px;
+}
+.splash-screen-3 .treck-your-ride {
+  margin-bottom: 10px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 28px;
+  color: #FFFFFF;
+}
+.splash-screen-3 .huge-delivery-network-helps-you-find-comforable-safe-and-cheap-ride {
+  margin-bottom: 40px;
+  display: inline-block;
+  text-align: center;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #7177AB;
+}
+.splash-screen-3 .lats-start {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.294;
+  text-transform: uppercase;
+  color: #343B71;
+}
+.splash-screen-3 .group-33 {
+  border-radius: 2px;
+  background: #FFFFFF;
+  position: relative;
+  margin: 0 1px 40px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px 0;
+  width: 152px;
+  box-sizing: border-box;
+}
+.splash-screen-3 .ellipse-17 {
+  border-radius: 3px;
+  background: #7177AB;
+  width: 6px;
+  height: 6px;
+}
+.splash-screen-3 .ellipse-18 {
+  border-radius: 3px;
+  background: #7177AB;
+  width: 6px;
+  height: 6px;
+}
+.splash-screen-3 .rectangle-47 {
+  border-radius: 4px;
+  background: #FFFFFF;
+  width: 25px;
+  height: 6px;
+}
+.splash-screen-3 .group-128 {
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+  width: 45px;
+  box-sizing: border-box;
+}
+.splash-screen-3 .group-129 {
+  border-radius: 30px 30px 0 0;
+  background: #343B71;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 16px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.splash-screen-3 .undraw-traveling-t-8-y-21 {
+  position: absolute;
+  left: 50%;
+  top: 195px;
+  translate: -50% 0;
+  width: 264px;
+  height: 238px;
+}
+.splash-screen-3 {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 14px;
+  box-sizing: border-box;
+}

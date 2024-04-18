@@ -1,0 +1,348 @@
+.menu .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.menu .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.menu .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.menu .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.menu .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.menu .container {
+  margin: 3.3px 0px 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.menu .ui-bars-status-bars-white-base {
+  margin: 0 0px 28px 15.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 15.6px);
+  box-sizing: border-box;
+}
+.menu .vector {
+  width: 24px;
+  height: 24px;
+}
+.menu .multiply-1 {
+  margin: 0 5.3px 10px 5.3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: flex-end;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+}
+.menu .image-9 {
+  background: url('../assets/images/image9.png') 50% / cover no-repeat;
+  position: absolute;
+  left: -2px;
+  bottom: -36px;
+  width: 96px;
+  height: 134px;
+}
+.menu .mask-group {
+  border-radius: 46.5px;
+  position: relative;
+  margin: 0 0 16px 9.9px;
+  width: 93px;
+  height: 93px;
+}
+.menu .marius-ciocirlan {
+  margin: 0 9.6px 10px 1px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 700;
+  font-size: 22px;
+  color: #FFFFFF;
+}
+.menu .marius-974-gmail-com {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #7177AB;
+}
+.menu .group-76 {
+  margin: 0 15.2px 61.4px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.menu .group-6 {
+  width: 24px;
+  height: 21.3px;
+}
+.menu .icon-1 {
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 21.3px;
+  box-sizing: border-box;
+}
+.menu .home {
+  margin: 0.6px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.menu .group-68 {
+  margin-bottom: 33.4px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.menu .group {
+  width: 24px;
+  height: 19.2px;
+}
+.menu .credit-card-1 {
+  margin: 0.4px 16px 0.4px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 19.2px;
+  box-sizing: border-box;
+}
+.menu .payment-method {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.menu .group-69 {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.menu .group-1 {
+  width: 24px;
+  height: 24px;
+}
+.menu .clock-circular-outline-1 {
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+}
+.menu .history {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.menu .group-71 {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.menu .vector-6 {
+  width: 14px;
+  height: 14px;
+}
+.menu .group-72 {
+  border-radius: 4px;
+  background: #FFFFFF;
+  position: relative;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+}
+.menu .apply-promo-code {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.menu .group-73 {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.menu .group-8 {
+  width: 24px;
+  height: 24px;
+}
+.menu .wedding-invitation-1 {
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+}
+.menu .invite-friends {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.menu .group-77 {
+  margin-bottom: 30.9px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.menu .vector-9 {
+  margin-bottom: 3.1px;
+  width: 24px;
+  height: 5.3px;
+}
+.menu .vector-8 {
+  margin-bottom: 3.1px;
+  width: 24px;
+  height: 5.3px;
+}
+.menu .vector-7 {
+  width: 24px;
+  height: 5.3px;
+}
+.menu .controls-1 {
+  margin-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  box-sizing: border-box;
+}
+.menu .setting {
+  margin: 1.1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.menu .group-74 {
+  margin-bottom: 30.9px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.menu .group-7 {
+  width: 24px;
+  height: 24px;
+}
+.menu .information-1 {
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+}
+.menu .online-support {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.menu .group-75 {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.menu .logout-1 {
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+}
+.menu .log-out {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.menu .group-70 {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.menu {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 14.7px 91px 20px;
+  box-sizing: border-box;
+}

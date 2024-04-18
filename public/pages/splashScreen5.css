@@ -1,0 +1,153 @@
+.splash-screen-5 .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.splash-screen-5 .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.splash-screen-5 .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.splash-screen-5 .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.splash-screen-5 .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.splash-screen-5 .container-1 {
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.splash-screen-5 .ui-bars-status-bars-white-base {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.splash-screen-5 .skip {
+  margin: 0 7.2px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.294;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.splash-screen-5 .mask-group {
+  background: url('../assets/images/image17.png') 50% / cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 14px 13.7px 530px 34.8px;
+  height: fit-content;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+.splash-screen-5 .request-ride {
+  margin-bottom: 10px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 28px;
+  color: #343B71;
+}
+.splash-screen-5 .huge-delivery-network-helps-you-find-comforable-safe-and-cheap-ride {
+  margin-bottom: 40px;
+  display: inline-block;
+  text-align: center;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #7177AB;
+}
+.splash-screen-5 .next {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.294;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.splash-screen-5 .group-33 {
+  border-radius: 2px;
+  background: #343B71;
+  position: relative;
+  margin: 0 1px 40px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px 1px 11px 0;
+  width: 152px;
+  box-sizing: border-box;
+}
+.splash-screen-5 .ellipse-17 {
+  border-radius: 3px;
+  background: #B9BCDD;
+  width: 6px;
+  height: 6px;
+}
+.splash-screen-5 .rectangle-47 {
+  border-radius: 4px;
+  background: #343B71;
+  width: 25px;
+  height: 6px;
+}
+.splash-screen-5 .ellipse-18 {
+  border-radius: 3px;
+  background: #B9BCDD;
+  width: 6px;
+  height: 6px;
+}
+.splash-screen-5 .group-128 {
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+  width: 45px;
+  box-sizing: border-box;
+}
+.splash-screen-5 .container {
+  border-radius: 30px 30px 0 0;
+  background: #FFFFFF;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+  height: 259px;
+  box-sizing: border-box;
+}
+.splash-screen-5 {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 1px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,516 @@
+.invite-friends .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.invite-friends .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.invite-friends .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.invite-friends .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.invite-friends .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.invite-friends .container {
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.invite-friends .ui-bars-status-bars-white-base {
+  margin: 0 14.7px 12px 35.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50.3px);
+  box-sizing: border-box;
+}
+.invite-friends .vector {
+  width: 24px;
+  height: 16.9px;
+}
+.invite-friends .left-arrow-1 {
+  margin: 3.6px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 16.9px;
+  box-sizing: border-box;
+}
+.invite-friends .invite-friends-1 {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.invite-friends .bell-1 {
+  width: 24px;
+  height: 24px;
+}
+.invite-friends .group-25 {
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.invite-friends .vector-2 {
+  width: 15.3px;
+  height: 15.3px;
+}
+.invite-friends .magnifying-glass-11 {
+  margin: 2.3px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 15.3px;
+  height: 15.3px;
+  box-sizing: border-box;
+}
+.invite-friends .search-friends {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #545C9B;
+}
+.invite-friends .search {
+  border-radius: 4px;
+  background: #282F62;
+  position: relative;
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 0 11px 10.3px;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.invite-friends .a {
+  margin-right: 8.2px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 20px;
+  color: #343B71;
+}
+.invite-friends .line-14 {
+  background: #343B71;
+  margin: 11px 0;
+  width: 69px;
+  height: 1px;
+}
+.invite-friends .group-85 {
+  margin: 0 3px 20px 3px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.invite-friends .image-8 {
+  background: url('../assets/images/image8.png') 50% / cover no-repeat;
+  position: absolute;
+  right: -8px;
+  bottom: -33px;
+  width: 74px;
+  height: 111px;
+}
+.invite-friends .mask-group {
+  border-radius: 29px;
+  position: relative;
+  margin-right: 16px;
+  width: 58px;
+  box-sizing: border-box;
+}
+.invite-friends .aihan-soysakal {
+  margin: 19px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.invite-friends .container-3 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.invite-friends .invite {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.invite-friends .group-65 {
+  border-radius: 2px;
+  background: #343B71;
+  position: relative;
+  margin: 11px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 8px 0;
+  width: 86px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.invite-friends .group-86 {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.invite-friends .image-10 {
+  background: url('../assets/images/image10.png') 50% / cover no-repeat;
+  position: absolute;
+  right: -14px;
+  bottom: -19px;
+  width: 83px;
+  height: 81px;
+}
+.invite-friends .mask-group-1 {
+  border-radius: 29px;
+  background: url('../assets/images/image8.png') 50% / cover no-repeat;
+  position: relative;
+  margin-right: 16px;
+  width: 58px;
+  box-sizing: border-box;
+}
+.invite-friends .aarius-ciocirlan {
+  margin: 19px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.invite-friends .container-1 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.invite-friends .done {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.invite-friends .group-651 {
+  border-radius: 2px;
+  border: 1px solid #343B71;
+  position: relative;
+  margin: 11px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 8px 0;
+  width: 86px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.invite-friends .group-87 {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.invite-friends .image-11 {
+  background: url('../assets/images/image11.png') 50% / cover no-repeat;
+  position: absolute;
+  left: -5px;
+  bottom: -21px;
+  width: 63px;
+  height: 94px;
+}
+.invite-friends .mask-group-2 {
+  border-radius: 29px;
+  position: relative;
+  margin-right: 16px;
+  width: 58px;
+  box-sizing: border-box;
+}
+.invite-friends .aosh-howard {
+  margin: 19px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.invite-friends .container-7 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.invite-friends .invite-1 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.invite-friends .group-652 {
+  border-radius: 2px;
+  background: #343B71;
+  position: relative;
+  margin: 11px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 8px 0;
+  width: 86px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.invite-friends .group-88 {
+  margin-bottom: 31px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.invite-friends .b {
+  margin-right: 8.9px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 20px;
+  color: #343B71;
+}
+.invite-friends .line-141 {
+  background: #343B71;
+  margin: 11px 0;
+  width: 69px;
+  height: 1px;
+}
+.invite-friends .group-89 {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.invite-friends .image-12 {
+  background: url('../assets/images/image12.png') 50% / cover no-repeat;
+  position: absolute;
+  left: -54px;
+  bottom: -30px;
+  width: 165px;
+  height: 110px;
+}
+.invite-friends .mask-group-4 {
+  border-radius: 29px;
+  position: relative;
+  margin-right: 16px;
+  width: 58px;
+  box-sizing: border-box;
+}
+.invite-friends .bregory-hayes {
+  margin: 19px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.invite-friends .container-5 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.invite-friends .done-1 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.invite-friends .group-654 {
+  border-radius: 2px;
+  border: 1px solid #343B71;
+  position: relative;
+  margin: 11px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 8px 0;
+  width: 86px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.invite-friends .group-91 {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.invite-friends .image-13 {
+  background: url('../assets/images/image13.png') 50% / cover no-repeat;
+  position: absolute;
+  left: -8px;
+  top: -20px;
+  width: 73px;
+  height: 97px;
+}
+.invite-friends .mask-group-3 {
+  border-radius: 29px;
+  background: url('../assets/images/image8.png') 50% / cover no-repeat;
+  position: relative;
+  margin-right: 16px;
+  width: 58px;
+  box-sizing: border-box;
+}
+.invite-friends .barshan-patel {
+  margin: 19px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.invite-friends .container-2 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.invite-friends .invite-2 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.invite-friends .group-653 {
+  border-radius: 2px;
+  background: #343B71;
+  position: relative;
+  margin: 11px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 8px 0;
+  width: 86px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.invite-friends .group-90 {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.invite-friends .image-14 {
+  background: url('../assets/images/image14.png') 50% / cover no-repeat;
+  position: absolute;
+  right: -25px;
+  bottom: -70px;
+  width: 100px;
+  height: 133px;
+}
+.invite-friends .mask-group-5 {
+  border-radius: 29px;
+  background: url('../assets/images/image8.png') 50% / cover no-repeat;
+  position: relative;
+  margin-right: 16px;
+  width: 58px;
+  box-sizing: border-box;
+}
+.invite-friends .brystian-krzew {
+  margin: 19px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.invite-friends .container-6 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.invite-friends .invite-3 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.invite-friends .group-655 {
+  border-radius: 2px;
+  background: #343B71;
+  position: relative;
+  margin: 11px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 8px 0;
+  width: 86px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.invite-friends .group-92 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.invite-friends .container-4 {
+  border-radius: 30px 30px 0 0;
+  background: #FFFFFF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 31px 20px 16px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.invite-friends {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  box-sizing: border-box;
+}

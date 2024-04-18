@@ -1,0 +1,195 @@
+.confirmation .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.confirmation .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.confirmation .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.confirmation .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.confirmation .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.confirmation .container-16 {
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.confirmation .ui-bars-status-bars-white-base {
+  margin: 0 0 28px 20.9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 20.9px);
+  box-sizing: border-box;
+}
+.confirmation .vector-76 {
+  width: 24px;
+  height: 24px;
+}
+.confirmation .multiply-1 {
+  margin: 0 5.3px 164.9px 5.3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: flex-end;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+}
+.confirmation .vector {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  translate: -50% 0;
+  width: 101.5px;
+  height: 79.9px;
+}
+.confirmation .thank-you {
+  position: relative;
+  margin: 0 5.1px 30.5px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Rancho';
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  color: #343B71;
+}
+.confirmation .container-13 {
+  margin: 3.2px 0.1px 2.3px 0;
+  width: 13.4px;
+  height: 15.2px;
+}
+.confirmation .vector-75 {
+  margin: 0 0.4px 14.8px 0;
+  width: 12px;
+  height: 5.9px;
+}
+.confirmation .vector-73 {
+  margin-top: 5px;
+  width: 13.8px;
+  height: 15.8px;
+}
+.confirmation .container-8 {
+  margin: 0 13.1px 50.1px 0;
+  display: flex;
+  flex-direction: row;
+  width: 39.8px;
+  box-sizing: border-box;
+}
+.confirmation .container-1 {
+  margin: 0.3px 36.4px 0.5px 0;
+  width: 22px;
+  height: 52.9px;
+}
+.confirmation .group-1 {
+  opacity: 0.3;
+  margin: 0.8px 53.3px 0 0;
+  width: 22px;
+  height: 52.9px;
+}
+.confirmation .container-2 {
+  margin: 0 0 23.1px 0.7px;
+  width: 15.6px;
+  height: 7px;
+}
+.confirmation .container-14 {
+  margin-right: 7.2px;
+  width: 9.1px;
+  height: 13.9px;
+}
+.confirmation .container-15 {
+  margin: 0px 46.5px 9.6px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16.4px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.confirmation .group-2 {
+  opacity: 0.3;
+  margin: 0.5px 2.2px 0.3px 0;
+  width: 22px;
+  height: 52.9px;
+}
+.confirmation .container-12 {
+  margin-bottom: 0.8px;
+  width: 22px;
+  height: 52.9px;
+}
+.confirmation .container-10 {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: 242.9px;
+  box-sizing: border-box;
+}
+.confirmation .vector-57 {
+  background: #414989;
+  margin-left: 2.2px;
+  width: 279.6px;
+  height: 1px;
+}
+.confirmation .container-9 {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  translate: -50% 0;
+  width: 101.5px;
+  height: 79.9px;
+}
+.confirmation .container-18 {
+  position: absolute;
+  right: -92.6px;
+  bottom: -122.7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 281.8px;
+  height: 207.4px;
+  box-sizing: border-box;
+}
+.confirmation .undraw-begin-chat-c-6-pj-1 {
+  position: relative;
+  margin: 0 9.8px 172.2px 0;
+  width: 101.5px;
+  height: 79.9px;
+}
+.confirmation .thank-you-for-your-confirmation {
+  text-align: center;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 28px;
+  color: #FFFFFF;
+}
+.confirmation {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 14.7px 245px 14.7px;
+  box-sizing: border-box;
+}

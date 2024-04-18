@@ -1,0 +1,687 @@
+.driver-payment-method .container-1 {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.driver-payment-method .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.driver-payment-method .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.driver-payment-method .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.driver-payment-method .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.driver-payment-method .container-7 {
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.driver-payment-method .ui-bars-status-bars-white-base {
+  margin: 0 14.7px 12px 35.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50.3px);
+  box-sizing: border-box;
+}
+.driver-payment-method .vector {
+  width: 24px;
+  height: 16.9px;
+}
+.driver-payment-method .left-arrow-1 {
+  margin: 3.6px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 16.9px;
+  box-sizing: border-box;
+}
+.driver-payment-method .payment-method {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.driver-payment-method .bell-1 {
+  width: 24px;
+  height: 24px;
+}
+.driver-payment-method .group-25 {
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.driver-payment-method .group {
+  margin: 0 0 0.6px 11.3px;
+  width: 12.7px;
+  height: 12.7px;
+}
+.driver-payment-method .vector-5 {
+  margin: 0.2px 1.1px 0.4px 0;
+  width: 5.5px;
+  height: 7.1px;
+}
+.driver-payment-method .vector-4 {
+  width: 17.4px;
+  height: 7.7px;
+}
+.driver-payment-method .group-1 {
+  margin-right: 0px;
+  display: flex;
+  flex-direction: row;
+  width: 24px;
+  box-sizing: border-box;
+}
+.driver-payment-method .group-55 {
+  box-shadow: 0px 0px 35px 0px rgba(212, 212, 212, 0.4);
+  border-radius: 4px;
+  background: #FFFFFF;
+  position: relative;
+  margin: 2px 0 1px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 9.5px 8px;
+  width: 40px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.driver-payment-method .cash-payment-1 {
+  margin-bottom: 7px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #282F62;
+}
+.driver-payment-method .defult-method {
+  margin-right: 17.8px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #A1A6CA;
+}
+.driver-payment-method .container-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.driver-payment-method .cash-payment {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14px 0 15px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.driver-payment-method .group-57 {
+  width: 24px;
+  height: 16px;
+}
+.driver-payment-method .group-58 {
+  box-shadow: 0px 0px 35px 0px rgba(212, 212, 212, 0.4);
+  border-radius: 4px;
+  background: #FFFFFF;
+  position: relative;
+  margin: 2px 0 1px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 13px 8px 11px 8px;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.driver-payment-method .master-card-1 {
+  margin-bottom: 7px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.driver-payment-method .container-2 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #A1A6CA;
+}
+.driver-payment-method .container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.driver-payment-method .master-card {
+  border-radius: 4px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14px 0 15px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.driver-payment-method .recent-activety {
+  margin-bottom: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.driver-payment-method .line-13 {
+  background: linear-gradient(90deg, #EDEDF6 0%, rgba(237, 237, 246, 0) 74.9%);
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  right: 20px;
+  translate: 0 -50%;
+  height: 1px;
+}
+.driver-payment-method .ellipse-2 {
+  border-radius: 4px;
+  background: #FF6B4A;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 8px;
+}
+.driver-payment-method .rectangle-20 {
+  margin: 0 3px;
+  width: 2px;
+  height: 10px;
+}
+.driver-payment-method .group-26 {
+  margin-right: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8px;
+  box-sizing: border-box;
+}
+.driver-payment-method .helden-st {
+  margin: 3px 0 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .group-77 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.driver-payment-method .container-5 {
+  margin: 3px 0 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .container-1 {
+  margin: 0 0 10px 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 4px);
+  box-sizing: border-box;
+}
+.driver-payment-method .vector-7 {
+  width: 16px;
+  height: 15.3px;
+}
+.driver-payment-method .star-1 {
+  margin: 0.3px 6px 0.3px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 15.3px;
+  box-sizing: border-box;
+}
+.driver-payment-method .container-3 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .group-65 {
+  position: relative;
+  margin: 0 4.1px 11px 4.1px;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.driver-payment-method .vector-6 {
+  width: 16px;
+  height: 16px;
+}
+.driver-payment-method .navigation-1 {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.driver-payment-method .chalotte-st {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .group-78 {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.driver-payment-method .container-4 {
+  margin-bottom: 2px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #A1A6CA;
+}
+.driver-payment-method .container-2 {
+  margin-right: 2.3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 2.3px);
+  box-sizing: border-box;
+}
+.driver-payment-method .group-80 {
+  box-shadow: 0px 0px 35px 0px rgba(212, 212, 212, 0.4);
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.driver-payment-method .line-131 {
+  background: linear-gradient(90deg, #EDEDF6 0%, rgba(237, 237, 246, 0) 74.9%);
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  right: 20px;
+  translate: 0 -50%;
+  height: 1px;
+}
+.driver-payment-method .ellipse-21 {
+  border-radius: 4px;
+  background: #FF6B4A;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 8px;
+}
+.driver-payment-method .rectangle-201 {
+  margin: 0 3px;
+  width: 2px;
+  height: 10px;
+}
+.driver-payment-method .group-261 {
+  margin-right: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8px;
+  box-sizing: border-box;
+}
+.driver-payment-method .helden-st-1 {
+  margin: 3px 0 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .group-771 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.driver-payment-method .container-8 {
+  margin: 3px 0 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .container-5 {
+  margin: 0 0 10px 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 4px);
+  box-sizing: border-box;
+}
+.driver-payment-method .vector-9 {
+  width: 16px;
+  height: 15.3px;
+}
+.driver-payment-method .star-11 {
+  margin: 0.3px 6px 0.3px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 15.3px;
+  box-sizing: border-box;
+}
+.driver-payment-method .container-6 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .group-651 {
+  position: relative;
+  margin: 0 4.1px 11px 4.1px;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.driver-payment-method .vector-8 {
+  width: 16px;
+  height: 16px;
+}
+.driver-payment-method .navigation-11 {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.driver-payment-method .chalotte-st-1 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .group-781 {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.driver-payment-method .container-7 {
+  margin-bottom: 2px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #A1A6CA;
+}
+.driver-payment-method .container-6 {
+  margin-right: 2.3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 2.3px);
+  box-sizing: border-box;
+}
+.driver-payment-method .group-81 {
+  box-shadow: 0px 0px 35px 0px rgba(212, 212, 212, 0.4);
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.driver-payment-method .line-132 {
+  background: linear-gradient(90deg, #EDEDF6 0%, rgba(237, 237, 246, 0) 74.9%);
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  right: 20px;
+  translate: 0 -50%;
+  height: 1px;
+}
+.driver-payment-method .ellipse-22 {
+  border-radius: 4px;
+  background: #FF6B4A;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 8px;
+}
+.driver-payment-method .rectangle-202 {
+  margin: 0 3px;
+  width: 2px;
+  height: 10px;
+}
+.driver-payment-method .group-262 {
+  margin-right: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8px;
+  box-sizing: border-box;
+}
+.driver-payment-method .helden-st-2 {
+  margin: 3px 0 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .group-772 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.driver-payment-method .container-11 {
+  margin: 3px 0 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .container-4 {
+  margin: 0 0 10px 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 4px);
+  box-sizing: border-box;
+}
+.driver-payment-method .vector-11 {
+  width: 16px;
+  height: 15.3px;
+}
+.driver-payment-method .star-12 {
+  margin: 0.3px 6px 0.3px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 15.3px;
+  box-sizing: border-box;
+}
+.driver-payment-method .container-9 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .group-652 {
+  position: relative;
+  margin: 0 4.1px 11px 4.1px;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.driver-payment-method .vector-10 {
+  width: 16px;
+  height: 16px;
+}
+.driver-payment-method .navigation-12 {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.driver-payment-method .chalotte-st-2 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 14px;
+  color: #343B71;
+}
+.driver-payment-method .group-782 {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.driver-payment-method .container-10 {
+  margin-bottom: 2px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  color: #A1A6CA;
+}
+.driver-payment-method .container-8 {
+  margin-right: 2.3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 2.3px);
+  box-sizing: border-box;
+}
+.driver-payment-method .group-82 {
+  box-shadow: 0px 0px 35px 0px rgba(212, 212, 212, 0.4);
+  background: #FFFFFF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.driver-payment-method .total-balance {
+  margin-right: 11.5px;
+  width: 283.5px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 20px;
+  color: #7177AB;
+}
+.driver-payment-method .container {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.driver-payment-method .group-111 {
+  border-radius: 30px 30px 0 0;
+  background: #343B71;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 36px 20px 35px 20px;
+  box-sizing: border-box;
+}
+.driver-payment-method .container-9 {
+  border-radius: 30px 30px 0 0;
+  background: #FFFFFF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 79px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.driver-payment-method {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  box-sizing: border-box;
+}

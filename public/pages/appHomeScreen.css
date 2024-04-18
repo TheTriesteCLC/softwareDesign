@@ -1,0 +1,84 @@
+.app-home-screen .rectangle-43 {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  translate: -50% 0;
+  width: 375px;
+  height: 91px;
+}
+.app-home-screen .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.app-home-screen .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.app-home-screen .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.app-home-screen .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.app-home-screen .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.app-home-screen .container {
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.app-home-screen .ui-bars-status-bars-white-base {
+  position: relative;
+  margin: 0 14.7px 303px 34.8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 49.4px);
+  box-sizing: border-box;
+}
+.app-home-screen .group-131 {
+  position: relative;
+  width: 79px;
+  height: 97px;
+}
+.app-home-screen .alaska {
+  position: relative;
+  margin: 0 1px 244px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 700;
+  font-size: 38px;
+  color: #FFFFFF;
+}
+.app-home-screen .rectangle-44 {
+  border-radius: 30px 30px 0 0;
+  background: #3A4178;
+  position: relative;
+  width: 375px;
+  height: 91px;
+}
+.app-home-screen {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 0 0px 0;
+  box-sizing: border-box;
+}

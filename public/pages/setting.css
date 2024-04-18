@@ -1,0 +1,362 @@
+.setting .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.setting .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.setting .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.setting .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.setting .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.setting .container-1 {
+  margin: 3.3px 0px 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.setting .ui-bars-status-bars-white-base {
+  margin: 0 14.7px 12px 35.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50.3px);
+  box-sizing: border-box;
+}
+.setting .vector {
+  width: 24px;
+  height: 16.9px;
+}
+.setting .left-arrow-1 {
+  margin: 3.6px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 16.9px;
+  box-sizing: border-box;
+}
+.setting .setting-1 {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.setting .bell-1 {
+  width: 24px;
+  height: 24px;
+}
+.setting .group-25 {
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.setting .phone-number {
+  margin-right: 10px;
+  width: 173.9px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.setting .container-1 {
+  margin-right: 8.7px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #A1A6CA;
+}
+.setting .line-152 {
+  width: 5.2px;
+  height: 10.3px;
+}
+.setting .group-102 {
+  margin: 5.8px 0 3.9px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 5.2px;
+  height: 10.3px;
+  box-sizing: border-box;
+}
+.setting .group-103 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.setting .group-104 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 10.2px 11px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.setting .call {
+  margin-right: 10px;
+  width: 260px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.setting .ellipse-14 {
+  border-radius: 7px;
+  background: #FFFFFF;
+  width: 14px;
+  height: 14px;
+}
+.setting .on {
+  border-radius: 10px;
+  background: #343B71;
+  position: relative;
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1px 18px 1px 1px;
+  width: 33px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.setting .group-105 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.setting .notification {
+  margin-right: 10px;
+  width: 260px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.setting .ellipse-141 {
+  border-radius: 7px;
+  background: #FFFFFF;
+  width: 14px;
+  height: 14px;
+}
+.setting .off {
+  border-radius: 10px;
+  background: #A1A6CA;
+  position: relative;
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1px 1px 1px 18px;
+  width: 33px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.setting .group-106 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.setting .favorite-address {
+  margin-right: 10px;
+  width: 219.1px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.setting .mozart-st {
+  margin-right: 8.7px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #A1A6CA;
+}
+.setting .line-15 {
+  width: 5.2px;
+  height: 10.3px;
+}
+.setting .group-1021 {
+  margin: 5.8px 0 3.9px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 5.2px;
+  height: 10.3px;
+  box-sizing: border-box;
+}
+.setting .group-1031 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.setting .group-107 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 10.2px 11px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.setting .traffic {
+  margin-right: 10px;
+  width: 260px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.setting .ellipse-142 {
+  border-radius: 7px;
+  background: #FFFFFF;
+  width: 14px;
+  height: 14px;
+}
+.setting .off-1 {
+  border-radius: 10px;
+  background: #A1A6CA;
+  position: relative;
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1px 1px 1px 18px;
+  width: 33px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.setting .group-108 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.setting .language {
+  margin-right: 10px;
+  width: 235.6px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.setting .english {
+  margin-right: 8.7px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #A1A6CA;
+}
+.setting .line-151 {
+  width: 5.2px;
+  height: 10.3px;
+}
+.setting .group-1022 {
+  margin: 5.8px 0 3.9px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 5.2px;
+  height: 10.3px;
+  box-sizing: border-box;
+}
+.setting .group-1032 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.setting .group-109 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 10.2px 11px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.setting .container {
+  border-radius: 30px 30px 0 0;
+  background: #FFFFFF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 322px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.setting {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,370 @@
+.request-texi .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.request-texi .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.request-texi .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.request-texi .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.request-texi .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.request-texi .container-2 {
+  margin: 3.3px 0px 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.request-texi .ui-bars-status-bars-white-base {
+  margin: 0 14.7px 12px 35.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50.3px);
+  box-sizing: border-box;
+}
+.request-texi .vector-3 {
+  width: 24px;
+  height: 16.9px;
+}
+.request-texi .list-menu-1 {
+  margin: 3.6px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 16.9px;
+  box-sizing: border-box;
+}
+.request-texi .alaska {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.request-texi .bell-1 {
+  width: 24px;
+  height: 24px;
+}
+.request-texi .group-25 {
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.request-texi .fire-shot-capture-021-gallery-mapbox-www-mapbox-2 {
+  background: url('../assets/images/fireShotCapture021GalleryMapboxWwwMapbox2.png') 50% / cover no-repeat;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 879px;
+}
+.request-texi .ellipse-2 {
+  border-radius: 4px;
+  background: #FF6B4A;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 8px;
+}
+.request-texi .rectangle-20 {
+  margin: 0 3px;
+  width: 2px;
+  height: 10px;
+}
+.request-texi .group-26 {
+  margin-right: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8px;
+  box-sizing: border-box;
+}
+.request-texi .line-1 {
+  background: #EDEDF6;
+  margin: 3px 11px 3px 0;
+  width: 1px;
+  height: 14px;
+}
+.request-texi .helden-st {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #343B71;
+}
+.request-texi .container-4 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.request-texi .vector-1 {
+  width: 16px;
+  height: 16px;
+}
+.request-texi .plus-symbol-1 {
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.request-texi .group-27 {
+  box-shadow: 0px 0px 70px 0px rgba(45, 45, 45, 0.1);
+  border-radius: 6px;
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 16px;
+  width: 335px;
+  box-sizing: border-box;
+}
+.request-texi .vector-2 {
+  width: 16px;
+  height: 16px;
+}
+.request-texi .navigation-1 {
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.request-texi .line-11 {
+  background: #EDEDF6;
+  margin: 3px 0;
+  width: 1px;
+  height: 14px;
+}
+.request-texi .chalotte-st {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #343B71;
+}
+.request-texi .container-3 {
+  display: flex;
+  flex-direction: row;
+  column-gap: 11px;
+  box-sizing: border-box;
+}
+.request-texi .vector-4 {
+  width: 16px;
+  height: 16px;
+}
+.request-texi .multiply-1 {
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.request-texi .group-28 {
+  box-shadow: 0px 0px 70px 0px rgba(45, 45, 45, 0.1);
+  border-radius: 6px;
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 47.8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 16px 11px 9px;
+  width: 335px;
+  box-sizing: border-box;
+}
+.request-texi .image-5 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(91.157deg);
+  margin-bottom: 20.9px;
+  width: 24.5px;
+  height: 24.5px;
+}
+.request-texi .image-4 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(87.334deg);
+  margin-top: 20.2px;
+  width: 25.1px;
+  height: 25.1px;
+}
+.request-texi .container {
+  margin: 0 0 19.9px 15.4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  width: 209.3px;
+  box-sizing: border-box;
+}
+.request-texi .image-3 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(87.778deg);
+  margin-bottom: 53.1px;
+  align-self: flex-start;
+  width: 24.9px;
+  height: 24.9px;
+}
+.request-texi .image-2 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(-6.119deg);
+  margin-bottom: 30.6px;
+  width: 26.4px;
+  height: 26.4px;
+}
+.request-texi .image-6 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(-13.483deg);
+  margin: 0 128.5px 36.1px 0;
+  align-self: center;
+  width: 28.9px;
+  height: 28.9px;
+}
+.request-texi .image-7 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(-97.483deg);
+  margin: 0 2.5px;
+  width: 26.9px;
+  height: 26.9px;
+}
+.request-texi .group-35 {
+  position: relative;
+  margin: 0 9.6px 220.1px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 299.4px;
+  box-sizing: border-box;
+}
+.request-texi .rectangle-1 {
+  border-radius: 100px;
+  margin-right: 1px;
+  width: 134px;
+  height: 5px;
+}
+.request-texi .line-5 {
+  border-radius: 2px;
+  transform: rotate(61.775deg);
+  position: absolute;
+  left: 357.5px;
+  top: 204.1px;
+  width: 230.8px;
+  height: 284.8px;
+}
+.request-texi .ellipse-61 {
+  box-shadow: 0px 0px 20px 0px rgba(255, 107, 74, 0.46);
+  border-radius: 6px;
+  background: #FF6B4A;
+  width: 12px;
+  height: 12px;
+}
+.request-texi .your-location-1 {
+  border-radius: 16px;
+  background: rgba(255, 107, 74, 0.1);
+  position: absolute;
+  left: 50%;
+  bottom: 229px;
+  translate: -50% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+}
+.request-texi .ellipse-6 {
+  box-shadow: 0px 0px 20px 0px rgba(255, 170, 42, 0.46);
+  border-radius: 6px;
+  background: #FFAA2A;
+  width: 12px;
+  height: 12px;
+}
+.request-texi .your-location {
+  border-radius: 16px;
+  background: rgba(255, 170, 42, 0.14);
+  position: absolute;
+  left: 50%;
+  top: 278px;
+  translate: -50% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+}
+.request-texi .container-5 {
+  background: url('../assets/images/fireShotCapture022GalleryMapboxWwwMapbox1.png') 50% / cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 44px 0 9px 0;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.request-texi .container-1 {
+  position: absolute;
+  right: -451px;
+  bottom: -186px;
+  padding: 0 95px 0 93px;
+  width: 1223px;
+  height: 900px;
+  box-sizing: border-box;
+}
+.request-texi .mask-group {
+  border-radius: 30px 30px 0 0;
+  background: url('../assets/images/fireShotCapture021GalleryMapboxWwwMapbox2.png') 50% / cover no-repeat;
+  position: relative;
+  width: 375px;
+  height: 714px;
+}
+.request-texi {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  box-sizing: border-box;
+}
