@@ -37,6 +37,21 @@ app.set("views", path.join(__dirname, "resources", "views"));
 
 //set up when using
 //app.use('/static', express.static(`${__dirname}\\public`))
+//Setup CSS
+app.use(express.static(path.join(__dirname, '../publicCus')));
+app.use(express.static(path.join(__dirname, '../publicAdmin')));
+
+//Set up JSON middleware for POST PUT
+app.use(
+  express.urlencoded({
+    extended: true,
+  }),
+);
+app.use(express.json());
+
+//Set up router
+const routeDriver = require('./routers/driver');
+const routeCustomer = require('./routers/customer');
 
 //Connect DB
 require("./dbs/mongo.db");
@@ -63,5 +78,9 @@ app.use("", require("./routers"));
 app.get("/", (req, res) => {
   res.render("home");
 });
+
+//Route init
+routeCustomer(app);
+routeDriver(app);
 
 module.exports = app;
