@@ -1,4 +1,4 @@
-const { multipleMongooseToObject, singleMongooseToObject } = require('../../util/mongoose');
+const { multipleMongooseToObject, singleMongooseToObject } = require('../util/mongoose');
 
 class siteController {
   //[GET] /login
@@ -7,7 +7,7 @@ class siteController {
     if (req.query.status === 'failed') {
       messFailed = 'Wrong username or password.';
     }
-    res.render('customer/login', { layout: 'customer/main', messFailed });
+    res.render('driver/login', { layout: 'driver/main', messFailed });
   }
 }
 

@@ -1,8 +1,8 @@
-const siteCustomerRouter = require('./site')
+const express = require('express');
+const router = express.Router();
 
-function route(app) {
-  app.use('/customer', siteCustomerRouter);
+const siteController = require('../../controllers/customer.c');
 
-}
+router.get('/login', siteController.login);
 
-module.exports = route;
+module.exports = router;

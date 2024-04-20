@@ -1,8 +1,8 @@
-const siteDriverRouter = require('./site')
+const express = require('express');
+const router = express.Router();
 
-function route(app) {
-  app.use('/driver', siteDriverRouter);
+const siteController = require('../../controllers/driver.c');
 
-}
+router.get('/login', siteController.login);
 
-module.exports = route;
+module.exports = router;
