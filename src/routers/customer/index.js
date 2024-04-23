@@ -3,6 +3,7 @@ const router = express.Router();
 
 const siteController = require('../../controllers/customer.c');
 
+router.get('/menu', siteController.menu);
 router.get('/settings', siteController.settings);
 router.get('/login', siteController.login);
 

@@ -14,6 +14,11 @@ class siteController {
   settings(req, res, next) {
     res.render('customer/settings', { layout: 'customer/main' });
   }
+
+  //[GET] /menu
+  menu(req, res, next) {
+    res.render('customer/menu', { layout: 'customer/main' });
+  }
 }
 
 const slugify = (textToSlugify) => {

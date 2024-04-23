@@ -52,27 +52,28 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-self: flex-end;
+  align-self: flex-start;
   width: 24px;
   height: 24px;
   box-sizing: border-box;
 }
 .menu .image-9 {
   background: url('../assets/images/image9.png') 50% / cover no-repeat;
+  border-radius: 50px;
   position: absolute;
   left: -2px;
-  bottom: -36px;
+  bottom: -30px;
+  margin-bottom: 20px;
   width: 96px;
   height: 134px;
 }
-.menu .mask-group {
-  border-radius: 46.5px;
+.menu .user-avatar {
   position: relative;
-  margin: 0 0 16px 9.9px;
+  margin: 16px;
   width: 93px;
   height: 93px;
 }
-.menu .marius-ciocirlan {
+.menu .username {
   margin: 0 9.6px 10px 1px;
   display: inline-block;
   overflow-wrap: break-word;
@@ -81,7 +82,7 @@
   font-size: 22px;
   color: #FFFFFF;
 }
-.menu .marius-974-gmail-com {
+.menu .user-mail {
   overflow-wrap: break-word;
   font-family: 'SF Pro Display', 'Roboto Condensed';
   font-weight: 400;
@@ -89,7 +90,7 @@
   color: #7177AB;
 }
 .menu .group-76 {
-  margin: 0 15.2px 61.4px 0;
+  margin: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -272,7 +273,7 @@
   box-sizing: border-box;
 }
 .menu .setting {
-  margin: 1.1px 0;
+  /* margin: 1.1px 0; */
   display: inline-block;
   overflow-wrap: break-word;
   font-family: 'SF Pro Display', 'Roboto Condensed';
