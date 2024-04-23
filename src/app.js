@@ -17,7 +17,7 @@ app.use(
 );
 
 app.use(morgan("dev")); // Change color status in terminal
-app.use(helmet()); // Hidden infomation of website
+//app.use(helmet()); // Hidden infomation of website
 app.use(compression()); // Decrease load data
 
 //Template engine
