@@ -9,6 +9,11 @@ class siteController {
     }
     res.render('customer/login', { layout: 'customer/main', messFailed });
   }
+
+  //[GET] /settings
+  settings(req, res, next) {
+    res.render('customer/settings', { layout: 'customer/main' });
+  }
 }
 
 const slugify = (textToSlugify) => {

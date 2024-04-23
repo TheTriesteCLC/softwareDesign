@@ -21,14 +21,10 @@ app.use(helmet()); // Hidden infomation of website
 app.use(compression()); // Decrease load data
 
 //Template engine
-app.engine(
-  "hbs",
-  handleBars.engine({
+app.engine("hbs",handleBars.engine({
     extname: ".hbs",
     helpers: {
-      sum: (a, b) => a + b,
       json: (content) => JSON.stringify(content),
-      prodClassFromName: (prodName) => prodName.replaceAll(" ", "-"),
     },
   })
 );
@@ -38,8 +34,7 @@ app.set("views", path.join(__dirname, "resources", "views"));
 //set up when using
 //app.use('/static', express.static(`${__dirname}\\public`))
 //Setup CSS
-app.use(express.static(path.join(__dirname, '../publicCus')));
-app.use(express.static(path.join(__dirname, '../publicAdmin')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 //Set up JSON middleware for POST PUT
 app.use(
