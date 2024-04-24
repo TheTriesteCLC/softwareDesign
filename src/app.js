@@ -18,6 +18,17 @@ app.use(
 
 app.use(morgan("dev")); // Change color status in terminal
 //app.use(helmet()); // Hidden infomation of website
+app.use(helmet({
+  contentSecurityPolicy: {
+      directives: {
+          defaultSrc: ["'self'"],
+          scriptSrc: ["'self'", "'unsafe-inline'"],
+          styleSrc: ["'self'", 'https://fonts.googleapis.com', "'unsafe-inline'"],
+          imgSrc: ["'self'", 'https://*.com'],
+          fontSrc: ["'self'", 'https://*.com', 'data:']
+      },
+  }
+}));
 app.use(compression()); // Decrease load data
 
 //Template engine
