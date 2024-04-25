@@ -9,7 +9,7 @@
 <script>
 	const map_parameters = { center: {lat: 47.490, lng: -117.585}, zoom: 18};
 	const map = new google.maps.Map(document.getElementById('map'), map_parameters);
-	const socket = io();
+	let socket = io('//localhost:3000');
 	let marker = null; 
 	
 	getLocation();

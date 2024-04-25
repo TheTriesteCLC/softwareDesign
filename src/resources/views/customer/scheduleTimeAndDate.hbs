@@ -1,11 +1,7 @@
 <div
-  style="background-color: transparent; width: 100%; height: 724.08px; "
+  style="background-color: transparent; width: 100%; height: 775.08px; "
 >
-    <div id="map" style="width: 100%; height: 75%; position: relative; border-top-left-radius: 30px; border-top-right-radius: 30px;">   
-    </div>
-    <div style="width: 100%; height: 30%; background-color: red; z-index: 10000000000; position: absolute;border-top-left-radius: 30px; border-top-right-radius: 30px;">
-        
-    </div>
+  <div id="map" style="width: 100%; height: 100%; border-top-left-radius: 30px; border-top-right-radius: 30px;"></div>
 </div>
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -13,7 +9,7 @@
 <script>
 	const map_parameters = { center: {lat: 47.490, lng: -117.585}, zoom: 18};
 	const map = new google.maps.Map(document.getElementById('map'), map_parameters);
-	let socket = io('//localhost:3000');
+	//const socket = io();
 	let marker = null; 
 	
 	getLocation();

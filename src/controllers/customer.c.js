@@ -19,6 +19,10 @@ class siteController {
   menu(req, res, next) {
     res.render('customer/menu', { layout: 'customer/main' });
   }
+
+  schedule(req, res) {
+    res.render('customer/scheduleTimeAndDate', { layout: 'customer/main' });
+  }
 }
 
 const slugify = (textToSlugify) => {

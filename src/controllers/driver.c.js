@@ -9,6 +9,18 @@ class siteController {
     }
     res.render('driver/login', { layout: 'driver/main', messFailed });
   }
+
+  home(req, res) {
+    res.render( 'driver/home', { layout: 'driver/main' });   
+  }
+  
+  confirm(req, res) {
+    res.render( 'driver/confirm', { layout: 'driver/main' });   
+  }
+
+  request(req, res) {
+    res.render( 'driver/request', { layout: 'driver/main' });   
+  }
 }
 
 const slugify = (textToSlugify) => {
