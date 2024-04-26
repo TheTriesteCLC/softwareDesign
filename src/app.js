@@ -1,9 +1,32 @@
+//Settup app
 const path = require("path");
 require("dotenv").config();
 const express = require("express");
 const app = express();
+
+//Settup hbs
 const handleBars = require("express-handlebars");
 
+//Settup passport, session
+const passport = require('passport');
+require('./config/passport/passport')(passport);
+app.use(passport.initialize());
+// app.use(passport.session());
+
+//Setup session
+const session = require('express-session');
+const store = session.MemoryStore();
+app.use(session({
+  saveUninitialized: false,
+  secret: "440457",
+  cookie: {
+    // maxAge: 1000 * 10 // 1s * 10
+    maxAge: null // 1s * 10
+  },
+  store
+}))
+
+//Settup miscellanous
 const morgan = require("morgan");
 const helmet = require("helmet");
 const compression = require("compression");
@@ -17,7 +40,7 @@ app.use(
 );
 
 app.use(morgan("dev")); // Change color status in terminal
-//app.use(helmet()); // Hidden infomation of website
+// app.use(helmet()); // Hidden infomation of website
 // app.use(helmet({
 //   contentSecurityPolicy: {
 //       directives: {

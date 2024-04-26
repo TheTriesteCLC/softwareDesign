@@ -20,8 +20,19 @@ class siteController {
     res.render('customer/menu', { layout: 'customer/main' });
   }
 
+  //[GET] /schedule
   schedule(req, res) {
     res.render('customer/scheduleTimeAndDate', { layout: 'customer/main' });
+  }
+
+  //[GET] /homepage
+  homepage(req, res) {
+    res.render('homepage', { layout: 'main' });
+  }
+
+  //[GET] /signup
+  signup(req, res) {
+    res.render('customer/signup', { layout: 'customer/main' });
   }
 }
 

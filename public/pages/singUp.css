@@ -55,6 +55,7 @@
 .sing-up .create-an-account {
   position: relative;
   margin: 0 20px 34px 20px;
+  justify-content: center;
   display: inline-block;
   align-self: flex-start;
   overflow-wrap: break-word;
@@ -64,7 +65,7 @@
   color: #FFFFFF;
 }
 .sing-up .name {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   display: inline-block;
   align-self: flex-start;
   overflow-wrap: break-word;
@@ -74,6 +75,10 @@
   text-transform: uppercase;
   color: #FFFFFF;
 }
+.sing-up .input {
+  padding: 11px 16px;
+}
+
 .sing-up .tushar-chowdhury {
   overflow-wrap: break-word;
   font-family: 'SF Pro Display', 'Roboto Condensed';
@@ -93,7 +98,7 @@
 .sing-up .group-61 {
   border-radius: 2px;
   position: relative;
-  margin: 0 20px 30px 20px;
+  margin: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
   width: calc(100% - 40px);
