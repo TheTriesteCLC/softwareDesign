@@ -2,57 +2,73 @@
 <div class="sing-up">
     <form method="POST" action="/driver/signup">
       <div class="create-an-account">Create An Account for driver</div>
-      <div class="group-61">
-        <label class="name" for="input-fullname">Full name</label>
-        <input class="input" type="text" id="input-fullname" name="fullname" required>
+      <div style="display: flex; align-items: center; flex-direction: column">
+        <p class="infomation-box-title">Driver's information</p>
+        <div class="infomation-box">
+          <div class="group-61">
+            <label class="name" for="input-fullname">Full name</label>
+            <input class="input" type="text" id="input-fullname" name="fullname" placeholder="Your fullname" required>
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-IDnumber">ID number</label>
+            <input class="input" type="text" id="input-IDnumber" name="IDnumber" placeholder="Your ID number" pattern="[0-9]{12}" required>
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-email">Email</label>
+            <input class="input" type="email" id="input-email" name="email" placeholder="Your email" required>
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-tel">Tel</label>
+            <input class="input" type="tel" id="input-tel" name="tel" placeholder="Your telephone number" required>
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-dob">Day of birth</label>
+            <input class="input" type="date" id="input-dob" name="dob" required>
+          </div>
+        </div>
       </div>
-      <div class="group-61">
-        <label class="name" for="input-IDnumber">ID number</label>
-        <input class="input" type="text" id="input-IDnumber" name="IDnumber" pattern="[0-9]{12}" required>
+      <div style="display: flex; align-items: center; flex-direction: column">
+        <p class="infomation-box-title">Vehicle</p>
+        <div class="infomation-box">
+          <div class="group-61">
+            <label class="name" for="input-vehicle">Your vehicle type:</label>
+            <select class="input" name="vehicle" id="input-vehicle" required>
+                <option value="Motorcycle">Motorcycle</option>
+                <option value="Sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="MPV">MPV</option>
+            </select>
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-plate">License plate</label>
+            <input class="input" type="text" id="input-plate" name="plate" placeholder="License plate number" required>
+          </div>
+        </div>
       </div>
-      <div class="group-61">
-        <label class="name" for="input-email">Email</label>
-        <input class="input" type="email" id="input-email" name="email" required>
+      <div style="display: flex; align-items: center; flex-direction: column">
+        <p class="infomation-box-title">Account</p>
+        <div class="infomation-box">
+          <div class="group-61">
+            <label class="name" for="input-username">Username</label>
+            <input class="input" type="text" id="input-username" name="username" placeholder="Username" required>
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-password">Password</label>
+            <input class="input" type="password" id="input-password" name="password" placeholder="Password" required>
+            <!-- <div class="eye-11">
+              <img class="vector-1" src="../assets/vectors/vector35_x2.svg" />
+            </div> -->
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-password-again">Enter your password again</label>
+            <input class="input" type="password" id="input-password-again" placeholder="Enter your password again">
+            <!-- <div class="eye-11">
+              <img class="vector-1" src="../assets/vectors/vector35_x2.svg" />
+            </div> -->
+          </div>
+        </div>
       </div>
-      <div class="group-61">
-        <label class="name" for="input-tel">Tel</label>
-        <input class="input" type="tel" id="input-tel" name="tel" required>
-      </div>
-      <div class="group-61">
-        <label class="name" for="input-dob">Day of birth</label>
-        <input class="input" type="date" id="input-dob" name="dob">
-      </div>
-      <div class="group-61">
-        <label class="name" for="input-vehicle">Your vehicle type:</label>
-        <select class="input" name="vehicle" id="input-vehicle" required>
-            <option value="Motorcycle">Motorcycle</option>
-            <option value="Sedan">Sedan</option>
-            <option value="SUV">SUV</option>
-            <option value="MPV">MPV</option>
-        </select>
-      </div>
-      <div class="group-61">
-        <label class="name" for="input-plate">License plate</label>
-        <input class="input" type="text" id="input-plate" name="plate">
-      </div>
-      <div class="group-61">
-        <label class="name" for="input-username">Username</label>
-        <input class="input" type="text" id="input-username" name="username" required>
-      </div>
-      <div class="group-61">
-        <label class="name" for="input-password">Password</label>
-        <input class="input" type="password" id="input-password" name="password" required>
-        <!-- <div class="eye-11">
-          <img class="vector-1" src="../assets/vectors/vector35_x2.svg" />
-        </div> -->
-      </div>
-      <div class="group-61">
-        <label class="name" for="input-password-again">Enter your password again</label>
-        <input class="input" type="password" id="input-password-again">
-        <!-- <div class="eye-11">
-          <img class="vector-1" src="../assets/vectors/vector35_x2.svg" />
-        </div> -->
-      </div>
+      
       <button class="sing-up-1 group-33"> Sign up </button>
     </form>
       <div class="container-3">

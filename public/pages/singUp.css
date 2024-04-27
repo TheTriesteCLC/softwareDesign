@@ -104,6 +104,20 @@
   width: calc(100% - 40px);
   box-sizing: border-box;
 }
+
+.sing-up .infomation-box {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding-top: 10px;
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+.sing-up .infomation-box-title {
+  color: white;
+  font-weight: 700;
+  margin: 5px;
+}
 .sing-up .email-address {
   margin-bottom: 20px;
   display: inline-block;
@@ -256,7 +270,7 @@
   color: #343B71;
 }
 .sing-up .group-33 {
-  border-radius: 2px;
+  border-radius: 10px;
   background: #FFFFFF;
   position: relative;
   margin: 0 20px 30px 20px;
