@@ -69,6 +69,7 @@ app.set("views", path.join(__dirname, "resources", "views"));
 //app.use('/static', express.static(`${__dirname}\\public`))
 //Setup CSS
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../publicAdmin')));
 
 //Set up JSON middleware for POST PUT
 app.use(

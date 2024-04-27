@@ -7,7 +7,7 @@ class siteController {
     if (req.query.status === 'failed') {
       messFailed = 'Wrong username or password.';
     }
-    res.render('driver/login', { layout: 'driver/main', messFailed });
+    res.render('driver/login', { layout: 'driver/customLogin', messFailed });
   }
 
   home(req, res) {

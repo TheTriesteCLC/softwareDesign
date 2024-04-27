@@ -7,8 +7,18 @@ const siteController = require('../../controllers/customer.c');
 
 router.get('/menu', siteController.menu);
 router.get('/settings', siteController.settings);
-router.get('/login', siteController.login);
+
 router.get('/schedule', siteController.schedule);
+
+//Login
+router.get('/login', siteController.login);
+router.post('/login',
+    passport.authenticate('local-login', { failureRedirect: './login?status=failed' }),
+    function (req, res) {
+        console.log("redirecting");
+        res.redirect('./dashboard');
+    }
+);
 
 //Signup new customer
 // router.post('/signup/available', siteController.avalable);

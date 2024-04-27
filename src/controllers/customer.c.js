@@ -7,7 +7,7 @@ class siteController {
     if (req.query.status === 'failed') {
       messFailed = 'Wrong username or password.';
     }
-    res.render('customer/login', { layout: 'customer/main', messFailed });
+    res.render('customer/login', { layout: 'customer/customLogin', messFailed });
   }
 
   //[GET] /settings

@@ -5,10 +5,19 @@ require('../../config/passport/passport')(passport);
 
 const siteController = require('../../controllers/driver.c');
 
-router.get('/login', siteController.login);
 router.get('/home', siteController.home)
 router.get('/confirm', siteController.confirm)
 router.get('/request', siteController.request)
+
+//Login
+router.get('/login', siteController.login);
+router.post('/login',
+    passport.authenticate('local-login', { failureRedirect: './login?status=failed' }),
+    function (req, res) {
+        console.log("redirecting");
+        res.redirect('./dashboard');
+    }
+);
 
 //Signup new driver
 router.get('/signup', siteController.signup);
