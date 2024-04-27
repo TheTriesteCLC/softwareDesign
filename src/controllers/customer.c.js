@@ -15,6 +15,11 @@ class siteController {
     res.render('customer/settings', { layout: 'customer/main' });
   }
 
+  //[GET] /history
+  history(req, res, next) {
+    res.render('customer/history', { layout: 'customer/main' });
+  }
+
   //[GET] /menu
   menu(req, res, next) {
     res.render('customer/menu', { layout: 'customer/main' });
