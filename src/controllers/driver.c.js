@@ -25,6 +25,10 @@ class siteController {
   signup(req, res) {
     res.render( 'driver/signup', { layout: 'driver/main' });   
   }
+
+  menu(req, res) {
+    res.render( 'driver/menu', { layout: 'driver/main' });   
+  }
 }
 
 const slugify = (textToSlugify) => {

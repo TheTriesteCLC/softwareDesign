@@ -8,6 +8,7 @@ const siteController = require('../../controllers/driver.c');
 router.get('/home', siteController.home)
 router.get('/confirm', siteController.confirm)
 router.get('/request', siteController.request)
+router.get('/menu', siteController.menu)
 
 //Login
 router.get('/login', siteController.login);

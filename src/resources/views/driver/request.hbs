@@ -1,23 +1,57 @@
 <div
-  style="background-color: transparent; width: 100%; height: 724.08px; "
+  style="background-color: transparent; width: 100%; height: 760.08px; "
 >
-    <div id="map" style="width: 100%; height: 75%; position: relative; border-top-left-radius: 30px; border-top-right-radius: 30px;">   
-    </div>
-    <div style="width: 100%; height: 30%; background-color: red; z-index: 10000000000; position: absolute;border-top-left-radius: 30px; border-top-right-radius: 30px;">
-        
-    </div>
+    <div id="map" style="width: 100%; height: 100%; position: relative; border-top-left-radius: 30px; border-top-right-radius: 30px;">   
+		<div style="width: 100%; height: 20%; color: white; background-color: #343B71; z-index: 10000000000; position: absolute; bottom:0; border-top-left-radius: 30px; border-top-right-radius: 30px; ">
+			<div style="display:flex; justify-content: center;">
+				<div style="display: flex; margin: 30px;">
+					<svg width="8" height="20" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="4" cy="4" r="4" fill="#FF6B4A"/>
+					<path d="M3 10H5L4 20L3 10Z" fill="#FF6B4A"/>
+					</svg>
+					<div class="start" style="font-size: 14px; margin: 0px 0px 0px 10px">start</div>
+				</div>
+				<div style="display: flex; margin: 30px;">
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_35_64)">
+					<path d="M15.9124 0.0965961C15.821 -0.000199775 15.68 -0.0271757 15.5607 0.0289977L0.180588 7.25854C0.0569523 7.31693 -0.0152459 7.45054 0.00272617 7.58891C0.0206983 7.72728 0.124503 7.83709 0.258674 7.85994L7.15717 9.04403L7.94578 15.7207C7.96251 15.8597 8.06631 15.9718 8.20111 15.9952C8.21877 15.9984 8.23612 16 8.25347 16C8.36967 16 8.47843 15.933 8.53111 15.8235L15.9678 0.458391C16.0261 0.33811 16.0038 0.193075 15.9124 0.0965961Z" fill="#FFAA2A"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_35_64">
+					<rect width="16" height="16" fill="white"/>
+					</clipPath>
+					</defs>
+					</svg>
+					<div class="start" style="font-size: 14px; margin: 0px 0px 0px 10px">End</div>
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center;">
+				<Button style="padding: 10px 100px 10px 100px; ">Finish Ride</Button>
+			</div>
+		</div>
+	</div>
 </div>
 
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-
+</div>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+      
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 <script>
-	const map_parameters = { center: {lat: 47.490, lng: -117.585}, zoom: 18};
-	const map = new google.maps.Map(document.getElementById('map'), map_parameters);
+	const map = L.map('map').setView([47.490, -117.585], 18);
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '© OpenStreetMap contributors'
+	}).addTo(map);
+
 	let socket = io('//localhost:3000');
-	let marker = null; 
-	
+	let marker = null;
+
 	getLocation();
-	setInterval(getLocation, 5000); 
+	setInterval(getLocation, 5000);
 
 	function getLocation() {
 		if (navigator.geolocation) {
@@ -28,35 +62,28 @@
 	}
 
 	function drawDriver() {
-		const image = {
-			url: '/assets/images/car.png',
-			size: new google.maps.Size(40, 40),
-			scaledSize: new google.maps.Size(40, 40),
-			origin: new google.maps.Point(0, 0),
-			anchor: new google.maps.Point(20, 20)
-		};
-		return image;
+		return L.icon({
+			iconUrl: '/assets/images/car.png',
+			iconSize: [40, 40],
+			iconAnchor: [20, 20] 
+		});
 	}
 
 	function showPosition(position) {
 		const lat = position.coords.latitude;
 		const lng = position.coords.longitude;
-		const image = drawDriver();
+		const icon = drawDriver();
 		if (marker) {
-			marker.setMap(null);
+			map.removeLayer(marker);
 		}
-	
-		marker = new google.maps.Marker({
-			position: {lat, lng},
-			map: map,
-			icon: image
-		});
-		map.setCenter(new google.maps.LatLng(lat, lng));
+
+		marker = L.marker([lat, lng], {icon: icon}).addTo(map);
+		map.setView(new L.LatLng(lat, lng), map.getZoom());
 		socket.emit('driverPosition', { id: '001', position: {latitude: lat, longitude: lng} });
 	}
 
 	function showError(error) {
-		switch(error.code) {
+		switch (error.code) {
 			case error.PERMISSION_DENIED:
 				console.error("User denied the request for Geolocation.");
 				break;
@@ -71,4 +98,20 @@
 				break;
 		}
 	}
+
+	// handle get position
+	function onMapClick(e) {
+		const latlng = e.latlng;
+		fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latlng.lat}&lon=${latlng.lng}`)
+			.then(response => response.json())
+			.then(data => {
+				console.log(data); // Log the data for inspection
+				L.popup()
+					.setLatLng(latlng)
+					.setContent('Address: ' + (data.display_name || 'Not found'))
+					.openOn(map);
+			})
+			.catch(err => console.error(err));
+	}
+
 </script>
