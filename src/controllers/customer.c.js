@@ -1,3 +1,4 @@
+const Customer = require('../models/Customer');
 const { multipleMongooseToObject, singleMongooseToObject } = require('../util/mongoose');
 
 class siteController {
@@ -25,6 +26,48 @@ class siteController {
   profile(req, res, next) {
     console.log(req.user);
     res.render('customer/profile', { layout: 'customer/main', user: req.user });
+  }
+
+  //[GET] /update-profile/:slug
+  updateProfile(req, res, next) {
+    console.log(req.user);
+    res.render('customer/updateProfile', { layout: 'customer/main', user: req.user });
+  }
+
+  //[POST] /update-profile
+  async update(req, res, next) {
+    const formData = req.body;
+
+    // get current user session
+    var customer = await Customer.findOne({ username: req.user.username });
+
+    // check two passwords
+    var checkPass = await customer.comparePassword(formData.password);
+
+    if (checkPass) {
+      customer = await Customer.findOneAndUpdate({ username: formData.username },
+        {
+          fullname: formData.fullname,
+          email: formData.email,
+          dob: formData.dob,
+          tel: formData.phone,
+        },
+        {
+          new: true
+        }
+      );
+
+      console.log('Updated');
+
+      if (customer === null) {
+        res.redirect('/customer/update-profile');
+      } else {
+        // update session user
+        req.session.passport.user = customer;
+        res.redirect('/customer/profile');
+      }
+    }
+    // res.json({ huhu });
   }
 
   //[GET] /history

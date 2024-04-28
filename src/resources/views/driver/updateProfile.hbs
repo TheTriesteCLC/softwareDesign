@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="/pages/singUp.css">
+<div class="sing-up">
+    <div style="display: flex; justify-content:space-around">
+        <div class="create-an-account">Update profile</div>
+    </div>
+    <form method="POST" action="/driver/update-profile">
+      <div style="display: flex; align-items: center; flex-direction: column">
+        <p class="infomation-box-title">Driver's information</p>
+        <div class="infomation-box">
+          <div class="group-61">
+            <label class="name" for="input-fullname">Full name</label>
+            <input class="input" type="text" id="input-fullname" name="fullname" placeholder="Your fullname" required value="{{user.fullname}}">
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-IDnumber">ID number</label>
+            <input class="input" type="text" id="input-IDnumber" name="IDnumber" placeholder="Your ID number" pattern="[0-9]{12}" required value="{{user.IDnumber}}">
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-email">Email</label>
+            <input class="input" type="email" id="input-email" name="email" placeholder="Your email" required value="{{user.email}}">
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-tel">Tel</label>
+            <input class="input" type="tel" id="input-tel" name="tel" placeholder="Your telephone number" required value="{{user.tel}}">
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-dob">Day of birth</label>
+            <input class="input" type="date" id="input-dob" name="dob" required value="{{user.dob}}">
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; flex-direction: column">
+        <p class="infomation-box-title">Vehicle</p>
+        <div class="infomation-box">
+          <div class="group-61">
+            <label class="name" for="input-vehicle">Your vehicle type:</label>
+            <select class="input" name="vehicle" id="input-vehicle" required>
+                <option value="Motorcycle" selected>Motorcycle</option>
+                <option value="Sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="MPV">MPV</option>
+            </select>
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-plate">License plate</label>
+            <input class="input" type="text" id="input-plate" name="plate" placeholder="License plate number" required value="{{user.plate}}">
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; flex-direction: column">
+        <p class="infomation-box-title">Confirmation</p>
+        <div class="infomation-box">
+          <div class="group-61">
+            <label class="name" for="input-username">Username</label>
+            <input class="input" type="text" id="input-username" name="username" placeholder="Username" required>
+          </div>
+          <div class="group-61">
+            <label class="name" for="input-password">Password</label>
+            <input class="input" type="password" id="input-password" name="password" placeholder="Password" required>
+            <!-- <div class="eye-11">
+              <img class="vector-1" src="../assets/vectors/vector35_x2.svg" />
+            </div> -->
+          </div>
+        </div>
+      </div>
+      
+      <button class="sing-up-1 group-33"> Update </button>
+    </form>
+      <a href="/driver/profile" style="text-decoration: none;">
+        <button class="sing-up-1 group-33" style="background-color: #FF5252"> Cancel </button>
+    </a>
+    </div>

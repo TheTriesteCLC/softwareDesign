@@ -10,6 +10,8 @@ router.get('/confirm', siteController.confirm)
 router.get('/request', siteController.request)
 router.get('/menu', siteController.menu)
 router.get('/profile', isLoggedIn, siteController.profile)
+router.get('/update-profile', siteController.updateProfile);
+router.post('/update-profile', siteController.update);
 router.get('/logout', isLoggedIn, siteController.logout)
 
 //Login

@@ -7,6 +7,8 @@ const siteController = require('../../controllers/customer.c');
 
 router.get('/home', isLoggedIn, siteController.home)
 router.get('/menu', siteController.menu);
+router.get('/update-profile', siteController.updateProfile);
+router.post('/update-profile', siteController.update);
 router.get('/profile', siteController.profile);
 router.get('/history', siteController.history);
 
