@@ -10,6 +10,17 @@ class siteController {
     res.render('driver/login', { layout: 'driver/customLogin', messFailed });
   }
 
+  //[GET] /logout
+  logout(req, res, next) {
+    console.log("Loging out");
+    req.logout(function (err) {
+      if (err) {
+        return next(err);
+      }
+      res.redirect('./login');
+    })
+  }
+
   home(req, res) {
     res.render( 'driver/home', { layout: 'driver/main' });   
   }
@@ -20,6 +31,10 @@ class siteController {
 
   request(req, res) {
     res.render( 'driver/request', { layout: 'driver/main' });   
+  }
+
+  profile(req, res) {
+    res.render( 'driver/profile', { layout: 'driver/main', user: req.user });   
   }
 
   signup(req, res) {

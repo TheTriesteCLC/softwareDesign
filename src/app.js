@@ -1,20 +1,18 @@
 //Settup app
 const path = require("path");
-require("dotenv").config();
 const express = require("express");
+require("dotenv").config();
+
 const app = express();
+
+const passport = require('passport');
+require('./config/passport/passport')(passport);
+const session = require('express-session');
 
 //Settup hbs
 const handleBars = require("express-handlebars");
 
-//Settup passport, session
-const passport = require('passport');
-require('./config/passport/passport')(passport);
-app.use(passport.initialize());
-// app.use(passport.session());
-
 //Setup session
-const session = require('express-session');
 const store = session.MemoryStore();
 app.use(session({
   saveUninitialized: false,
@@ -25,6 +23,10 @@ app.use(session({
   },
   store
 }))
+
+//Passport init
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Settup miscellanous
 const morgan = require("morgan");

@@ -61,7 +61,7 @@
   overflow-wrap: break-word;
   font-family: 'SF Pro Display', 'Roboto Condensed';
   font-weight: 500;
-  font-size: 17px;
+  font-size: 25px;
   color: #FFFFFF;
 }
 .setting .bell-1 {
@@ -69,7 +69,7 @@
   height: 24px;
 }
 .setting .group-25 {
-  margin: 0 20px 30px 20px;
+  margin: 0 20px 20px 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -112,7 +112,7 @@
   box-sizing: border-box;
 }
 .setting .group-104 {
-  border-radius: 2px;
+  border-radius: 10px;
   border: 1px solid #B9BCDD;
   background: #F9FAFF;
   position: relative;
@@ -165,6 +165,21 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+.setting .infomation-box {
+  /* border: 2px solid black;
+  border-radius: 10px; */
+  padding-top: 10px;
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+.setting .infomation-box-title {
+  color: black;
+  font-weight: 700;
+  margin: 5px;
+}
+
 .setting .notification {
   margin-right: 10px;
   width: 260px;

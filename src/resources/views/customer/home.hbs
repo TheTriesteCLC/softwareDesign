@@ -1,0 +1,74 @@
+<div>
+	<a href="/customer/profile">
+	<h1>Customer profile</h1></a>
+</div>
+<div
+  style="background-color: transparent; width: 100%; height: 775.08px; "
+>
+  <div id="map" style="width: 100%; height: 100%; border-top-left-radius: 30px; border-top-right-radius: 30px;"></div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+	const map_parameters = { center: {lat: 47.490, lng: -117.585}, zoom: 18};
+	const map = new google.maps.Map(document.getElementById('map'), map_parameters);
+	let socket = io('//localhost:3000');
+	let marker = null; 
+	
+	getLocation();
+	setInterval(getLocation, 5000); 
+
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition, showError);
+		} else {
+			alert("Geolocation is not supported by this browser.");
+		}
+	}
+
+	function drawDriver() {
+		const image = {
+			url: '/assets/images/car.png',
+			size: new google.maps.Size(40, 40),
+			scaledSize: new google.maps.Size(40, 40),
+			origin: new google.maps.Point(0, 0),
+			anchor: new google.maps.Point(20, 20)
+		};
+		return image;
+	}
+
+	function showPosition(position) {
+		const lat = position.coords.latitude;
+		const lng = position.coords.longitude;
+		const image = drawDriver();
+		if (marker) {
+			marker.setMap(null);
+		}
+	
+		marker = new google.maps.Marker({
+			position: {lat, lng},
+			map: map,
+			icon: image
+		});
+		map.setCenter(new google.maps.LatLng(lat, lng));
+		socket.emit('driverPosition', { id: '001', position: {latitude: lat, longitude: lng} });
+	}
+
+	function showError(error) {
+		switch(error.code) {
+			case error.PERMISSION_DENIED:
+				console.error("User denied the request for Geolocation.");
+				break;
+			case error.POSITION_UNAVAILABLE:
+				console.error("Location information is unavailable.");
+				break;
+			case error.TIMEOUT:
+				console.error("The request to get user location timed out.");
+				break;
+			case error.UNKNOWN_ERROR:
+				console.error("An unknown error occurred.");
+				break;
+		}
+	}
+</script>

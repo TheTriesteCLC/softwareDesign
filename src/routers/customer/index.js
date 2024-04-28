@@ -5,11 +5,13 @@ require('../../config/passport/passport')(passport);
 
 const siteController = require('../../controllers/customer.c');
 
+router.get('/home', isLoggedIn, siteController.home)
 router.get('/menu', siteController.menu);
-router.get('/settings', siteController.settings);
+router.get('/profile', siteController.profile);
 router.get('/history', siteController.history);
 
 router.get('/schedule', siteController.schedule);
+router.get('/logout',siteController.logout);
 
 //Login
 router.get('/login', siteController.login);
@@ -17,7 +19,8 @@ router.post('/login',
     passport.authenticate('local-login', { failureRedirect: './login?status=failed' }),
     function (req, res) {
         console.log("redirecting");
-        res.redirect('./dashboard');
+        console.log(req.user);
+        res.redirect('./home');
     }
 );
 
@@ -29,10 +32,22 @@ router.post('/signup',
     function (req, res) {
         console.log("redirecting");
         console.log(req.user);
-        res.redirect('/');
+        res.redirect('./home');
     }
 );
 
-router.get('/', siteController.homepage);
+
+router.get(/.*/, isLoggedIn, siteController.home)
+
+function isLoggedIn(req, res, next) {
+
+    console.log("Authenticate checking");
+    if (req.isAuthenticated()) { // is authenticated
+        return next();
+    }
+
+    // is not authenticated
+    res.redirect('/customer/login');
+}
 
 module.exports = router;

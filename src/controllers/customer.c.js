@@ -9,10 +9,22 @@ class siteController {
     }
     res.render('customer/login', { layout: 'customer/customLogin', messFailed });
   }
+  
+  //[GET] /logout
+  logout(req, res, next) {
+    console.log("Loging out");
+    req.logout(function (err) {
+      if (err) {
+        return next(err);
+      }
+      res.redirect('./login');
+    })
+  }
 
   //[GET] /settings
-  settings(req, res, next) {
-    res.render('customer/settings', { layout: 'customer/main' });
+  profile(req, res, next) {
+    console.log(req.user);
+    res.render('customer/profile', { layout: 'customer/main', user: req.user });
   }
 
   //[GET] /history
@@ -30,9 +42,9 @@ class siteController {
     res.render('customer/scheduleTimeAndDate', { layout: 'customer/main' });
   }
 
-  //[GET] /homepage
-  homepage(req, res) {
-    res.render('homepage', { layout: 'main' });
+  //[GET] /home
+  home(req, res) {
+    res.render('customer/home', { layout: 'customer/main' });
   }
 
   //[GET] /signup
