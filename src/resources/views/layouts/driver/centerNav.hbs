@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+                
+        /*
+        =====
+        DEPENDENCES
+        =====
+        */
+
+        :where(.ra-button) {
+        background-color: var(--ra-button-background-color, transparent);
+        padding: var(--ra-button-padding, var(--ra-button-padding-top, 0) var(--ra-button-padding-right, 0) var(--ra-button-padding-bottom, 0) var(--ra-button-padding-left, 0));
+        border: var(--ra-button-border, var(--ra-button-border-width, 0) var(--ra-button-border-style, solid) var(--ra-button-border-color, currentcolor));
+
+        font-family: var(--ra-button-font-family, inherit);
+        font-size: var(--ra-button-font-size, 1em);
+        font-weight: var(--ra-button-font-weight, inherit);
+
+        color: var(--ra-button-color, currentcolor);
+        text-align: var(--ra-button-text-align, center);
+        text-transform: var(--ra-button-text-transform, inherit);
+        letter-spacing: var(--ra-button-letter-spacing, inherit);
+        word-spacing: var(--ra-button-word-spacing, inherit);
+
+        text-shadow: var(--ra-button-text-shadow, none);
+        display: var(--ra-button-display, inline-flex);
+        }
+
+        .ra-button::-moz-focus-inner,
+        .ra-button[type="button"]::-moz-focus-inner,
+        .ra-button[type="reset"]::-moz-focus-inner,
+        .ra-button[type="submit"]::-moz-focus-inner {
+
+        /* Remove the inner border and padding in Firefox. */
+
+        border-style: none;
+        padding: 0;
+        }
+
+        .uia-hamburger{  
+        --_uia-hamburger-thickness: var(--uia-hamburger-thickness, 4px);
+
+        display: var(--uia-hamburger-display, inline-flex);
+        inline-size: var(--uia-hamburger-width, 28px);
+        block-size: var(--uia-hamburger-height, 20px);
+
+        position: var(--uia-hamburger-position, relative);
+        }
+
+        .uia-hamburger::before, 
+        .uia-hamburger::after, 
+        .uia-hamburger__label{
+        inline-size: 100%;
+        border-block-start: var(--_uia-hamburger-thickness) solid var(--uia-hamburger-background-color, currentColor);
+        border-radius: var(--uia-hamburger-border-radius, 5px);
+
+        position: absolute;
+        }
+
+        .uia-hamburger::before, 
+        .uia-hamburger::after{
+        content:"";
+        }
+
+        .uia-hamburger::before{
+        inset-block-start: var(--uia-hamburger-first-line-position, 0);
+        }
+
+        .uia-hamburger::after{
+        inset-block-start: var(--uia-hamburger-third-line-position, calc(100% - var(--_uia-hamburger-thickness)));
+        }
+
+        .uia-hamburger__label{
+        /* The calculation of middle hamburger button line position */
+
+        inset-block-start: calc(50% - calc(var(--_uia-hamburger-thickness) / 2));
+        }
+
+        /*
+        =====
+        HELPERS
+        =====
+        */
+
+        .ha-screen-reader {
+        width: var(--ha-screen-reader-width, 1px);
+        height: var(--ha-screen-reader-height, 1px);
+        padding: var(--ha-screen-reader-padding, 0);
+        border: var(--ha-screen-reader-border, none);
+
+        position: var(--ha-screen-reader-position, absolute);
+        clip: var(--ha-screen-reader-clip, rect(1px, 1px, 1px, 1px));
+        overflow: var(--ha-screen-reader-overflow, hidden);
+        }
+
+        /*
+        =====
+        MENU STYLES
+        =====
+        */
+
+        .menu{
+        --_menu-circle-size: var(--menu-circle-size, 6.25rem);
+        --_menu-circle-height: calc(var(--_menu-circle-size) / 2);  
+        --_menu-circle-background-color: var(--menu-circle-background-color, currentColor);
+
+        --_menu-hamburger-width: var(--menu-hamburger-width, 1.75rem);
+        --_menu-hamburger-height: var(--menu-hamburger-height, 1.25rem);
+
+        --uia-hamburger-width: var(--_menu-hamburger-width);
+        --uia-hamburger-height: var(--_menu-hamburger-height);
+        --uia-hamburger-background-color: var(--menu-hamburger-background-color, #fff);
+        --uia-hamburger-position: absolute;
+        
+        inline-size: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+
+        position: fixed;
+        inset-block-end: 0;
+        inset-inline-start: 0;
+        z-index: var(--menu-z-index, 9998);
+        }
+
+        .menu__nav{
+        box-sizing: border-box;
+        inline-size: 100%;
+        block-size: 0;
+
+        transition: opacity .2s ease-out;
+        opacity: 0;
+
+        display: flex;
+        align-items: flex-end;
+        z-index: 2;
+        }
+
+        .menu__list{
+        inline-size: 100%;
+        max-block-size: 100%;
+
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        }
+
+        .menu__group{
+        padding: .5rem 2rem; 
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        }
+
+        .menu__toggle{
+        box-sizing: border-box;
+        inline-size: var(--_menu-circle-size);
+        block-size: var(--_menu-circle-height);
+        flex: none;
+
+        position: relative;
+        isolation: isolate;
+        }
+
+        .menu__toggle::before{
+        content: "";
+        box-sizing: border-box;
+        inline-size: 1em;
+        block-size: 1em;
+        border: 1px solid var(--_menu-circle-background-color);
+        font-size: var(--_menu-circle-size);
+
+        background-color: var(--_menu-circle-background-color);
+        border-radius: 50%;
+
+        position: absolute;
+        inset-block-end: -.5em;
+        inset-inline-start: calc(50% - .5em);
+        z-index: -1;
+        }
+
+        .menu__hamburger{
+        inset-inline-start: 50%;
+        inset-block-end: .75rem;
+        transform: translateX(-50%);
+        }
+
+        /*
+        =====
+        MENU STATES
+        =====
+        */
+
+        .menu_activated{
+        --uia-hamburger-first-line-position: 50%;
+        --uia-hamburger-third-line-position: 50%;
+
+        block-size: 100%;
+        }
+
+        .menu_activated .menu__nav{
+        flex-grow: 1;
+        opacity: 1;
+
+        will-change: opacity;
+        transition-duration: .2s;
+        transition-delay: .3s;
+        }
+
+        .menu_activated .menu__toggle::before{
+        inline-size: 100vmax;
+        block-size: 100vmax;
+        transform: translate3d(-50vh, -50vh, 0) scale(5);
+        }
+
+        .menu:not(.menu_activated) .menu__list{
+        display: none;
+        }
+
+        .menu_activated .menu__hamburger::before{
+        transform: translate3d(0, -50%, 0) rotate(45deg);
+        }
+
+        .menu_activated .menu__hamburger::after{
+        transform: translate3d(0, -50%, 0) rotate(135deg);
+        }
+
+        .menu_activated .menu__hamburger-label{
+        transform: rotate(-45deg) translate3d(-.285em, -.3em, 0);
+        opacity: 0;
+        }
+
+        @media (prefers-reduced-motion: no-preference){
+        .menu__toggle::before{
+            will-change: width, height;
+            transition: transform .25s cubic-bezier(0.04, -0.1, 0.29, 0.98),
+            width .25s cubic-bezier(0.04, -0.1, 0.29, 0.98),
+            height .25s cubic-bezier(0.04, -0.1, 0.29, 0.98);
+        }  
+
+        .menu_activated .menu__toggle::before{
+            transition-duration: 1s;
+        }
+
+        .menu__hamburger::before, 
+        .menu__hamburger::after, 
+        .menu__hamburger-label{
+            transition-timing-function: ease;
+            transition-duration: .15s;  
+        }
+
+        .menu__hamburger::before, 
+        .menu__hamburger::after{
+            transition-property: transform;
+        }
+
+        .menu__hamburger-label{
+            transition-property: transform, opacity;
+        }
+        }
+
+        /*
+        =====
+        HELPERS
+        =====
+        */
+
+        :where(.ra-link) {
+        display: var(--ra-link-display, inline-flex);
+        }
+
+        :where(.ra-link[href]) {
+        color: var(--ra-link-color);
+        text-decoration: var(--ra-link-text-decoration, none);
+        }
+
+        :where(.ra-list) {
+        padding-inline-start: var(--ra-list-padidng-inline-start, 0);
+        margin-block: var(--ra-list-margin-block-start, 0) var(--ra-list-margin-block-end, 0);
+        list-style: var(--ra-list-list-style, none);
+        }
+
+        /*
+        =====
+        UIA-CONTROL
+        =====
+        */
+
+        .uia-control__group {
+            cursor: var(--uia-control-cursor, var(--_uia-control-cursor, pointer));	
+            line-height: var(--uia-control-line-height, 1);
+        }
+
+        .uia-control {
+            --_uia-control-padding_default: 0;
+
+            --_uia-control-border-width: var(--uia-control-border-width);
+            --_uia-control-border-style: var(--uia-control-border-style, solid);
+            --_uia-control-border-color: var(--uia-control-border-color, currentColor);
+
+            --_uia-control-padding: var(--uia-control-padding,
+                                                                var(
+                                                                    --uia-control-padding-block-start,
+                                                                    var(--_uia-control-padding_default)
+                                                                )
+                                                                var(
+                                                                    --uia-control-padding-inline-end,
+                                                                    var(--_uia-control-padding_default)
+                                                                )
+                                                                var(
+                                                                    --uia-control-padding-block-end, 
+                                                                    var(--_uia-control-padding_default)
+                                                                )
+                                                                var(
+                                                                    --uia-control-padding-inline-start,
+                                                                    var(--_uia-control-padding_default)
+                                                                )
+                                                            );
+            --_uia-control-border: var(--_uia-control-border-width) var(--_uia-control-border-style) var(--_uia-control-border-color);
+            --_uia-control-border-radius: var(--uia-control-border-radius, .25rem);
+        }
+
+        .uia-control__group {
+            display: var(--uia-control-display, inline-flex);
+            gap: var(--uia-control-gap, .5rem);
+            
+            padding: var(--_uia-control-padding);
+
+            border: var(--_uia-control-border);
+            border-radius: var(--_uia-control-border-radius);
+            background-image: linear-gradient(
+                var(--uia-control-background-degree, 135deg),
+                var(
+                    --uia-control-background-start-color,
+                    var(--uia-control-background-color)
+                ) var(--uia-control-background-start-position, 0),
+                var(
+                    --uia-control-background-end-color,
+                    var(--uia-control-background-color)
+                ) var(--uia-control-background-end-position, 100%)
+            );
+        }
+
+        /*
+        =====
+        DEMO
+        =====
+        */
+
+        :root{
+        --menu-circle-background-color: #4557bb;
+        --menu-hamburger-background-color: #fff;
+        }
+
+        @media (prefers-color-scheme: dark){
+
+            :root{
+            --menu-circle-background-color: #45526b;
+            --menu-hamburger-background-color: #ebecef;
+            
+                --accent-mode-color: #ebecef;
+                --main-mode-color: #1e2229;
+            }	
+        }
+
+        :focus-visible{
+        outline: 2px solid currentColor;
+        outline-offset: 5px;
+        }
+
+        body{
+        display: flex;
+        flex-direction: column;
+        min-block-size: 100dvh;
+        margin: 0;  
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+        background-color: var(--main-mode-color);
+        color: var(--accent-mode-color);
+        }
+
+        .page{
+        text-align: center;
+        padding-bottom: 40px;
+        background-color: #343b71;
+        }
+
+        .page__name{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        }
+
+        .page__hint{
+        display: block;
+        line-height: 1.45;
+        margin-block-size: 1rem;
+        }
+
+        .menu_activated{
+        color: #ebecef;
+        }
+
+        .linktr{
+        --uia-control-background-color: rgb(209, 246, 255);
+        --uia-control-border-radius: 2rem;
+        --uia-control-padding: .75rem 1.5rem;
+        --uia-control-border-width: 1px;
+        --uia-control-border-color: rgb(209, 246, 255);
+        
+        order: -1;
+        padding: 1.75rem;
+        text-align: center;
+        }
+
+        .linktr__goal{ 
+        box-shadow: rgb(8 49 112 / 24%) 0 2px 8px 0;  
+        }
+
+        @media (prefers-color-scheme: dark){
+
+            .linktr{
+            --uia-control-background-color: #45526b;
+            --uia-control-border-color: #45526b;
+            }	
+        }
+
+        @media (min-width: 1024px){
+
+        .linktr{
+            position: absolute; 
+            right: 1rem; 
+            bottom: 1rem;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        {{{body}}}
+    </div>
+    <div class="menu">
+    <nav id="main-menu" class="menu__nav">
+        <ul class="menu__list ra-list">
+        <li class="menu__group">
+            <a href="/driver/home" class="menu__link ra-link">Home</a>
+        </li>
+        <li class="menu__group">
+            <a href="/driver/profile" class="menu__link ra-link">Profile</a>
+        </li>
+        <li class="menu__group">
+            <a href="#0" class="menu__link ra-link">Services</a>
+        </li>
+        <li class="menu__group">
+            <a href="#0" class="menu__link ra-link">Portfolio</a>
+        </li>
+        <li class="menu__group">
+            <a href="#0" class="menu__link ra-link">Blog</a>
+        </li>
+        <li class="menu__group">
+            <a href="#0" class="menu__link ra-link">Contacts</a>
+        </li>
+        </ul>
+    </nav>
+    <button class="menu__toggle ra-button" type="button" aria-controls="main-menu">
+        <span class="menu__hamburger uia-hamburger">
+        <span class="menu__hamburger-label uia-hamburger__label">
+            <span class="menu__toggle-hint ha-screen-reader">Open menu</span>
+        </span>
+        </span>
+    </button>
+    </div>
+    {{!-- <div class="linktr">
+    <a href="https://cssisntmagic.substack.com" target="_blank" class="ra-link uia-control">
+        <span class="linktr__goal uia-control__group">Subscribe on my email newsletter with CSS tips <span aria-hidden="true">💪💪💪</span>
+        </span>
+    </a>
+    </div> --}}
+</body>
+<script>
+    /*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert. So use it at your own risk
+!!!!!
+*/
+
+
+(function(){
+  'use strict';
+
+  class Menu {
+    constructor(settings) {
+      this.menuRootNode = settings.menuRootNode;
+      this.isInitialized = false;
+      this.isOpened = false;
+    }
+
+    changeMenuState(menuState) {
+      return this.isOpened = !menuState;
+    }
+  }
+
+  class MenuBurger extends Menu {
+
+    constructor(settings) {
+      super(settings);
+      this.openText = settings.openText;
+      this.closeText = settings.closeText;
+      this.menuClassesNames = settings.menuClassesNames;
+      this.menuLinks = this.menuRootNode.querySelectorAll(`.${this.menuClassesNames.menuItemClass}`);
+      this.hiddenElementsQuery = settings.hiddenElementsQuery;
+      this.pageNodes = document.querySelectorAll(this.hiddenElementsQuery);  
+      this.toggleNode = this.menuRootNode.querySelector(`.${this.menuClassesNames.toggleClass}`);
+      this.a11yAttributes = ['aria-hidden', 'inert'];
+      this.a11yAttributeValues = {
+        'aria-hidden': true,
+        'inert': ''
+      }
+    }
+
+    init() {
+      let currentMenuState = this.changeMenuState(this.isOpened);
+
+      this.changeToggleHint(
+        this.getCurrentToggleHint(currentMenuState, this.openText, this.closeText), 
+        this.menuRootNode.querySelector(`.${this.menuClassesNames.toggleHintClass}`)
+      );
+      this.menuRootNode.classList.toggle(`${this.menuClassesNames.activeClass}`);
+      this.setCurrentA11yAttribute(currentMenuState, this.toggleNode, "aria-expanded");  
+      this.getFocusCurrentNode(currentMenuState, this.toggleNode, this.menuLinks[0]);
+      this.pageNodes
+        .forEach(
+          (node) => this.setCurrentPageA11yAttributes(
+            currentMenuState, 
+            node, 
+            this.a11yAttributes, 
+            this.a11yAttributeValues)
+      ); 
+    }
+
+    changeToggleHint(toggleHint, toggleNode) {
+      toggleNode.textContent = toggleHint;
+      return toggleHint; 
+    }
+
+    getCurrentToggleHint(currentMenuState, openText, closeText) {
+      return (currentMenuState !== true) ? openText : closeText;
+    }
+
+    setCurrentA11yAttribute(currentMenuState, toggleNode, attribute) {
+      return (currentMenuState !== true) ? 
+        toggleNode.removeAttribute(attribute) : 
+        toggleNode.setAttribute(attribute, currentMenuState);
+    }
+
+    getFocusCurrentNode(currentMenuState, importantFocusNode, toggleNode) {
+      return (currentMenuState !== true) ? 
+        importantFocusNode.focus() : 
+        toggleNode.focus();
+    }
+
+    setCurrentPageA11yAttributes(currentMenuState, node, a11yAttributes, a11yAttributeValues) {
+      return (currentMenuState !== true) ? 
+        a11yAttributes.forEach((attribute) => node.removeAttribute(attribute)) : 
+        a11yAttributes.forEach((attribute) => node.setAttribute(attribute, a11yAttributeValues[attribute]));
+    }
+  }
+
+  const menuClassesNames = {
+    rootClass: 'menu',
+    activeClass: 'menu_activated',
+    toggleClass: 'menu__toggle',
+    toggleHintClass: 'menu__toggle-hint',
+    menuItemClass: 'menu__link'
+  }
+
+  const jsMenuNode = document.querySelector(`.${menuClassesNames.rootClass}`);
+  const demoMenu = new MenuBurger ({
+    menuRootNode: jsMenuNode,
+    menuClassesNames: menuClassesNames,
+    openText: 'Open the menu',
+    closeText: 'Close the menu',
+    hiddenElementsQuery: `body > *:not(.${menuClassesNames.rootClass}):not(script)`
+  });
+
+  let menuIsDisplayed = false;
+
+  function toggleMenu(event) {   
+
+    if (menuIsDisplayed === false) {
+      document.addEventListener('keyup', handleEscape);
+    } 
+
+    function handleEscape(event) {
+
+      let key = event.which || event.keyCode;
+
+      // remove the listener after click the button if he doesn't pust the ESC key
+      if (menuIsDisplayed === false) {
+        document.removeEventListener('keyup', handleEscape);
+      } 
+
+      if (key === 27 && menuIsDisplayed === true) {
+        event.stopPropagation();
+        menuIsDisplayed = !menuIsDisplayed;
+        document.removeEventListener('keyup', handleEscape);
+        demoMenu.init();
+      }
+    };
+
+    menuIsDisplayed = !menuIsDisplayed;
+    return demoMenu.init();
+  }
+
+  jsMenuNode.querySelector(`.${menuClassesNames.toggleClass}`).addEventListener('click', toggleMenu);
+})();
+</script>
+</html>

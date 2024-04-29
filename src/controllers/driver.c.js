@@ -23,7 +23,7 @@ class siteController {
   }
 
   home(req, res) {
-    res.render( 'driver/home', { layout: 'driver/main' });   
+    res.render( 'driver/home', { layout: 'driver/centerNav' });   
   }
   
   confirm(req, res) {
@@ -35,12 +35,12 @@ class siteController {
   }
 
   profile(req, res) {
-    res.render( 'driver/profile', { layout: 'driver/main', user: req.user });   
+    res.render( 'driver/profile', { layout: 'driver/centerNav', user: req.user });   
   }
 
   //[GET] /update-profile
   updateProfile(req, res) {
-    res.render( 'driver/updateProfile', { layout: 'driver/main', user: req.user });   
+    res.render( 'driver/updateProfile', { layout: 'driver/centerNav', user: req.user });   
   }
 
   //[POST] /update-profile
