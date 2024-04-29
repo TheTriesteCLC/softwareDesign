@@ -25,13 +25,13 @@ class siteController {
   //[GET] /settings
   profile(req, res, next) {
     console.log(req.user);
-    res.render('customer/profile', { layout: 'customer/main', user: req.user });
+    res.render('customer/profile', { layout: 'customer/centerNav', user: req.user });
   }
 
-  //[GET] /update-profile/:slug
+  //[GET] /update-profile
   updateProfile(req, res, next) {
     console.log(req.user);
-    res.render('customer/updateProfile', { layout: 'customer/main', user: req.user });
+    res.render('customer/updateProfile', { layout: 'customer/centerNav', user: req.user });
   }
 
   //[POST] /update-profile
@@ -87,7 +87,7 @@ class siteController {
 
   //[GET] /home
   home(req, res) {
-    res.render('customer/home', { layout: 'customer/main' });
+    res.render('customer/home', { layout: 'customer/centerNav' });
   }
 
   //[GET] /signup
