@@ -90,6 +90,11 @@ class siteController {
     res.render('customer/home', { layout: 'customer/centerNav' });
   }
 
+  //[GET] /new-cabs
+  newCabs(req, res) {
+    res.render('customer/newCabs', { layout: 'customer/newCabs' });
+  }
+
   //[GET] /signup
   signup(req, res) {
     res.render('customer/signup', { layout: 'customer/main' });
