@@ -1,8 +1,12 @@
 <link rel="stylesheet" href="/pages/singUp.css">
 <div class="sing-up">
-    <form method="POST" action="/driver/signup">
+    <form method="POST" action="/driver/signup" id="signup-form" enctype="multipart/form-data">
       <div class="create-an-account">Create An Account for driver</div>
       <div style="display: flex; align-items: center; flex-direction: column">
+        <img id="profile-image" src="/assets/images/defaultAvt.jpg" alt="your image" />
+        {{!-- <p style="color: red; font-weight: 600;">You must upload your profile image</p> --}}
+        <input type="file" id="input-avatar" name="avatar" accept="image/jpeg, image/png" style="display:none" onchange="chooseFile(this)">
+        <button class="sing-up-1 group-33" type="button" style="background-color: #B9BCDD;" onclick="clickFileInput()"> Upload image </button>
         <p class="infomation-box-title">Driver's information</p>
         <div class="infomation-box">
           <div class="group-61">
@@ -73,10 +77,36 @@
     </form>
       <div class="container-3">
         <div class="already-have-an-account">Already have an account?</div>
-        <a class="group-117" href="#">
+        <a class="group-117" href="/driver/login" style="text-decoration: none;">
           <div>
-            <span class="sing-in"> Sign in </span>
+            <span class="sing-in"> Login </span>
           </div>
         </a>
       </div>
     </div>
+
+<script>
+  function chooseFile(fileInput) {
+    if(fileInput.files && fileInput.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function(e) {
+        $('#profile-image').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(fileInput.files[0]);
+      
+    }
+  }
+  function clickFileInput() {
+    document.getElementById("input-avatar").click();
+  }
+  
+
+  document.getElementById('signup-form').addEventListener('submit', function (event) {
+    const inputAvatar = document.getElementById('input-avatar');
+      if(!inputAvatar.files || !inputAvatar.files[0]) {
+        event.preventDefault();
+        alert("You must upload profile avatar")
+    }
+  });
+</script>

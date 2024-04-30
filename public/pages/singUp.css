@@ -260,6 +260,15 @@
   width: calc(100% - 40px);
   box-sizing: border-box;
 }
+
+.sing-up #profile-image {
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
 .sing-up .sing-up-1 {
   overflow-wrap: break-word;
   font-family: 'SF Pro Display', 'Roboto Condensed';
