@@ -92,7 +92,7 @@ class siteController {
 
   //[GET] /new-cabs
   newCabs(req, res) {
-    res.render('customer/newCabs', { layout: 'customer/newCabs' });
+    res.render('customer/newCabs', { layout: 'customer/newCabs', user: JSON.stringify(req.user) });
   }
 
   //[GET] /signup

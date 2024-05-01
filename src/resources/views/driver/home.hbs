@@ -22,7 +22,13 @@
 	}).addTo(map);
 
 	let socket = io('//localhost:3000');
+
+	socket.on("requestDriver", () => {
+		window.location.href = `/driver/confirm`;
+	})
+
 	let marker = null;
+	let users = JSON.parse('{{{user}}}')
 
 	getLocation();
 	setInterval(getLocation, 5000);
@@ -53,7 +59,7 @@
 
 		marker = L.marker([lat, lng], {icon: icon}).addTo(map);
 		map.setView(new L.LatLng(lat, lng), map.getZoom());
-		socket.emit('driverPosition', { id: '001', position: {latitude: lat, longitude: lng} });
+		socket.emit('driverPosition', { id: users._id, position: {latitude: lat, longitude: lng} });
 	}
 
 	function showError(error) {

@@ -26,15 +26,31 @@ function haversineDistance(coords1, coords2, isMiles = false) {
 class PositionRealTime {
     static posDrivers = new Map();
     static numbersOfRun = new Map();
-    
+    static activityDriver = new Map();
+    static distances = [];
+
     static PositionDriver(io) {
         io.on('connection', socket => {
             socket.on('driverPosition', (data) => {
+                //console.log("driver", data)
+                this.activityDriver.set(data.id, socket.id)
                 this.posDrivers.set(data.id, data.position);
             });
 
             socket.on('increasNumbersOfRun', (data) => {
                 this.numbersOfRun.set(data.id, this.numbersOfRun.get(data.id) + 1)
+            })
+
+            socket.on('requestUser', (data) => {
+                this.distances = []
+                this.posDrivers.forEach((value, key) => {
+                    console.log(value)
+                    const distance = haversineDistance(data.start, value);
+                    this.distances = [ ...this.distances, {idDriver: key, idUser: data._id, distance } ];
+                });
+                this.distances.sort((a, b) => b.distance - a.distance);
+                const tagetId = this.activityDriver.get(this.distances[0].idDriver)
+                socket.to(tagetId).emit("requestDriver")
             })
 
             io.emit('updateDriverPosition', () => {

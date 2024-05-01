@@ -23,7 +23,7 @@ class siteController {
   }
 
   home(req, res) {
-    res.render( 'driver/home', { layout: 'driver/centerNav' });   
+    res.render('driver/home', { layout: 'driver/centerNav', user: JSON.stringify(req.user) });   
   }
   
   confirm(req, res) {
