@@ -54,7 +54,7 @@
 }
 .sing-up .create-an-account {
   position: relative;
-  margin: 0 20px 34px 20px;
+  margin: 0 20px 15px 20px;
   justify-content: center;
   display: inline-block;
   align-self: flex-start;
@@ -98,7 +98,7 @@
 .sing-up .group-61 {
   border-radius: 2px;
   position: relative;
-  margin: 0 20px 20px 20px;
+  margin: 0 20px 10px 20px;
   display: flex;
   flex-direction: column;
   width: calc(100% - 40px);

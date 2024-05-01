@@ -5,7 +5,8 @@ require('../../config/passport/passport')(passport);
 
 const siteController = require('../../controllers/customer.c');
 
-router.get('/home', isLoggedIn, siteController.home)
+router.get('/home', isLoggedIn, siteController.home);
+router.get('/new-cabs', isLoggedIn, siteController.newCabs)
 router.get('/menu', siteController.menu);
 router.get('/update-profile', siteController.updateProfile);
 router.post('/update-profile', siteController.update);
