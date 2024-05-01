@@ -38,6 +38,10 @@ class siteController {
     res.render( 'driver/profile', { layout: 'driver/centerNav', user: req.user });   
   }
 
+  chat(req, res) {
+    res.render('driver/chat', {layout: 'driver/main'})
+  }
+ 
   //[GET] /update-profile
   updateProfile(req, res) {
     res.render( 'driver/updateProfile', { layout: 'driver/centerNav', user: req.user });   

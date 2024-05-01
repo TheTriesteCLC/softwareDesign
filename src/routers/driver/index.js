@@ -13,6 +13,8 @@ router.get('/profile', isLoggedIn, siteController.profile)
 router.get('/update-profile', siteController.updateProfile);
 router.post('/update-profile', siteController.update);
 router.get('/logout', isLoggedIn, siteController.logout)
+router.get('/chat', siteController.chat)
+
 
 //Login
 router.get('/login', siteController.login);
