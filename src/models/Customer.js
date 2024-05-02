@@ -17,6 +17,12 @@ const Customer = new Schema({
   slug: { type: String, slug: 'username', unique: true },
 
   status: { type: String, required: true },
+
+  favorite: [{
+    lat: { type: Number },
+    long: { type: Number },
+    address: { type: String },
+  }]
 }, {
   timestamps: true,
 });

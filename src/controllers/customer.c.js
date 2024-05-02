@@ -95,6 +95,11 @@ class siteController {
     res.render('customer/newCabs', { layout: 'customer/newCabs', user: JSON.stringify(req.user) });
   }
 
+  //[GET] /favorite
+  favorite(req, res) {
+    res.render('customer/favorite', { layout: 'customer/newCabs' });
+  }
+
   //[GET] /signup
   signup(req, res) {
     res.render('customer/signup', { layout: 'customer/main' });
