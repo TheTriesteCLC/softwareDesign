@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<form action="/customer/favorite" method="POST">
+<form action="/customer/add-favorite" method="POST">
     <div style="position: relative;" class="sing-up">
         <div>
             <div class="create-an-account">Adding new favorite place</div>
@@ -31,8 +31,8 @@
             </div>
             <div style="display: flex; align-items: center; flex-direction: column">
                 <div class="group-61">
-                    <label class="name" for="input-end-cabs">Address</label>
-                    <input class="input" type="text" id="input-end-cabs" name="end-cabs" placeholder="Drag map to choose destination" required readonly>
+                    <label class="name" for="input-address">Address</label>
+                    <input class="input" type="text" id="input-address" name="address" placeholder="Drag map to choose destination" required readonly>
                 </div>
             </div>
             <button class="sing-up-1 group-33 btnBook"> Add </button>
@@ -113,7 +113,7 @@
             latitude: map.getCenter().lat,
             longitude: map.getCenter().lng
         },function(result) {
-            document.getElementById('input-end-cabs').value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`;
+            document.getElementById('input-address').value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`;
             document.getElementById('input-lat').value = result.latitude;
             document.getElementById('input-long').value = result.longitude;
             favoritePoint.latitude = result.latitude       

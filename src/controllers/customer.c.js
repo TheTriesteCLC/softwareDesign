@@ -96,13 +96,39 @@ class siteController {
   }
 
   //[GET] /favorite
-  favorite(req, res) {
-    res.render('customer/favorite', { layout: 'customer/newCabs' });
+  async favorite(req, res) {
+    const user = await Customer.findOne({ username: req.user.username }).lean();
+    res.render('customer/favorite', { layout: 'customer/newCabs', 
+    username: req.user.username , favorite: user.favorite });
   }
 
   //[GET] /add-favorite
   addFavorite(req, res) {
     res.render('customer/addFavorite', { layout: 'customer/newCabs' });
+  }
+
+  //[POST] /add-favorite
+  async addToFavorite(req, res) {
+    let user = req.user;
+
+    const formData = req.body;
+    console.log(formData);
+
+    await Customer.findOneAndUpdate(
+      { username: user.username },
+      {
+        $push: {
+          favorite: {
+            name: formData.name,
+            lat: formData.lat,
+            long: formData.long,
+            address: formData.address
+          }
+        }
+      },
+      { upsert: true });
+
+    res.redirect('/customer/favorite');
   }
 
   //[GET] /signup

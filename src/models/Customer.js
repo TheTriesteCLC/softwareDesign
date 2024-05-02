@@ -19,6 +19,7 @@ const Customer = new Schema({
   status: { type: String, required: true },
 
   favorite: [{
+    name: { type: String},
     lat: { type: Number },
     long: { type: Number },
     address: { type: String },

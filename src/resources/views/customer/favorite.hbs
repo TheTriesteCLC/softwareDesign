@@ -17,13 +17,14 @@
         </div>
       </div>
     <div class="container-5">
-        <div class="nearby-you">hahahjhj's favorite places</div>
+        <div class="nearby-you">{{username}}'s favorite places</div>
+        {{#each favorite}}
         <div class="group-95">
           <div class="container-12">
             <div class="container-18">
-              <div class="cihan-soysakal">Name</div>
+              <div class="cihan-soysakal">{{this.name}}</div>
               <div class="group-65">
-                <span class="container"> 7P28QMF3+XH, Quận 10, Thành phố Hồ Chí Minh, Việt Nam </span>
+                <span class="container"> {{this.address}} </span>
               </div>
             </div>
           </div>
@@ -36,22 +37,23 @@
                     src="../assets/vectors/vector43_x2.svg"
                   />
                 </div>
-                <div class="container-2">15</div>
+                <div class="container-2">{{this.lat}}</div>
               </div>
               <div class="group-94">
                 <img
                   class="comment-1"
                   src="../assets/vectors/comment12_x2.svg"
                 />
-                <span class="container-3"> 4 </span>
+                <span class="container-3">{{this.long}}</span>
               </div>
             </div>
             <a href="#">
                 <button class="group-651 call">
-                    Call 
+                    Book 
                 </button>
             </a>
           </div>
         </div>
+        {{/each}}
       </div>
 </div>
