@@ -87,7 +87,7 @@ class siteController {
 
   //[GET] /home
   home(req, res) {
-    res.render('customer/home', { layout: 'customer/centerNav' });
+    res.render('customer/home', { layout: 'customer/newCabs' });
   }
 
   //[GET] /new-cabs

@@ -1,70 +1,53 @@
-<div
-  style="background-color: transparent; width: 100%; height: 775.08px; "
->
-  <div id="map" style="width: 100%; height: 100%; border-top-left-radius: 30px; border-top-right-radius: 30px;"></div>
+<div id="map">
+    <div class="leaflet-bottom leaflet-right">
+        <button style="background-color: #4557bb; border: none; color: white; padding: 15px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 20px; border-radius: 40%; pointer-events: auto;" id="my-loc">
+            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+        </button>
+    </div>
 </div>
 
-<script src="https://maps.googleapis.com/maps/api/js"></script>
+<div style="position: relative;" class="sing-up">
+	
+</div>
+
+<!-- leaflet js  -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 
 <script>
-	const map_parameters = { center: {lat: 47.490, lng: -117.585}, zoom: 18};
-	const map = new google.maps.Map(document.getElementById('map'), map_parameters);
-	let socket = io('//localhost:3000');
-	let marker = null; 
-	
-	getLocation();
-	setInterval(getLocation, 5000); 
+	// Map initialization 
+    var map = L.map('map').setView([10.762622, 106.660172], 12);
 
-	function getLocation() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(showPosition, showError);
-		} else {
-			alert("Geolocation is not supported by this browser.");
-		}
-	}
+	//osm layer
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+    osm.addTo(map);
 
-	function drawDriver() {
-		const image = {
-			url: '/assets/images/car.png',
-			size: new google.maps.Size(40, 40),
-			scaledSize: new google.maps.Size(40, 40),
-			origin: new google.maps.Point(0, 0),
-			anchor: new google.maps.Point(20, 20)
-		};
-		return image;
-	}
+    //L.control.locate().addTo(map);
 
-	function showPosition(position) {
-		const lat = position.coords.latitude;
-		const lng = position.coords.longitude;
-		const image = drawDriver();
-		if (marker) {
-			marker.setMap(null);
-		}
-	
-		marker = new google.maps.Marker({
-			position: {lat, lng},
-			map: map,
-			icon: image
-		});
-		map.setCenter(new google.maps.LatLng(lat, lng));
-		socket.emit('driverPosition', { id: '001', position: {latitude: lat, longitude: lng} });
-	}
+    L.DomEvent.on(document.getElementById('my-loc'), 'click', function(){
+        map.locate({setView: true, maxZoom: 16});
+    })
 
-	function showError(error) {
-		switch(error.code) {
-			case error.PERMISSION_DENIED:
-				console.error("User denied the request for Geolocation.");
-				break;
-			case error.POSITION_UNAVAILABLE:
-				console.error("Location information is unavailable.");
-				break;
-			case error.TIMEOUT:
-				console.error("The request to get user location timed out.");
-				break;
-			case error.UNKNOWN_ERROR:
-				console.error("An unknown error occurred.");
-				break;
-		}
-	}
+	const currentLocIcon = L.icon({
+        iconUrl: 'https://img.icons8.com/fluency/48/map-pin.png',
+
+        iconSize:     [50, 50], // size of the icon
+        iconAnchor:   [25, 50], // point of the icon which will correspond to marker's location
+        popupAnchor:  [0, -50] // point from which the popup should open relative to the iconAnchor
+    });
+
+	function onLocationFound(e) {
+        var radius = e.accuracy;
+
+        var currentMarker = L.marker(e.latlng, {icon: currentLocIcon}).addTo(map)
+            .bindPopup("You are here").openPopup();
+
+        currentLatlong = currentMarker._latlng;
+        console.log(currentLatlong)
+        //L.circle(e.latlng, radius).addTo(map);
+    }
+
+	map.on('locationfound', onLocationFound);
 </script>
