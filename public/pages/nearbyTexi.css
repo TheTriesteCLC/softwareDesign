@@ -70,12 +70,21 @@
   height: 24px;
 }
 .nearby-texi .group-25 {
-  margin: 0 20px 30px 20px;
+  margin: 0 20px 10px 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: calc(100% - 40px);
   box-sizing: border-box;
+}
+.nearby-texi .setting-1 {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 25px;
+  color: #FFFFFF;
 }
 .nearby-texi .nearby-you {
   margin-bottom: 20px;
@@ -112,8 +121,8 @@
   color: #343B71;
 }
 .nearby-texi .vector {
-  width: 16px;
-  height: 15.3px;
+  width: 40px;
+  height: 35px;
 }
 .nearby-texi .star-1 {
   margin: 0.3px 6px 0.3px 0;
@@ -347,6 +356,7 @@
   font-weight: 500;
   font-size: 14px;
   color: #343B71;
+  margin-top: 10px;
 }
 .nearby-texi .group-941 {
   margin-top: 1px;
@@ -887,6 +897,6 @@
   background: #343B71;
   display: flex;
   flex-direction: column;
-  padding-top: 14px;
   box-sizing: border-box;
+  padding-top: 15px;
 }

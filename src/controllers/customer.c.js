@@ -100,6 +100,11 @@ class siteController {
     res.render('customer/favorite', { layout: 'customer/newCabs' });
   }
 
+  //[GET] /add-favorite
+  addFavorite(req, res) {
+    res.render('customer/addFavorite', { layout: 'customer/newCabs' });
+  }
+
   //[GET] /signup
   signup(req, res) {
     res.render('customer/signup', { layout: 'customer/main' });

@@ -1,122 +1,57 @@
-<link rel="stylesheet" href="/pages/singUp.css">
+<link rel="stylesheet" href="/pages/nearbyTexi.css">
 
-<div id="map">
-    <div class="leaflet-bottom leaflet-right">
-        <button style="background-color: #4557bb; border: none; color: white; padding: 15px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 20px; border-radius: 40%; pointer-events: auto;" id="my-loc">
-            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-        </button>
-    </div>
-</div>
 
-<form action="/customer/favorite" method="POST">
-    <div style="position: relative;" class="sing-up">
-        <div>
-            <div class="create-an-account">Adding new favorite place</div>
-            <div style="display: flex; align-items: center; justify-content:space-around;">
-                <div class="group-61">
-                    <label class="name" for="input-lat">Latitude</label>
-                    <input class="input" type="text" id="input-lat" name="lat" placeholder="Latitude" style="width: 100px;" required readonly>
-                </div>
-                <div class="group-61">
-                    <label class="name" for="input-long">Longtitude</label>
-                    <input class="input" type="text" id="input-long" name="long" placeholder="Longtitudes" style="width: 100px;" required readonly>
-                </div>
-            </div>
-            <div style="display: flex; align-items: center; flex-direction: column">
-                <div class="group-61">
-                    <label class="name" for="input-name">Name</label>
-                    <input class="input" type="text" id="input-name" name="name" placeholder="Enter name for favorite place" required>
-                </div>
-            </div>
-            <div style="display: flex; align-items: center; flex-direction: column">
-                <div class="group-61">
-                    <label class="name" for="input-end-cabs">Address</label>
-                    <input class="input" type="text" id="input-end-cabs" name="end-cabs" placeholder="Drag map to choose destination" required readonly>
-                </div>
-            </div>
-            <button class="sing-up-1 group-33 btnBook"> Add </button>
+<div class="nearby-texi">
+    <div class="group-25">
+        {{!-- <a href="/customer/update-profile">
+            <span style="text-decoration: none; color: white; font-size: 20px;">Update</span>
+            <img class="vector" src="../assets/vectors/logout.svg" />
+          </a> --}}
+          <div class="left-arrow-1">
+          </div>
+        <h2 class="setting-1">Favorite places</h2>
+        <div class="left-arrow-1">
+          <a href="/customer/add-favorite">
+            <img class="vector" src="../assets/vectors/plus.svg" />
+          </a>
         </div>
-    </div>
-</form>
-
-<!-- leaflet js  -->
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
-
-{{!-- Geocoding --}}
-<script src="https://cdn.jsdelivr.net/gh/bigdatacloudapi/js-reverse-geocode-client@latest/bigdatacloud_reverse_geocode.min.js" type="text/javascript"></script>
-
-<script>
-    let currentPoint = {};
-    let favoritePoint = {};
-
-    // Map initialization 
-    var map = L.map('map').setView([10.762622, 106.660172], 12);
-
-    /* Initialise Reverse Geocode API Client */
-    var reverseGeocoder=new BDCReverseGeocode();
-    reverseGeocoder.localityLanguage='vi';
-
-    //osm layer
-    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    });
-    osm.addTo(map);
-
-    //L.control.locate().addTo(map);
-
-    L.DomEvent.on(document.getElementById('my-loc'), 'click', function(){
-        map.locate({setView: true, maxZoom: 16});
-    })
-
-    const currentLocIcon = L.icon({
-        iconUrl: 'https://img.icons8.com/fluency/48/map-pin.png',
-
-        iconSize:     [50, 50], // size of the icon
-        iconAnchor:   [25, 50], // point of the icon which will correspond to marker's location
-        popupAnchor:  [0, -50] // point from which the popup should open relative to the iconAnchor
-    });
-    const favoreiteLocIcon = L.icon({
-        iconUrl: 'https://img.icons8.com/stickers/100/star--v1.png',
-
-        iconSize:     [40, 40], // size of the icon
-        iconAnchor:   [20, 28], // point of the icon which will correspond to marker's location
-    });
-
-    var centerMarker = new L.marker(map.getCenter(), {icon: favoreiteLocIcon}).addTo(map);
-
-    function onLocationFound(e) {
-        var radius = e.accuracy;
-
-        var currentMarker = L.marker(e.latlng, {icon: currentLocIcon}).addTo(map)
-            .bindPopup("You are here").openPopup();
-
-        currentPoint = currentMarker._latlng;
-        console.log(currentLatlong)
-        //L.circle(e.latlng, radius).addTo(map);
-    }
-
-    map.on("move", function () {
-        centerMarker.setLatLng(map.getCenter());
-    });
-
-    map.on("moveend", function() {
-        reverseGeocoder.getClientLocation({
-            latitude: map.getCenter().lat,
-            longitude: map.getCenter().lng
-        },function(result) {
-            document.getElementById('input-end-cabs').value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`;
-            document.getElementById('input-lat').value = result.latitude;
-            document.getElementById('input-long').value = result.longitude;
-            favoritePoint.latitude = result.latitude       
-            favoritePoint.longitude = result.longitude  
-        })
-    })
-
-    map.on('locationfound', onLocationFound);
-
-    function markCenter(e) {
-        var currentMarker = L.marker(map.getCenter()).addTo(map);
-    }
-
-</script>
+      </div>
+    <div class="container-5">
+        <div class="nearby-you">hahahjhj's favorite places</div>
+        <div class="group-95">
+          <div class="container-12">
+            <div class="container-18">
+              <div class="cihan-soysakal">Name</div>
+              <div class="group-65">
+                <span class="container"> 7P28QMF3+XH, Quận 10, Thành phố Hồ Chí Minh, Việt Nam </span>
+              </div>
+            </div>
+          </div>
+          <div class="container-15">
+            <div class="container-13">
+              <div class="group-93">
+                <div class="like-1">
+                  <img
+                    class="vector-1"
+                    src="../assets/vectors/vector43_x2.svg"
+                  />
+                </div>
+                <div class="container-2">15</div>
+              </div>
+              <div class="group-94">
+                <img
+                  class="comment-1"
+                  src="../assets/vectors/comment12_x2.svg"
+                />
+                <span class="container-3"> 4 </span>
+              </div>
+            </div>
+            <a href="#">
+                <button class="group-651 call">
+                    Call 
+                </button>
+            </a>
+          </div>
+        </div>
+      </div>
+</div>
