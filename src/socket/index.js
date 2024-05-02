@@ -31,9 +31,16 @@ class PositionRealTime {
 
     static PositionDriver(io) {
         io.on('connection', socket => {
+            socket.on('activity', data => {
+                let ids = this.activityDriver.get(data.id)
+                if (!ids) {
+                    ids = [];
+                }
+                ids.push(socket.id);        
+                console.log("endpush socket:::", socket.id)
+                this.activityDriver.set(data.id, ids)
+            })
             socket.on('driverPosition', (data) => {
-                //console.log("driver", data)
-                this.activityDriver.set(data.id, socket.id)
                 this.posDrivers.set(data.id, data.position);
             });
 
@@ -43,14 +50,23 @@ class PositionRealTime {
 
             socket.on('requestUser', (data) => {
                 this.distances = []
+                console.log("asdkjahskdjaskfhahksjasjhfa")
                 this.posDrivers.forEach((value, key) => {
-                    console.log(value)
                     const distance = haversineDistance(data.start, value);
-                    this.distances = [ ...this.distances, {idDriver: key, idUser: data._id, distance } ];
+                    this.distances = [ ...this.distances, {idDriver: key, user: data, distance } ];
                 });
                 this.distances.sort((a, b) => b.distance - a.distance);
                 const tagetId = this.activityDriver.get(this.distances[0].idDriver)
-                socket.to(tagetId).emit("requestDriver")
+                tagetId.forEach(id => {
+                    socket.to(id).emit("requestDriver")
+                })
+            })
+
+            socket.on('accept', (idDriver) => {
+                const temp = this.distances.find(data => data.idDriver == idDriver)
+                const tagetId = this.activityDriver.get(idDriver)
+                console.log(tagetId)
+                socket.emit(`success${idDriver}`, temp)
             })
 
             io.emit('updateDriverPosition', () => {

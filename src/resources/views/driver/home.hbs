@@ -29,6 +29,7 @@
 
 	let marker = null;
 	let users = JSON.parse('{{{user}}}')
+	socket.emit("activity", { id: users._id})
 
 	getLocation();
 	setInterval(getLocation, 5000);
