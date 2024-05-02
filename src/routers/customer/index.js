@@ -32,7 +32,7 @@ router.post('/login',
 // router.post('/signup/available', siteController.avalable);
 router.get('/signup', siteController.signup);
 router.post('/signup',
-    passport.authenticate('local-signup', { failureRedirect: './signup' }),
+    passport.authenticate('local-signup', { failureRedirect: './home' }),
     function (req, res) {
         console.log("redirecting");
         console.log(req.user);
