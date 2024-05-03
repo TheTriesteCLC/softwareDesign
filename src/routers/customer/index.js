@@ -10,6 +10,8 @@ router.get('/new-cabs', isLoggedIn, siteController.newCabs);
 router.get('/favorite', siteController.favorite);
 
 //Add new favorite places
+router.get('/book-favorite', siteController.bookFavorite);
+router.get('/delete-favorite', siteController.deleteFavorite);
 router.post('/add-favorite', siteController.addToFavorite);
 router.get('/add-favorite', siteController.addFavorite);
 

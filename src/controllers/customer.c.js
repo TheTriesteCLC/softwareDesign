@@ -92,7 +92,10 @@ class siteController {
 
   //[GET] /new-cabs
   newCabs(req, res) {
-    res.render('customer/newCabs', { layout: 'customer/newCabs', user: JSON.stringify(req.user) });
+    const bookLat = req.query.lat;
+    const bookLong = req.query.long;
+
+    res.render('customer/newCabs', { layout: 'customer/newCabs', user: JSON.stringify(req.user), bookLat, bookLong });
   }
 
   //[GET] /favorite
@@ -100,6 +103,33 @@ class siteController {
     const user = await Customer.findOne({ username: req.user.username }).lean();
     res.render('customer/favorite', { layout: 'customer/newCabs', 
     username: req.user.username , favorite: user.favorite });
+  }
+
+  //[GET] /book-favorite
+  async bookFavorite(req, res) {
+    const bookName = req.query.name;
+    const bookLat = req.query.lat;
+    const bookLong = req.query.long;
+
+    res.render('customer/favorite', { layout: 'customer/newCabs', 
+    bookName: bookName, bookLat: bookLat , bookLong: bookLong });
+  }
+
+  //[GET] /delete-favorite
+  async deleteFavorite(req, res) {
+    const delLat = req.query.lat;
+    const delLong = req.query.long;
+
+    await Customer.updateOne({ username: req.user.username }, 
+      { 
+        $pull: { 
+          'favorite': { 
+            'lat': delLat,
+            'long': delLong 
+          } 
+        } 
+      }, { new: true });
+    res.redirect('/customer/favorite');
   }
 
   //[GET] /add-favorite

@@ -47,7 +47,12 @@
                 <span class="container-3">{{this.long}}</span>
               </div>
             </div>
-            <a href="#">
+            <a href="/customer/delete-favorite?lat={{this.lat}}&long={{this.long}}" style="text-decoration: none;">
+                <button class="group-651 call" style="background-color: #F47070;">
+                    Delete 
+                </button>
+            </a>
+            <a href="/customer/book-cabs?name={{this.name}}&lat={{this.lat}}&long={{this.long}}" style="text-decoration: none;">
                 <button class="group-651 call">
                     Book 
                 </button>
