@@ -7,13 +7,31 @@
         <p style="text-align: center;">You got a ride request from Marius Ciocirlan. Please Pick him from his request location. Please go quick.</p>
     </div>
     <div style="display: flex; justify-content: space-between; margin: 10px;">
-        <button style="width: 48px; height: 48px; background-color: #343B71; border-color:#545C9B;">
+        <button id="declines" style="width: 48px; height: 48px; background-color: #343B71; border-color:#545C9B;">
             <img src="/assets/images/close.png">
         </button>
-        <button style="width: 300px; border-radius: 5px;">comfirm request</button>
+        <button id="accept" style="width: 300px; border-radius: 5px;">comfirm request</button>
     </div>
 </div>
 
 <script>
+
+    const users = JSON.parse('{{{user}}}')
+    const socket = io('//localhost:3000');
+    socket.emit('activity', { id: users._id });
     
+    const declines = document.querySelector('#declines')
+    declines.addEventListener("click", () => {
+        alert("declines")
+    })
+
+    const accept = document.querySelector('#accept')
+    accept.addEventListener("click", () => {
+        alert("eh")
+        socket.emit('accept', users._id)
+        window.location.href = `/driver/request`;
+    })
+    {{!-- console.log("running...")
+    socket.on(`success${users._id}`, () => {
+    }) --}}
 </script>

@@ -46,8 +46,14 @@
 		maxZoom: 19,
 		attribution: '© OpenStreetMap contributors'
 	}).addTo(map);
-
+	const users = JSON.parse('{{{user}}}')
 	let socket = io('//localhost:3000');
+
+    socket.emit('accept', users._id)
+	socket.on(`success${users._id}`, (data) => {
+		console.log("hdhhd", data)
+	})
+
 	let marker = null;
 
 	getLocation();
@@ -79,7 +85,6 @@
 
 		marker = L.marker([lat, lng], {icon: icon}).addTo(map);
 		map.setView(new L.LatLng(lat, lng), map.getZoom());
-		socket.emit('driverPosition', { id: '001', position: {latitude: lat, longitude: lng} });
 	}
 
 	function showError(error) {

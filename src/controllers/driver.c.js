@@ -27,11 +27,11 @@ class siteController {
   }
   
   confirm(req, res) {
-    res.render( 'driver/confirm', { layout: 'driver/main' });   
+    res.render( 'driver/confirm', { layout: 'driver/main', user: JSON.stringify(req.user) });   
   }
 
   request(req, res) {
-    res.render( 'driver/request', { layout: 'driver/main' });   
+    res.render( 'driver/request', { layout: 'driver/main', user: JSON.stringify(req.user)  });   
   }
 
   profile(req, res) {
