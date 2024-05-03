@@ -27,11 +27,6 @@
 
     const accept = document.querySelector('#accept')
     accept.addEventListener("click", () => {
-        alert("eh")
-        socket.emit('accept', users._id)
         window.location.href = `/driver/request`;
     })
-    {{!-- console.log("running...")
-    socket.on(`success${users._id}`, () => {
-    }) --}}
 </script>

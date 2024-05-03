@@ -26,7 +26,7 @@
 				</div>
 			</div>
 			<div style="display: flex; justify-content: center;">
-				<Button style="padding: 10px 100px 10px 100px; ">Finish Ride</Button>
+				<Button style="padding: 10px 100px 10px 100px;" class="finish">Finish Ride</Button>
 			</div>
 		</div>
 	</div>
@@ -48,10 +48,11 @@
 	}).addTo(map);
 	const users = JSON.parse('{{{user}}}')
 	let socket = io('//localhost:3000');
+	let position;
 
     socket.emit('accept', users._id)
 	socket.on(`success${users._id}`, (data) => {
-		console.log("hdhhd", data)
+		position = data;
 	})
 
 	let marker = null;
@@ -118,5 +119,16 @@
 			})
 			.catch(err => console.error(err));
 	}
+
+	document.querySelector('.finish').addEventListener("click", () => {
+		fetch("http://localhost:3000/save/history", {
+			method: "POST",
+			body: JSON.stringify(position),
+			headers: {
+				"Content-type": "application/json; charset=UTF-8"
+			}
+		});
+		window.location.href = `/driver/home`;
+	})
 
 </script>
