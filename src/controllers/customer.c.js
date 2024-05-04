@@ -110,9 +110,17 @@ class siteController {
     const bookName = req.query.name;
     const bookLat = req.query.lat;
     const bookLong = req.query.long;
+    const bookAddress = req.query.endAddress;
+
+    const endPoint = {
+      latitude: req.query.lat,
+      longitude: req.query.long
+    };
 
     res.render('customer/bookFavorite', { layout: 'customer/newCabs', 
-    bookName: bookName, bookLat: bookLat , bookLong: bookLong });
+    user: JSON.stringify(req.user),
+    bookName: bookName, endPoint: endPoint,
+    bookAddress: bookAddress });
   }
 
   //[GET] /delete-favorite
