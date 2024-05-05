@@ -1,4 +1,5 @@
 const Customer = require('../models/Customer');
+const History = require('../models/history');
 const { multipleMongooseToObject, singleMongooseToObject } = require('../util/mongoose');
 
 class siteController {
@@ -71,8 +72,13 @@ class siteController {
   }
 
   //[GET] /history
-  history(req, res, next) {
-    res.render('customer/history', { layout: 'customer/main' });
+  async history(req, res, next) {
+    console.log(req.user);
+    var user_activities = await History.find({ customerId: req.user._id }).lean().sort({"createdAt":-1});
+
+    console.log(user_activities);
+    res.render('customer/history', { layout: 'customer/centerNav', activities: user_activities });
+    // res.render('customer/history', { layout: 'customer/main'});
   }
 
   //[GET] /menu

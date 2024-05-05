@@ -19,7 +19,7 @@ router.get('/menu', siteController.menu);
 router.get('/update-profile', siteController.updateProfile);
 router.post('/update-profile', siteController.update);
 router.get('/profile', siteController.profile);
-router.get('/history', siteController.history);
+router.get('/history', isLoggedIn, siteController.history);
 
 router.get('/schedule', siteController.schedule);
 router.get('/logout',siteController.logout);
