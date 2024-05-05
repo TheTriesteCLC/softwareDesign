@@ -3,7 +3,7 @@
   width: calc(100% - 40px);
 }
 
-.date {
+.activity-title {
   margin-bottom: 20px;
   display: inline-block;
   align-self: flex-start;
@@ -12,6 +12,10 @@
   font-weight: 500;
   font-size: 20px;
   color: #343B71;
+}
+
+.money {
+  text-decoration: underline;
 }
 
 .time-list {
@@ -66,14 +70,26 @@
   box-sizing: border-box;
 }
 
-.group-262 {
-  margin-right: 14px;
+.group-262 { /* pickup icon*/
+  margin: 0 14.1px 19px 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 8px;
   box-sizing: border-box;
+
 }
+
+.navigation-1 { /* destination icon*/
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+
 
 .ellipse-23 {
   border-radius: 4px;
@@ -89,12 +105,19 @@
   height: 10px;
 }
 
-.location {
+.text {
   overflow-wrap: break-word;
   font-family: 'SF Pro Display', 'Roboto Condensed';
   font-weight: 400;
   font-size: 14px;
   color: #343B71;
+}
+
+.detail {
+  display: flex;
+  width: calc(100% - 8.1px);
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .group-65 {
@@ -136,16 +159,6 @@
   justify-content: center;
   width: 16px;
   height: 15.3px;
-  box-sizing: border-box;
-}
-
-.navigation-1 {
-  margin-right: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
   box-sizing: border-box;
 }
 
