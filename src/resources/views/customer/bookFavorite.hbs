@@ -94,39 +94,46 @@
         iconAnchor:   [5, 45], // point of the icon which will correspond to marker's location
     });
 
+    var currentMarker;
     var destinationMarker = new L.marker(new L.latLng(endPoint.latitude, endPoint.longitude), 
     {icon: destinationLocIcon}).addTo(map);
-
-    reverseGeocoder.getClientLocation(function(result) {
-        document.getElementById('input-start-cabs').value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`;
-        startPoint.latitude = result.latitude       
-        startPoint.longitude = result.longitude    
-        startPoint.value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`
-    });
 
     document.getElementById('input-end-cabs').value = {{{json bookAddress}}};
 
     function onLocationFound(e) {
         var radius = e.accuracy;
 
-        var currentMarker = L.marker(e.latlng, {icon: currentLocIcon}).addTo(map)
+        currentMarker = L.marker(e.latlng, {icon: currentLocIcon}).addTo(map)
             .bindPopup("You are here").openPopup();
         //L.circle(e.latlng, radius).addTo(map);
     }
 
     map.on('locationfound', onLocationFound);
 
-    map.setView([(startPoint.latitude + endPoint.latitude) / 2,
+    reverseGeocoder.getClientLocation(function(result) {
+        document.getElementById('input-start-cabs').value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`;
+        startPoint.latitude = result.latitude       
+        startPoint.longitude = result.longitude    
+        console.log("setting start point"); 
+        startPoint.value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`
+    });
+        
+    setTimeout(() => {
+        currentMarker = L.marker(new L.latLng(startPoint.latitude, startPoint.longitude), {icon: currentLocIcon}).addTo(map)
+            .bindPopup("You are here").openPopup();
+            
+        map.setView([(startPoint.latitude + endPoint.latitude) / 2,
          (startPoint.longitude + endPoint.longitude) / 2], 12);
-
+        
         L.Routing.control({
-            waypoints: [
-                L.latLng(startPoint.latitude, startPoint.longitude),
-                L.latLng(endPoint.latitude, endPoint.longitude)
-            ],
-            routeWhileDragging: true,
-            createMarker: function() { return null; }
+        waypoints: [
+            L.latLng(startPoint.latitude, startPoint.longitude),
+            L.latLng(endPoint.latitude, endPoint.longitude)
+        ],
+        routeWhileDragging: true,
+        createMarker: function() { return null; }
         }).addTo(map);
+    }, 100);
 
     document.querySelector(".btnBook").addEventListener("click", function() {
         socket.emit('requestUser', { id: users._id, start: startPoint, end: endPoint});
