@@ -1,3 +1,32 @@
+.group-25 {
+  margin: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+
+.page-title{
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+.left-arrow-1 {
+  margin: 3.6px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 16.9px;
+  box-sizing: border-box;
+}
+
 .empty-space {
   margin: 0 20px 30px 20px;
   width: calc(100% - 40px);
@@ -30,7 +59,7 @@
   display: flex;
   align-self: flex-start;
   flex-direction: column;
-  padding: 31px 20px 98px 20px;
+  padding: 31px 20px 0px 20px;
   width: 100%;
   box-sizing: border-box;
   border-radius: 30px 30px 0 0;

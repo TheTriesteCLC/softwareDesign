@@ -1,41 +1,60 @@
-<link rel="stylesheet" href="../../../../public/pages/history.css">
-<body>
-    <div class="history">
-        <div class="empty-space">
+<link rel="stylesheet" href="/pages/history.css">
+
+<div class="history">
+    <div class="group-25">          
+        <div class="left-arrow-1">
+          <a href="/customer/logout">
+            <img style="width: 30px; height: 25px;" src="../assets/vectors/logout.svg" />
+          </a>
         </div>
-        <div class="time-list">
+
+        <h2 class="page-title">History</h2>
+        
+        <div class="left-arrow-1">
+        </div>
+      </div>
+    {{!-- <div class="empty-space">
+    </div> --}}
+    <div class="time-list">
+        {{#each activities}}
             <div class="activity"> 
+                {{!-- row 1 --}}
                 <div class="container-3">
-                    <div class="activity-title">31-10-2019 16:36 </div> 
-                    <div class="activity-title money"> 100.000d</div>
+                    <div class="activity-title"> {{this.time}} </div> 
+                    {{!-- <div class="activity-title">31-10-2019 16:36 </div>  --}}
+                    <div class="activity-title money"> {{this.fee}}d</div>
                 </div>
 
                 <div class="line-13"></div>
 
+                {{!-- row 2 --}}
                 <div class="container-3">
-                <div class="group-78 pickup_location">
-                    <div class="group-262">
-                        <div class="ellipse-23"></div>
-                        <img class="rectangle-203" src="../assets/vectors/rectangle2011_x2.svg"/>
+                    <div class="group-78 pickup_location">
+                        <div class="group-262">
+                            <div class="ellipse-23"></div>
+                            <img class="rectangle-203" src="../assets/vectors/rectangle2011_x2.svg"/>
+                        </div>
+                        <span class="text"> {{this.start}}</span>
                     </div>
-                    <span class="text"> Chalotte St </span>
-                </div>
                 
-                <div class="group-78 destination">
-                    <div class="navigation-1">
-                        <img class="vector-2" src="../assets/vectors/vector12_x2.svg" />
-                    </div>
-                    <span class="text"> Chalotte St </span>
-                </div>                
-            </div>
-
-            <div class="line-13"></div>
-
-            <div class="container-3">
-                <div class ="detail">
-                    <span class="text" style="text-decoration: underline;">Detail</span>
+                    <div class="group-78 destination">
+                        <div class="navigation-1">
+                            <img class="vector-2" src="../assets/vectors/vector12_x2.svg" />
+                        </div>
+                        <span class="text"> {{this.destination}}</span>
+                    </div>     
                 </div>
-            </div>
-        </div> <!-- activity -->  
+
+                <div class="line-13"></div>
+
+                {{!-- row 3 --}}
+                <div class="container-3">
+                    <div class ="detail">
+                        <span class="text" style="text-decoration: underline;">Detail</span>
+                    </div>
+                </div>
+            </div> <!-- activity -->  
+    
+        {{/each}}
     </div> <!-- time-list-->
-</body>
+</div> <!-- history -->
