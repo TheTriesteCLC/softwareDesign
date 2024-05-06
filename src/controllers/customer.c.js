@@ -76,6 +76,7 @@ class siteController {
     console.log(req.user);
     var user_activities = await History.find({ customerId: req.user._id }).lean().sort({"createdAt":-1});
 
+    user_activities = formatDate(user_activities);
     console.log(user_activities);
     res.render('customer/history', { layout: 'customer/centerNav', activities: user_activities });
     // res.render('customer/history', { layout: 'customer/main'});
@@ -190,3 +191,15 @@ const slugify = (textToSlugify) => {
 }
 
 module.exports = new siteController;
+
+
+function formatDate(list){
+  list = list.map(item => {
+    const date = new Date(item.createdAt);
+    const formattedDate = date.toISOString().slice(0, 10); // Format as "YYYY-MM-DD"
+    const formattedTime = `${date.getHours()}:${date.getMinutes()}`; // Format as "HH:MM"
+    item.formattedDateTime = `${formattedDate} ${formattedTime}`; // Combine date and time
+    return item;
+  });
+  return list;
+}
