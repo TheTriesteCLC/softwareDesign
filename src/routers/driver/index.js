@@ -5,15 +5,15 @@ require('../../config/passport/passport')(passport);
 
 const siteController = require('../../controllers/driver.c');
 
-router.get('/home', siteController.home)
-router.get('/confirm', siteController.confirm)
-router.get('/request', siteController.request)
-router.get('/menu', siteController.menu)
+router.get('/home', isLoggedIn, siteController.home)
+router.get('/confirm', isLoggedIn, siteController.confirm)
+router.get('/request', isLoggedIn, siteController.request)
+router.get('/menu', isLoggedIn, siteController.menu)
 router.get('/profile', isLoggedIn, siteController.profile)
-router.get('/update-profile', siteController.updateProfile);
-router.post('/update-profile', siteController.update);
+router.get('/update-profile',isLoggedIn , siteController.updateProfile);
+router.post('/update-profile', isLoggedIn,siteController.update);
 router.get('/logout', isLoggedIn, siteController.logout)
-router.get('/chat', siteController.chat)
+router.get('/chat', isLoggedIn,siteController.chat)
 
 
 //Login
