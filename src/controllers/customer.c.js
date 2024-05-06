@@ -74,8 +74,12 @@ class siteController {
   //[GET] /history
   async history(req, res, next) {
     console.log(req.user);
-    var user_activities = await History.find({ customerId: req.user._id }).lean().sort({"createdAt":-1});
-
+    var user_activities = await History.find({ customerId: req.user._id })
+    .populate({
+      path:"driverId",
+      select: "fullname username",
+      model:'Driver'
+    }).lean().sort({"createdAt":-1});
     user_activities = formatDate(user_activities);
     console.log(user_activities);
     res.render('customer/history', { layout: 'customer/centerNav', activities: user_activities });

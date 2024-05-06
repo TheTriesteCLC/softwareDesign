@@ -140,6 +140,7 @@
   font-weight: 400;
   font-size: 14px;
   color: #343B71;
+  text-align: left;
 }
 
 .detail {
@@ -147,6 +148,16 @@
   width: calc(100% - 8.1px);
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
+  cursor:pointer;
+}
+
+.detail-section{
+  display:none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 24px;
 }
 
 .group-65 {
