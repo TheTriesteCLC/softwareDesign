@@ -74,7 +74,7 @@ class siteController {
   //[GET] /history
   async history(req, res, next) {
     console.log(req.user);
-    var user_activities = await History.find({ customerId: req.user._id })
+    var user_activities = await History.find({ customerId: req.user._id, rating: { $eq: null } })
     .populate({
       path:"driverId",
       select: "fullname username",
@@ -84,6 +84,20 @@ class siteController {
     console.log(user_activities);
     res.render('customer/history', { layout: 'customer/centerNav', activities: user_activities });
     // res.render('customer/history', { layout: 'customer/main'});
+  }
+
+  //[POST] /rating
+  async rating(req, res, next) {
+    const formData = req.body;
+    await History.findOneAndUpdate({ customerId: req.user._id, _id: formData.cabsID },
+    {
+      rating: formData.rating,
+    },
+    {
+      new: true
+    }
+  );
+    res.redirect('/customer/history');
   }
 
   //[GET] /menu
