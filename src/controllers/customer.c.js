@@ -86,6 +86,20 @@ class siteController {
     // res.render('customer/history', { layout: 'customer/main'});
   }
 
+  //[POST] /rating
+  async rating(req, res, next) {
+    const formData = req.body;
+    await History.findOneAndUpdate({ customerId: req.user._id, _id: formData.cabsID },
+    {
+      rating: formData.rating,
+    },
+    {
+      new: true
+    }
+  );
+    res.redirect('/customer/history');
+  }
+
   //[GET] /menu
   menu(req, res, next) {
     res.render('customer/menu', { layout: 'customer/main' });

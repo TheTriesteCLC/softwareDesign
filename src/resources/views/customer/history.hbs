@@ -1,4 +1,51 @@
 <link rel="stylesheet" href="/pages/history.css">
+<link rel="stylesheet" href="/pages/setting.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .rate {
+        float: left;
+        height: 46px;
+        padding: 0 10px;
+    }
+    .rate:not(:checked) > input {
+        position:absolute;
+        top:-9999px;
+    }
+    .rate:not(:checked) > label {
+        float:right;
+        width:1em;
+        overflow:hidden;
+        white-space:nowrap;
+        cursor:pointer;
+        font-size:30px;
+        color:#ccc;
+    }
+    .rate:not(:checked) > label:before {
+        content: '★ ';
+    }
+    .rate > input:checked ~ label {
+        color: #ffc700;    
+    }
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;  
+    }
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+    }
+
+    /* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+</style>
 
 <div class="history">
     <div class="group-25">          
@@ -22,7 +69,7 @@
                 <div class="container-3">
                     <div class="activity-title"> {{this.formattedDateTime}} </div> 
                     {{!-- <div class="activity-title">31-10-2019 16:36 </div>  --}}
-                    <div class="activity-title money"> {{this.fee}}d</div>
+                    <div class="activity-title money"> {{this.fee}}vnđ</div>
                 </div>
 
                 <div class="line-13"></div>
@@ -44,6 +91,42 @@
                         <span class="text"> {{this.destination}}</span>
                     </div>     
                 </div>
+
+                <div class="line-13"></div>
+
+                <form action="/customer/rating" method="POST" id="rating-form">
+                    <div class="container-3" style="display: flex; justify-content: space-around;">
+                        <div class="rate">
+                            <input type="radio" id="star5" name="rating" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="rating" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                            <input type="hidden" name="cabsID" value="{{this._id}}">
+                        </div> 
+                    
+                        <button type="submit" class="sing-up-1 group-33" style="border-radius: 10px;
+                        background: #FFFFFF;
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        overflow-wrap: break-word;
+                        font-family: 'SF Pro Display', 'Roboto Condensed';
+                        font-weight: 600;
+                        font-size: 15px;
+                        line-height: 1.294;
+                        text-transform: uppercase;
+                        color: #343B71;">Rating</button>
+                    </div>
+                </form>
 
                 <div class="line-13"></div>
 

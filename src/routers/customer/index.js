@@ -19,6 +19,9 @@ router.get('/menu', siteController.menu);
 router.get('/update-profile', siteController.updateProfile);
 router.post('/update-profile', siteController.update);
 router.get('/profile', siteController.profile);
+
+//History and rating
+router.post('/rating', isLoggedIn, siteController.rating);
 router.get('/history', isLoggedIn, siteController.history);
 
 router.get('/schedule', siteController.schedule);
