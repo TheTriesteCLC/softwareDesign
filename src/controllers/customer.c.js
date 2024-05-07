@@ -74,7 +74,7 @@ class siteController {
   //[GET] /history
   async history(req, res, next) {
     console.log(req.user);
-    var user_activities = await History.find({ customerId: req.user._id })
+    var user_activities = await History.find({ customerId: req.user._id, rating: { $eq: null } })
     .populate({
       path:"driverId",
       select: "fullname username",
