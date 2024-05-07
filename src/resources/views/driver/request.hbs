@@ -50,9 +50,10 @@
 	let socket = io('//localhost:3000');
 	let position;
 
-    socket.emit('accept', users._id)
+    socket.emit('accept', {idDriver: users._id})
 	socket.on(`success${users._id}`, (data) => {
 		position = data;
+		console.log(data)
 	})
 
 	let marker = null;
