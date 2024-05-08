@@ -1,0 +1,152 @@
+.call-screen .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.call-screen .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.call-screen .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.call-screen .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.call-screen .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.call-screen .container-1 {
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.call-screen .ui-bars-status-bars-white-base {
+  margin-bottom: 168px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.call-screen .image-8 {
+  background: url('../assets/images/image8.png') 50% / cover no-repeat;
+  position: absolute;
+  left: 50%;
+  bottom: -29px;
+  translate: -50% 0;
+  width: 93px;
+  height: 140px;
+}
+.call-screen .mask-group {
+  border-radius: 46.5px;
+  background: url('../assets/images/image9.png') 50% / cover no-repeat;
+  position: relative;
+  margin: 0 19.3px 16px 19.3px;
+  width: 93px;
+  height: 93px;
+}
+.call-screen .cihan-soysakal {
+  margin-bottom: 16px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 22px;
+  color: #FFFFFF;
+}
+.call-screen .ringing {
+  margin-right: 3.5px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #7177AB;
+}
+.call-screen .group-76 {
+  margin: 0 20.9px 285px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.call-screen .vector-1 {
+  width: 24px;
+  height: 19.1px;
+}
+.call-screen .speaker-filled-audio-tool-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 19.1px;
+  box-sizing: border-box;
+}
+.call-screen .group-101 {
+  border-radius: 28px;
+  background: #FFFFFF;
+  position: relative;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 18.5px 16px;
+  width: 56px;
+  height: 56px;
+  box-sizing: border-box;
+}
+.call-screen .vector {
+  width: 33.9px;
+  height: 33.9px;
+}
+.call-screen .telephone-handle-silhouette-1 {
+  transform: rotate(134.94deg);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 33.9px;
+  height: 33.9px;
+  box-sizing: border-box;
+}
+.call-screen .group-100 {
+  border-radius: 28px;
+  background: #FF5252;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px 11.1px 11.1px 11px;
+  width: 56px;
+  height: 56px;
+  box-sizing: border-box;
+}
+.call-screen .container {
+  margin-right: 19.9px;
+  display: flex;
+  flex-direction: row;
+  width: 152px;
+  box-sizing: border-box;
+}
+.call-screen {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 14.7px 100px 35.6px;
+  box-sizing: border-box;
+}

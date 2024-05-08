@@ -1,0 +1,313 @@
+.sing-in .rectangle-43 {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  translate: -50% 0;
+  width: 375px;
+  height: 91px;
+}
+.sing-in .container-1 {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.sing-in .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.sing-in .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.sing-in .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.sing-in .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.sing-in .container {
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.sing-in .ui-bars-status-bars-white-base {
+  position: relative;
+  margin: 0 14.7px 42px 35.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50.3px);
+  box-sizing: border-box;
+}
+.sing-in .lets-get-started {
+  position: relative;
+  margin: 0 20px 34px 20px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 28px;
+  color: #FFFFFF;
+}
+.sing-in .name {
+  margin-bottom: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.sing-in .tushar-chowdhury {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #545C9B;
+}
+.sing-in .container-3 {
+  border-radius: 2px;
+  border: 1px solid #545C9B;
+  background: #282F62;
+  position: relative;
+  padding: 11px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sing-in .group-61 {
+  border-radius: 2px;
+  position: relative;
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.sing-in .password {
+  margin-bottom: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.sing-in .container {
+  margin-right: 10px;
+  width: 277px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #545C9B;
+}
+.sing-in .vector {
+  width: 16px;
+  height: 9.5px;
+}
+.sing-in .eye-1 {
+  margin: 2.2px 0 8.2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 9.5px;
+  box-sizing: border-box;
+}
+.sing-in .container-1 {
+  border-radius: 2px;
+  border: 1px solid #545C9B;
+  background: #282F62;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14px 16px 8px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sing-in .group-63 {
+  position: relative;
+  margin: 0 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.sing-in .sing-in {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.294;
+  text-transform: uppercase;
+  color: #343B71;
+}
+.sing-in .group-33 {
+  border-radius: 2px;
+  background: #FFFFFF;
+  position: relative;
+  margin: 0 20px 104px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px 0;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.sing-in .create-an-account {
+  margin: 0 33.1px 20px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #343B71;
+}
+.sing-in .sing-up {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #545C9B;
+}
+.sing-in .group-117 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px 8px 11px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sing-in .group-65 {
+  border-radius: 2px;
+  margin-bottom: 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sing-in .or {
+  margin: 0 9px 20px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #343B71;
+}
+.sing-in .f {
+  margin-right: 19.5px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  text-transform: lowercase;
+  color: #FFFFFF;
+}
+.sing-in .line-1 {
+  background: #7683AD;
+  margin: 5px 15px 5px 0;
+  width: 1px;
+  height: 10px;
+}
+.sing-in .sing-up-with-facebook {
+  margin: 3px 0 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+.sing-in .group-121 {
+  border-radius: 2px;
+  background: #536396;
+  position: relative;
+  margin-bottom: 21px;
+  display: flex;
+  flex-direction: row;
+  padding: 8px 0 8px 13px;
+  width: 215px;
+  box-sizing: border-box;
+}
+.sing-in .g {
+  margin-right: 18px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.sing-in .line-11 {
+  background: #FF9A9A;
+  margin: 5px 15px 5px 0;
+  width: 1px;
+  height: 10px;
+}
+.sing-in .sing-up-with-google {
+  margin: 3px 0 1px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+.sing-in .group-122 {
+  border-radius: 2px;
+  background: #F47070;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 8px 0 8px 10px;
+  width: 215px;
+  box-sizing: border-box;
+}
+.sing-in .container-2 {
+  border-radius: 30px 30px 0 0;
+  background: #FFFFFF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 31px 20px 30px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sing-in-1 {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  box-sizing: border-box;
+}

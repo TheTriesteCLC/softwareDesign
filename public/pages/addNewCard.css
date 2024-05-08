@@ -1,0 +1,343 @@
+.add-new-card .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.add-new-card .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.add-new-card .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.add-new-card .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.add-new-card .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.add-new-card .container-4 {
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.add-new-card .ui-bars-status-bars-white-base {
+  margin: 0 14.7px 12px 35.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50.3px);
+  box-sizing: border-box;
+}
+.add-new-card .vector {
+  width: 24px;
+  height: 16.9px;
+}
+.add-new-card .left-arrow-1 {
+  margin: 3.6px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 16.9px;
+  box-sizing: border-box;
+}
+.add-new-card .add-new-card-1 {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.add-new-card .bell-1 {
+  width: 24px;
+  height: 24px;
+}
+.add-new-card .group-25 {
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.add-new-card .qr-code-1 {
+  margin: 0 1px 10px 0;
+  width: 42px;
+  height: 42px;
+}
+.add-new-card .scan-your-card {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #A1A6CA;
+}
+.add-new-card .group-104 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 39px 0;
+  width: 261px;
+  box-sizing: border-box;
+}
+.add-new-card .card-number {
+  margin-bottom: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.add-new-card .container-1 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.add-new-card .container-3 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  padding: 11px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.add-new-card .group-105 {
+  border-radius: 2px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+.add-new-card .expiration-date {
+  margin-bottom: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.add-new-card .container-3 {
+  margin-right: 10.4px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.add-new-card .line-15 {
+  width: 10.3px;
+  height: 5.2px;
+}
+.add-new-card .group-102 {
+  margin: 6.7px 0 8.2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 10.3px;
+  height: 5.2px;
+  box-sizing: border-box;
+}
+.add-new-card .group-1131 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 11px 18.8px 11px 18.5px;
+  box-sizing: border-box;
+}
+.add-new-card .container-4 {
+  margin-right: 10.4px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.add-new-card .line-151 {
+  width: 10.3px;
+  height: 5.2px;
+}
+.add-new-card .group-1021 {
+  margin: 6.7px 0 8.2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 10.3px;
+  height: 5.2px;
+  box-sizing: border-box;
+}
+.add-new-card .group-114 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 11px 18.8px 11px 18.5px;
+  box-sizing: border-box;
+}
+.add-new-card .container-1 {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.add-new-card .group-109 {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.add-new-card .cvv-cvc {
+  margin: 0 0 20px 3.3px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.add-new-card .container-2 {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.add-new-card .group-112 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.add-new-card .group-113 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px 0 11px 1px;
+  width: 75px;
+  box-sizing: border-box;
+}
+.add-new-card .group-107 {
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.add-new-card .container {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.add-new-card .card-holder-name {
+  margin-bottom: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.add-new-card .aosh-howard {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #343B71;
+}
+.add-new-card .container-5 {
+  border-radius: 2px;
+  border: 1px solid #B9BCDD;
+  background: #F9FAFF;
+  position: relative;
+  padding: 11px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.add-new-card .group-108 {
+  border-radius: 2px;
+  margin-bottom: 113px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+.add-new-card .add-my-card {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.294;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.add-new-card .group-33 {
+  border-radius: 2px;
+  background: #343B71;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px 0 11px 1px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.add-new-card .container-2 {
+  border-radius: 30px 30px 0 0;
+  background: #FFFFFF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 30px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.add-new-card {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  box-sizing: border-box;
+}

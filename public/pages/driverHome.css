@@ -1,0 +1,211 @@
+.driver-home .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.driver-home .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.driver-home .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.driver-home .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.driver-home .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.driver-home .container-2 {
+  margin: 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.driver-home .ui-bars-status-bars-white-base {
+  margin: 0 14.7px 12px 35.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50.3px);
+  box-sizing: border-box;
+}
+.driver-home .vector-1 {
+  border-radius: 1px;
+  width: 24px;
+  height: 2px;
+}
+.driver-home .group {
+  border-radius: 1px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 2px;
+  box-sizing: border-box;
+}
+.driver-home .vector-2 {
+  border-radius: 1px;
+  width: 18px;
+  height: 2px;
+}
+.driver-home .group-1 {
+  border-radius: 1px;
+  margin: 0 3px 4px 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 18px;
+  height: 2px;
+  box-sizing: border-box;
+}
+.driver-home .vector-3 {
+  border-radius: 1px;
+  width: 10px;
+  height: 2px;
+}
+.driver-home .group-2 {
+  border-radius: 1px;
+  margin: 0 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 10px;
+  height: 2px;
+  box-sizing: border-box;
+}
+.driver-home .list-menu-1 {
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.driver-home .alaska {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.driver-home .bell-1 {
+  width: 24px;
+  height: 24px;
+}
+.driver-home .group-25 {
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.driver-home .fire-shot-capture-021-gallery-mapbox-www-mapbox-2 {
+  background: url('../assets/images/fireShotCapture021GalleryMapboxWwwMapbox2.png') 50% / cover no-repeat;
+  position: relative;
+  width: 1223px;
+  height: 879px;
+}
+.driver-home .image-3 {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  background: url('../assets/images/image3.png') 50% / cover no-repeat;
+  transform: rotate(87.778deg);
+  width: 24.9px;
+  height: 24.9px;
+}
+.driver-home .group-35 {
+  margin: 253px 62.1px 427.1px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24.9px;
+  height: 24.9px;
+  box-sizing: border-box;
+}
+.driver-home .rectangle {
+  border-radius: 100px;
+  margin-right: 53px;
+  width: 134px;
+  height: 5px;
+}
+.driver-home .vector-4 {
+  width: 20px;
+  height: 20px;
+}
+.driver-home .gps-fixed-indicator-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+}
+.driver-home .group-29 {
+  border-radius: 24px;
+  background: #343B71;
+  position: relative;
+  margin-bottom: 61px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 14px;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+}
+.driver-home .container-1 {
+  background: url('../assets/images/fireShotCapture022GalleryMapboxWwwMapbox1.png') 50% / cover no-repeat;
+  position: absolute;
+  left: 93px;
+  top: 0px;
+  right: 95px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 9px;
+  height: 714px;
+  box-sizing: border-box;
+}
+.driver-home .container {
+  position: absolute;
+  right: -451px;
+  bottom: -186px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 21px;
+  width: 1223px;
+  height: 900px;
+  box-sizing: border-box;
+}
+.driver-home .mask-group {
+  border-radius: 30px 30px 0 0;
+  background: url('../assets/images/fireShotCapture021GalleryMapboxWwwMapbox2.png') 50% / cover no-repeat;
+  position: relative;
+  width: 375px;
+  height: 714px;
+}
+.driver-home {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  box-sizing: border-box;
+}

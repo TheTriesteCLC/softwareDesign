@@ -1,0 +1,311 @@
+.home .container {
+  overflow-wrap: break-word;
+  font-family: 'Roboto Black', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+.home .time-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.home .mobile-signal {
+  margin: 0.3px 5px 0.3px 0;
+  width: 17px;
+  height: 10.7px;
+}
+.home .wifi {
+  margin: 0 5px 0.4px 0;
+  width: 15.3px;
+  height: 11px;
+}
+.home .battery {
+  margin-top: 0px;
+  width: 24.3px;
+  height: 11.3px;
+}
+.home .container-2 {
+  margin: 3.3px 0px 3.3px 0;
+  display: flex;
+  flex-direction: row;
+  width: 66.7px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.home .ui-bars-status-bars-white-base {
+  margin: 0 14.7px 12px 35.6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50.3px);
+  box-sizing: border-box;
+}
+.home .vector {
+  border-radius: 1px;
+  width: 24px;
+  height: 2px;
+}
+.home .group {
+  border-radius: 1px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 24px;
+  height: 2px;
+  box-sizing: border-box;
+}
+.home .vector-1 {
+  border-radius: 1px;
+  width: 18px;
+  height: 2px;
+}
+.home .group-1 {
+  border-radius: 1px;
+  margin: 0 3px 4px 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 18px;
+  height: 2px;
+  box-sizing: border-box;
+}
+.home .vector-2 {
+  border-radius: 1px;
+  width: 10px;
+  height: 2px;
+}
+.home .group-2 {
+  border-radius: 1px;
+  margin: 0 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 10px;
+  height: 2px;
+  box-sizing: border-box;
+}
+.home .list-menu-1 {
+  margin: 6px 0 4px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.home .alaska {
+  margin: 2px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+.home .bell-1 {
+  width: 24px;
+  height: 24px;
+}
+.home .group-25 {
+  margin: 0 20px 30px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.home .fire-shot-capture-021-gallery-mapbox-www-mapbox-2 {
+  background: url('../assets/images/fireShotCapture021GalleryMapboxWwwMapbox2.png') 50% / cover no-repeat;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 879px;
+}
+.home .ellipse-2 {
+  border-radius: 4px;
+  background: #FF6B4A;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 8px;
+}
+.home .rectangle-20 {
+  margin: 0 3px;
+  width: 2px;
+  height: 10px;
+}
+.home .group-26 {
+  margin-right: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8px;
+  box-sizing: border-box;
+}
+.home .line-1 {
+  background: #EDEDF6;
+  margin: 3px 11px 3px 0;
+  width: 1px;
+  height: 14px;
+}
+.home .goethe-st-road {
+  margin-right: 0px;
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #343B71;
+}
+.home .container {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.home .vector-4 {
+  width: 16px;
+  height: 16px;
+}
+.home .plus-symbol-1 {
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.home .group-27 {
+  box-shadow: 0px 0px 70px 0px rgba(45, 45, 45, 0.1);
+  border-radius: 6px;
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 11px 16px;
+  width: 335px;
+  box-sizing: border-box;
+}
+.home .vector-5 {
+  width: 16px;
+  height: 16px;
+}
+.home .navigation-1 {
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+.home .line-11 {
+  background: #EDEDF6;
+  margin: 3px 0;
+  width: 1px;
+  height: 14px;
+}
+.home .where-to-go {
+  overflow-wrap: break-word;
+  font-family: 'SF Pro Display', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 17px;
+  color: #343B71;
+}
+.home .group-28 {
+  box-shadow: 0px 0px 70px 0px rgba(45, 45, 45, 0.1);
+  border-radius: 6px;
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 286px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 11px;
+  padding: 11px 0 11px 9px;
+  width: 335px;
+  box-sizing: border-box;
+}
+.home .ellipse-6 {
+  box-shadow: 0px 0px 20px 0px rgba(255, 107, 74, 0.46);
+  border-radius: 6px;
+  background: #FF6B4A;
+  width: 12px;
+  height: 12px;
+}
+.home .your-location {
+  border-radius: 16px;
+  background: rgba(255, 107, 74, 0.1);
+  position: relative;
+  margin: 0 0 138px 95px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+}
+.home .vector-6 {
+  width: 20px;
+  height: 20px;
+}
+.home .gps-fixed-indicator-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+}
+.home .group-29 {
+  border-radius: 24px;
+  background: #343B71;
+  position: relative;
+  margin-left: 287px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 14px;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+}
+.home .container-3 {
+  background: url('../assets/images/fireShotCapture022GalleryMapboxWwwMapbox1.png') 50% / cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 44px 0 70px 0;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.home .container-1 {
+  position: absolute;
+  right: -451px;
+  bottom: -186px;
+  padding: 0 95px 0 93px;
+  width: 1223px;
+  height: 900px;
+  box-sizing: border-box;
+}
+.home .mask-group {
+  border-radius: 30px 30px 0 0;
+  background: url('../assets/images/fireShotCapture021GalleryMapboxWwwMapbox2.png') 50% / cover no-repeat;
+  position: relative;
+  width: 375px;
+  height: 714px;
+}
+.home {
+  background: #343B71;
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  box-sizing: border-box;
+}

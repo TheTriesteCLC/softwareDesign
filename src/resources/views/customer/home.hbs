@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="map" style="height: 800px;">
+    <div class="leaflet-bottom leaflet-right">
+        <button style="background-color: #4557bb; border: none; color: white; padding: 10px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 20px; border-radius: 40%; pointer-events: auto;" id="my-loc">
+            <i class="fa fa-bullseye" aria-hidden="true"></i>
+        </button>
+    </div>
+</div>
+
+<!-- leaflet js  -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
+<script>
+	// Map initialization 
+    var map = L.map('map').setView([10.762622, 106.660172], 12);
+
+	//osm layer
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+    osm.addTo(map);
+
+    //L.control.locate().addTo(map);
+
+    L.DomEvent.on(document.getElementById('my-loc'), 'click', function(){
+        map.locate({setView: true, maxZoom: 16});
+    })
+
+	const currentLocIcon = L.icon({
+        iconUrl: 'https://img.icons8.com/fluency/48/map-pin.png',
+
+        iconSize:     [50, 50], // size of the icon
+        iconAnchor:   [25, 50], // point of the icon which will correspond to marker's location
+        popupAnchor:  [0, -50] // point from which the popup should open relative to the iconAnchor
+    });
+
+	function onLocationFound(e) {
+        var radius = e.accuracy;
+
+        var currentMarker = L.marker(e.latlng, {icon: currentLocIcon}).addTo(map)
+            .bindPopup("You are here").openPopup();
+
+        currentLatlong = currentMarker._latlng;
+        console.log(currentLatlong)
+        //L.circle(e.latlng, radius).addTo(map);
+    }
+
+	map.on('locationfound', onLocationFound);
+</script>

@@ -1,0 +1,32 @@
+<div style="background-color: transparent; width: 100%;">
+    <div style="margin-top: 150px; display: flex; justify-content: center; align-items: center;">
+        <img src="/assets/images/request.png" alt="undefined" width="287px" height="213">
+    </div>
+    <div style="margin: 0px 10px 180px 10px; display:flex; flex-direction: column; color: white; align-items: center;">
+        <h1>Confirm?</h1>
+        <p style="text-align: center;">You got a ride request from Marius Ciocirlan. Please Pick him from his request location. Please go quick.</p>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin: 10px;">
+        <button id="declines" style="width: 48px; height: 48px; background-color: #343B71; border-color:#545C9B;">
+            <img src="/assets/images/close.png">
+        </button>
+        <button id="accept" style="width: 300px; border-radius: 5px;">comfirm request</button>
+    </div>
+</div>
+
+<script>
+
+    const users = JSON.parse('{{{user}}}')
+    const socket = io('//localhost:3000');
+    socket.emit('activity', { id: users._id });
+    
+    const declines = document.querySelector('#declines')
+    declines.addEventListener("click", () => {
+        alert("declines")
+    })
+
+    const accept = document.querySelector('#accept')
+    accept.addEventListener("click", () => {
+        window.location.href = `/driver/request`;
+    })
+</script>

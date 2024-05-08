@@ -1,0 +1,108 @@
+<link rel="stylesheet" href="/pages/history.css">
+
+
+
+
+<div class="history">
+  
+    <div class="group-25">          
+        <div class="left-arrow-1">
+          <a href="/customer/logout">
+            <img style="width: 30px; height: 25px;" src="../assets/vectors/logout.svg" />
+          </a>
+        </div>
+
+        <h2 class="page-title">History</h2>
+        
+        <div class="left-arrow-1">
+        </div>
+      </div>
+
+    <div class="time-list">
+      
+      <div class="driver-history"> 
+          <div class="card text-center">
+          <div class="card-header">
+            Statistical
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">TOTAL TRIPS THIS MONTH: {{totalRunning}}</h5>
+            <p class="card-text">Total Income This month: {{totalIncome}} vnd</p>
+            
+          </div>
+          <div class="card-footer text-body-secondary">
+            {{!-- this month --}}
+          </div>
+        </div>
+      </div>
+
+
+        {{#each histories }}
+            <div class="activity"> 
+                {{!-- row 1 --}}
+                <div class="container-3">
+                    <div class="activity-title"> {{this.updatedAt}} </div> 
+                    {{!-- <div class="activity-title">31-10-2019 16:36 </div>  --}}
+                    <div class="activity-title money"> {{this.fee}} vnd</div>
+                </div>
+
+                <div class="line-13"></div>
+
+                {{!-- row 2 --}}
+                <div class="container-3">
+                    <div class="group-78 pickup_location">
+                        <div class="group-262">
+                            <div class="ellipse-23"></div>
+                            <img class="rectangle-203" src="../assets/vectors/rectangle2011_x2.svg"/>
+                        </div>
+                        <span class="text"> {{this.start}}</span>
+                    </div>
+                
+                    <div class="group-78 destination">
+                        <div class="navigation-1">
+                            <img class="vector-2" src="../assets/vectors/vector12_x2.svg" />
+                        </div>
+                        <span class="text"> {{this.destination}}</span>
+                    </div>     
+                </div>
+
+                <div class="line-13"></div>
+
+                {{!-- row 3 --}}
+
+                <div class="container-3">
+                    {{!-- <div class ="detail">
+                        <a href="/driver/profile/">Details</a>
+                    </div> --}}
+                    <button type="button" class="collapsible">Details</button>
+                        <div class="content">
+                          <p>Customer Name: {{this.customerId.fullname}}</p>
+                          <p>Customer Phone: {{this.customerId.tel}}</p>
+                          <p>{{this.createdAt}}</p>
+                        </div>
+
+
+                </div>
+            </div> <!-- activity -->  
+    
+        {{/each}}
+    </div> <!-- time-list-->
+</div> <!-- history -->
+<script>
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+

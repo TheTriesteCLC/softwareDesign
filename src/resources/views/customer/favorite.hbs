@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/pages/nearbyTexi.css">
+
+
+<div class="nearby-texi">
+    <div class="group-25">
+        {{!-- <a href="/customer/update-profile">
+            <span style="text-decoration: none; color: white; font-size: 20px;">Update</span>
+            <img class="vector" src="../assets/vectors/logout.svg" />
+          </a> --}}
+          <div class="left-arrow-1">
+          </div>
+        <h2 class="setting-1">Favorite places</h2>
+        <div class="left-arrow-1">
+          <a href="/customer/add-favorite">
+            <img class="vector" src="../assets/vectors/plus.svg" />
+          </a>
+        </div>
+      </div>
+    <div class="container-5">
+        <div class="nearby-you">{{username}}'s favorite places</div>
+        {{#each favorite}}
+        <div class="group-95">
+          <div class="container-12">
+            <div class="container-18">
+              <div class="cihan-soysakal">{{this.name}}</div>
+              <div class="group-65">
+                <span class="container"> {{this.address}} </span>
+              </div>
+            </div>
+          </div>
+          <div class="container-15">
+            <div class="container-13">
+              <div class="group-93">
+                <div class="like-1">
+                  <img
+                    class="vector-1"
+                    src="../assets/vectors/vector43_x2.svg"
+                  />
+                </div>
+                <div class="container-2">{{this.lat}}</div>
+              </div>
+              <div class="group-94">
+                <img
+                  class="comment-1"
+                  src="../assets/vectors/comment12_x2.svg"
+                />
+                <span class="container-3">{{this.long}}</span>
+              </div>
+            </div>
+            <a href="/customer/delete-favorite?lat={{this.lat}}&long={{this.long}}" style="text-decoration: none;">
+                <button class="group-651 call" style="background-color: #F47070;">
+                    Delete 
+                </button>
+            </a>
+            <a href="/customer/book-favorite?name={{this.name}}&lat={{this.lat}}&long={{this.long}}&endAddress={{this.address}}" style="text-decoration: none;">
+                <button class="group-651 call">
+                    Book 
+                </button>
+            </a>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+</div>
