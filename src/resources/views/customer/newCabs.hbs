@@ -28,7 +28,7 @@
         <div style="display: flex; align-items: center; flex-direction: column">
             <div class="group-61">
                 <label class="name" for="input-vehicle">Your vehicle type:</label>
-                <select class="input" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();' name="vehicle" id="input-vehicle" required>
+                <select class="input TypeCar" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();' name="vehicle" id="input-vehicle" required>
                     <option value="Motorcycle">Motorcycle</option>
                     <option value="Sedan">Sedan</option>
                     <option value="SUV">SUV</option>
@@ -58,9 +58,7 @@
     const users = JSON.parse('{{{user}}}');
     let startPoint = {}
     let endPoint = {}
-    
 
-    console.log(users._id)
     socket.on(`success${users._id}`, (postition) => {
         console.log("postition:::", postition)
 	})
@@ -146,7 +144,7 @@
     }
 
     document.querySelector(".btnBook").addEventListener("click", function() {
-        socket.emit('requestUser', { id: users._id, start: startPoint, end: endPoint});
+        socket.emit('requestUser', { id: users._id, start: startPoint, end: endPoint, car: document.querySelector(".TypeCar").value});
 
         map.off("moveend", geoCodingEndPoint);
         //map.dragging.disable();

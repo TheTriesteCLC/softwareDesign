@@ -12,7 +12,7 @@ class siteController {
     await History.create({
       customerId: data.user.id,
       driverId: data.idDriver,
-      vehicle: "motobike",
+      vehicle: data.user.car,
       start: data.user.start.value,
       destination: data.user.end.value
       })
