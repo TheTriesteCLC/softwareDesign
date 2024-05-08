@@ -8,7 +8,8 @@ const History = new Schema({
   start: { type: String, required: true },
   destination: { type: String, required: true },
   fee: {type: String, required: true},
-  rating: {Type: Number}
+  rating: {Type: Number},
+  voucher: {Type: String}
 }, {
   timestamps: true,
 });

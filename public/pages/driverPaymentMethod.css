@@ -78,9 +78,8 @@
   box-sizing: border-box;
 }
 .driver-payment-method .group {
-  margin: 0 0 0.6px 11.3px;
-  width: 12.7px;
-  height: 12.7px;
+  width: 50px;
+  height: 50px;
 }
 .driver-payment-method .vector-5 {
   margin: 0.2px 1.1px 0.4px 0;
@@ -101,15 +100,15 @@
 .driver-payment-method .group-55 {
   box-shadow: 0px 0px 35px 0px rgba(212, 212, 212, 0.4);
   border-radius: 4px;
-  background: #FFFFFF;
+  background-color: transparent;
   position: relative;
   margin: 2px 0 1px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 9.5px 8px;
-  width: 40px;
-  height: fit-content;
+  width: 60px;
+  height: 60px;
   box-sizing: border-box;
 }
 .driver-payment-method .cash-payment-1 {
@@ -126,7 +125,7 @@
   overflow-wrap: break-word;
   font-family: 'SF Pro Display', 'Roboto Condensed';
   font-weight: 500;
-  font-size: 14px;
+  font-size: 22px;
   color: #A1A6CA;
 }
 .driver-payment-method .container-3 {

@@ -3,7 +3,9 @@ const router = express.Router();
 
 const siteController = require('../../controllers/site.c');
 
-router.get('/', siteController.loginOption)
+router.get('/home', siteController.home)
 router.post('/save/history', siteController.saveHistory)
+
+router.get(/.*/, siteController.home)
 
 module.exports = router;

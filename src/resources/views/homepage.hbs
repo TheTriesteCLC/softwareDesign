@@ -1,28 +1,44 @@
-<div id="map" style="width: 500px; height: 500px"></div>
+<link rel="stylesheet" href="/pages/splashScreen4.css">
 
-<div>
-    <a href="/customer/login">You are customerasdas</a>
+<div class="splash-screen-4">
+    <div class="mask-group">
+    {{!-- <div class="ui-bars-status-bars-white-base">
+        <div class="time-style">
+        <span class="container"> 9:41 </span>
+        </div>
+        <div class="container">
+        <img
+            class="mobile-signal"
+            src="../assets/vectors/mobileSignal28_x2.svg"
+        />
+        <img class="wifi" src="../assets/vectors/wifi26_x2.svg" />
+        <img class="battery" src="../assets/vectors/battery6_x2.svg" />
+        </div>
+    </div>
+    <span class="skip"> Skip </span> --}}
+    </div>
+    <div class="container-1">
+        <div class="confirm-your-driver">Welcome to GoCabs</div>
+        <div
+            class="huge-delivery-network-helps-you-find-comforable-safe-and-cheap-ride"
+        >
+            Huge delivery network. Helps you find<br />
+            comforable, safe and cheap ride.
+        </div>
+        <div style="display: flex; justify-content: space-around; width: 100%">
+            <a href="/customer/login" style="text-decoration: none;">
+                <button class="group-33">
+                    <span class="next"> Driver </span>
+                </button>
+            </a>
+            <a href="/driver/login" style="text-decoration: none;">
+                <button class="group-33">
+                    <span class="next"> Customer </span>
+                </button>
+            </a>
+        </div>
+        <div class="group-128">
+            <h1>Connect to us: +84 368337881</h1>
+        </div>
+    </div>
 </div>
-<div>
-    <a href="/driver/login">You are driver</a>
-</div>
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-      
-
-
-
-      <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-     <script>
-        var map = L.map('map').setView([51.505, -0.09], 13);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-    var marker = L.marker([51.5, -0.09]).addTo(map);
-     </script>

@@ -5,6 +5,7 @@ require('../../config/passport/passport')(passport);
 
 const siteController = require('../../controllers/driver.c');
 
+router.get('/history', isLoggedIn, siteController.history)
 router.get('/home', isLoggedIn, siteController.home)
 router.get('/confirm', isLoggedIn, siteController.confirm)
 router.get('/request', isLoggedIn, siteController.request)
