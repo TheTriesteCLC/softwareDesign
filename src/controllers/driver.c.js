@@ -131,7 +131,8 @@ class siteController {
         totalMonthRuns += 1;
       }
     });
-    res.render('driver/history', { layout: 'driver/centerNav', activities: user_activities, totalCabs, totalIncome,totalMonthIncome,totalMonthRuns });
+
+    res.render('driver/history', { layout: 'driver/centerNav', activities: driver_histories , totalCabs, totalIncome,totalMonthIncome,totalMonthRuns });
     // res.render('customer/history', { layout: 'customer/main'});
   }
 }

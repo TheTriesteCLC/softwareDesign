@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/pages/history.css">
-<link rel="stylesheet" href="/pages/driverPaymentMethod.css">
 <link rel="stylesheet" href="/pages/setting.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -14,11 +13,35 @@
         height: 46px;
         padding: 0 10px;
     }
-    .rate label {
-      font-size: 25px;
+    .rate:not(:checked) > input {
+        position:absolute;
+        top:-9999px;
+    }
+    .rate:not(:checked) > label {
+        float:right;
+        width:1em;
+        overflow:hidden;
+        white-space:nowrap;
+        cursor:pointer;
+        font-size:30px;
+        color:#ccc;
     }
     .rate:not(:checked) > label:before {
         content: '★ ';
+    }
+    .rate > input:checked ~ label {
+        color: #ffc700;    
+    }
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;  
+    }
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
     }
 
     /* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
@@ -36,35 +59,7 @@
         
         <div class="left-arrow-1">
         </div>
-    </div>
-    <div class="driver-payment-method" style="padding: 0;">
-      <div class="cash-payment">
-        <div class="group-55">
-          <img class="group" src="https://img.icons8.com/ios/50/money-bag.png" />
-        </div>
-        <div class="container-3">
-          <div class="cash-payment-1">Total income</div>
-          <span class="defult-method"> {{totalIncome}} vnđ</span>
-                    <div class="cash-payment-1">Total month income</div>
-          <span class="defult-method"> {{totalMonthIncome}} vnđ</span>
-        </div>
       </div>
-    </div>
-    <div class="driver-payment-method" style="padding: 0;">
-      <div class="cash-payment">
-        <div class="group-55">
-          <img class="group" src="https://img.icons8.com/ios-filled/50/region-code.png" />
-        </div>
-        <div class="container-3">
-          <div class="cash-payment-1">Total ride</div>
-          <span class="defult-method"> {{totalCabs}}</span>
-          
-          <div class="cash-payment-1">Total month ride</div>
-          <span class="defult-method"> {{totalMonthRuns}}</span>
-        </div>
-      </div>
-    </div>
-    
     {{!-- <div class="empty-space">
     </div> --}}
     <div class="time-list">
@@ -99,15 +94,39 @@
 
                 <div class="line-13"></div>
 
-                <div class="container-3" style="display: flex; justify-content: space-around;">
-                  <div class="rate">
-                      {{#if this.rating}}
-                        <label for="star5" title="text" style="color: #c59b08;">{{this.rating}} stars</label>
-                        {{else}}
-                        <label for="star5" title="text" style="color: #343b71;">No rating</label>
-                      {{/if}}
-                  </div> 
-                </div>
+                <form action="/customer/rating" method="POST" id="rating-form">
+                    <div class="container-3" style="display: flex; justify-content: space-around;">
+                        <div class="rate">
+                            <input type="radio" id="star5" name="rating" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="rating" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                            <input type="hidden" name="cabsID" value="{{this._id}}">
+                        </div> 
+                    
+                        <button type="submit" class="sing-up-1 group-33" style="border-radius: 10px;
+                        background: #FFFFFF;
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        overflow-wrap: break-word;
+                        font-family: 'SF Pro Display', 'Roboto Condensed';
+                        font-weight: 600;
+                        font-size: 15px;
+                        line-height: 1.294;
+                        text-transform: uppercase;
+                        color: #343B71;">Rating</button>
+                    </div>
+                </form>
 
                 <div class="line-13"></div>
 
