@@ -105,8 +105,11 @@ class siteController {
       model:'Driver'
     }).lean().sort({"createdAt":-1});
     user_activities = formatDate(user_activities);
+
+    let totalIncome = user_activities.reduce((accum, act) =>  parseFloat(act.fee) + accum, 0);
+    let totalCabs = user_activities.length;
     console.log(user_activities);
-    res.render('driver/history', { layout: 'driver/centerNav', activities: user_activities });
+    res.render('driver/history', { layout: 'driver/centerNav', activities: user_activities, totalCabs, totalIncome });
     // res.render('customer/history', { layout: 'customer/main'});
   }
 }
