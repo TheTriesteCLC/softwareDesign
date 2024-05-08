@@ -1,5 +1,6 @@
 const Driver = require('../models/Driver');
 const History = require('../models/history');
+const moment = require('moment');
 const { multipleMongooseToObject, singleMongooseToObject } = require('../util/mongoose');
 
 class siteController {
@@ -108,8 +109,29 @@ class siteController {
 
     let totalIncome = user_activities.reduce((accum, act) =>  parseFloat(act.fee) + accum, 0);
     let totalCabs = user_activities.length;
-    console.log(user_activities);
-    res.render('driver/history', { layout: 'driver/centerNav', activities: user_activities, totalCabs, totalIncome });
+    //console.log(user_activities);
+
+    //npm i moment[required]
+    const currentMonth = moment().month() + 1; // Add 1 because moment().month() returns zero-based index
+    const currentYear = moment().year();
+    var driver_histories = await History.find({ driverId: req.user._id })
+                                        .populate({path:"customerId",
+                                                    select: "fullname tel",
+                                                    model:'Customer'
+                                        })
+                                        .lean().sort({"createdAt":-1});
+    let totalMonthIncome = 0;
+    let totalMonthRuns = 0;
+
+    driver_histories.forEach((history) => {
+      const historyMonth = moment(history.updatedAt).month() + 1;
+      const historyYear = moment(history.updatedAt).year();
+      if (historyMonth === currentMonth && historyYear === currentYear) {
+        totalMonthIncome += Number(history.fee);
+        totalMonthRuns += 1;
+      }
+    });
+    res.render('driver/history', { layout: 'driver/centerNav', activities: user_activities, totalCabs, totalIncome,totalMonthIncome,totalMonthRuns });
     // res.render('customer/history', { layout: 'customer/main'});
   }
 }
