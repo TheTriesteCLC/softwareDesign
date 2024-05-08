@@ -1,4 +1,5 @@
 const Driver = require('../models/Driver');
+const History = require('../models/history');
 const { multipleMongooseToObject, singleMongooseToObject } = require('../util/mongoose');
 
 class siteController {
@@ -93,6 +94,21 @@ class siteController {
   menu(req, res) {
     res.render( 'driver/menu', { layout: 'driver/main' });   
   }
+
+  //[GET] /history
+  async history(req, res, next) {
+    console.log(req.user);
+    var user_activities = await History.find({ driverId: req.user._id })
+    .populate({
+      path:"driverId",
+      select: "fullname username",
+      model:'Driver'
+    }).lean().sort({"createdAt":-1});
+    user_activities = formatDate(user_activities);
+    console.log(user_activities);
+    res.render('driver/history', { layout: 'driver/centerNav', activities: user_activities });
+    // res.render('customer/history', { layout: 'customer/main'});
+  }
 }
 
 const slugify = (textToSlugify) => {
@@ -101,6 +117,17 @@ const slugify = (textToSlugify) => {
   const lowercaseText = textToSlugify.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '').replace(/ +(?= )/g, '');
 
   return lowercaseText.split(' ').join('-');
+}
+
+function formatDate(list){
+  list = list.map(item => {
+    const date = new Date(item.createdAt);
+    const formattedDate = date.toISOString().slice(0, 10); // Format as "YYYY-MM-DD"
+    const formattedTime = `${date.getHours()}:${date.getMinutes()}`; // Format as "HH:MM"
+    item.formattedDateTime = `${formattedDate} ${formattedTime}`; // Combine date and time
+    return item;
+  });
+  return list;
 }
 
 module.exports = new siteController;

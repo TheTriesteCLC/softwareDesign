@@ -208,9 +208,6 @@ const slugify = (textToSlugify) => {
   return lowercaseText.split(' ').join('-');
 }
 
-module.exports = new siteController;
-
-
 function formatDate(list){
   list = list.map(item => {
     const date = new Date(item.createdAt);
@@ -221,3 +218,5 @@ function formatDate(list){
   });
   return list;
 }
+
+module.exports = new siteController;
