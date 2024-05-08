@@ -22,7 +22,8 @@
     
     const declines = document.querySelector('#declines')
     declines.addEventListener("click", () => {
-        alert("declines")
+        socket.emit('decline', users._id)
+        window.location.href = `/driver/home`
     })
 
     const accept = document.querySelector('#accept')

@@ -62,6 +62,12 @@
     const users = JSON.parse('{{{user}}}');
     let startPoint = {}
     let endPoint = {}
+    
+
+    console.log(users._id)
+    socket.on(`success${users._id}`, (postition) => {
+        console.log("postition:::", postition)
+	})
 
     // Map initialization 
     var map = L.map('map').setView([10.762622, 106.660172], 12);
