@@ -7,6 +7,11 @@ class siteController {
     res.render('loginOption', { layout: 'main' });
   }
 
+  //[GET] /home
+  home(req, res, next) {
+    res.render('homepage', { layout: 'main' });
+  }
+
   async saveHistory(req, res) {
     const data = req.body
     await History.create({

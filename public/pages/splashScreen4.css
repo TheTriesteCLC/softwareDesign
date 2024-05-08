@@ -59,7 +59,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 14px 13.7px 530px 34.8px;
+  padding: 14px 13.7px 585px 34.8px;
   height: fit-content;
   flex-grow: 1;
   box-sizing: border-box;
@@ -74,7 +74,7 @@
   color: #343B71;
 }
 .splash-screen-4 .huge-delivery-network-helps-you-find-comforable-safe-and-cheap-ride {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   display: inline-block;
   text-align: center;
   overflow-wrap: break-word;
@@ -96,12 +96,12 @@
   border-radius: 2px;
   background: #343B71;
   position: relative;
-  margin: 0 1px 40px 0;
+  margin: 30px 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 11px 1px 11px 0;
-  width: 152px;
+  width: 120px;
   box-sizing: border-box;
 }
 .splash-screen-4 .rectangle-47 {
@@ -123,10 +123,11 @@
   height: 6px;
 }
 .splash-screen-4 .group-128 {
+  font-family: 'SF Pro Display', 'Roboto Condensed';
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  width: 100%;
   column-gap: 4px;
-  width: 45px;
   box-sizing: border-box;
 }
 .splash-screen-4 .container-1 {
@@ -139,8 +140,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 16px;
-  height: 259px;
+  padding: 20px;
   box-sizing: border-box;
 }
 .splash-screen-4 {
@@ -148,6 +148,5 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-right: 1px;
   box-sizing: border-box;
 }
