@@ -120,7 +120,7 @@ class siteController {
     const bookLat = req.query.lat;
     const bookLong = req.query.long;
 
-    res.render('customer/newCabs', { layout: 'customer/newCabs', user: JSON.stringify(req.user), bookLat, bookLong });
+    res.render('customer/bookingPreview', { layout: 'customer/newCabs', user: JSON.stringify(req.user), bookLat, bookLong });
   }
 
   //[GET] /favorite

@@ -22,20 +22,22 @@
                 <input class="input" type="text" id="input-end-cabs" name="end-cabs" placeholder="Drag map to choose destination" required readonly>
             </div>
         </div>
-        <div>
-            
-        </div>
+        <button class="sing-up-1 group-33 btnPreview" > Set destination </button>
         <div style="display: flex; align-items: center; flex-direction: column">
             <div class="group-61">
                 <label class="name" for="input-vehicle">Your vehicle type:</label>
                 <select class="input TypeCar" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();' name="vehicle" id="input-vehicle" required>
                     <option value="Motorcycle">Motorcycle</option>
-                    <option value="Sedan">4-5 seats</option>
-                    <option value="SUV">7 seats</option>
-                    <option value="MPV">9 seats</option>
+                    <option value="4-5 seats">4-5 seats</option>
+                    <option value="7 seats">7 seats</option>
+                    <option value="9 seats">9 seats</option>
                 </select>
             </div>
         </div>
+        <div class="group-61">
+                <label class="name" for="input-price">Price (thousand vnđ)</label>
+                <input class="input" type="text" id="input-price" name="price" placeholder="Cabs price" required readonly>
+            </div>
         <button class="sing-up-1 group-33 btnBook"> Book </button>
     </div>
 </div>
@@ -58,6 +60,13 @@
     const users = JSON.parse('{{{user}}}');
     let startPoint = {}
     let endPoint = {}
+
+    const typePrice = {
+        'Motorcycle': 15000,
+        '4-5 seats': 20000,
+        '7 seats': 25000,
+        '9 seats': 30000
+    }
 
     socket.on(`success${users._id}`, (postition) => {
         console.log("postition:::", postition)
@@ -99,23 +108,27 @@
         iconAnchor:   [5, 45], // point of the icon which will correspond to marker's location
     });
 
-    var currentLatlong;
-    var centerMarker = new L.marker(map.getCenter(), {icon: destinationLocIcon}).addTo(map);
+    let route;
+    let startMarker;
+    let centerMarker = new L.marker(map.getCenter(), {icon: destinationLocIcon}).addTo(map);
+    let destinationMarker;
 
     reverseGeocoder.getClientLocation(function(result) {
         document.getElementById('input-start-cabs').value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`;
         startPoint.latitude = result.latitude       
         startPoint.longitude = result.longitude    
         startPoint.value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`
+
+        startMarker = new L.marker(L.latLng(result.latitude, result.longitude), {icon: currentLocIcon}).addTo(map)
+            .bindPopup("You are here").openPopup();
     });
 
     function onLocationFound(e) {
         var radius = e.accuracy;
+        map.removeLayer(startMarker);
 
-        var currentMarker = L.marker(e.latlng, {icon: currentLocIcon}).addTo(map)
+        startMarker = L.marker(e.latlng, {icon: currentLocIcon}).addTo(map)
             .bindPopup("You are here").openPopup();
-
-        currentLatlong = currentMarker._latlng;
         //L.circle(e.latlng, radius).addTo(map);
     }
 
@@ -125,8 +138,6 @@
             longitude: map.getCenter().lng
         },function(result) {
             document.getElementById('input-end-cabs').value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`;
-            endPoint.latitude = result.latitude       
-            endPoint.longitude = result.longitude  
             endPoint.value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`
         })
     }
@@ -143,6 +154,37 @@
         var currentMarker = L.marker(map.getCenter()).addTo(map);
     }
 
+    document.querySelector('.btnPreview').addEventListener('click', function() {
+        if(route) {
+            route.remove();
+            map.removeLayer(destinationMarker);
+        }
+
+        endPoint.latitude = map.getCenter().lat;
+        endPoint.longitude = map.getCenter().lng;
+
+        route = L.Routing.control({
+            waypoints: [
+                L.latLng(startPoint.latitude, startPoint.longitude),
+                L.latLng(endPoint.latitude, endPoint.longitude)
+            ],
+            routeWhileDragging: true,
+            createMarker: function() { return null; }
+        }).addTo(map);
+
+        console.log(endPoint);
+        destinationMarker = L.marker(L.latLng(endPoint.latitude, endPoint.longitude), {icon: destinationLocIcon}).addTo(map)
+            .bindPopup("Destination").openPopup();
+
+        route.on('routesfound', function(e) {
+            var routes = e.routes;
+            var summary = routes[0].summary;
+            //alert('Total distance is ' + summary.totalDistance / 1000 + ' km and total time is ' + Math.round(summary.totalTime % 3600 / 60) + ' minutes');
+            const price = (summary.totalDistance / 1000) * typePrice[`${document.getElementById('input-vehicle').value}`]
+            document.getElementById('input-price').value = `${price/1000}`
+        });
+    })
+
     document.querySelector(".btnBook").addEventListener("click", function() {
         socket.emit('requestUser', { id: users._id, start: startPoint, end: endPoint, car: document.querySelector(".TypeCar").value});
 
@@ -151,15 +193,6 @@
 
         map.setView([(startPoint.latitude + endPoint.latitude) / 2,
          (startPoint.longitude + endPoint.longitude) / 2], 12);
-
-        L.Routing.control({
-            waypoints: [
-                L.latLng(startPoint.latitude, startPoint.longitude),
-                L.latLng(endPoint.latitude, endPoint.longitude)
-            ],
-            routeWhileDragging: true,
-            createMarker: function() { return null; }
-        }).addTo(map);
 
         map.removeLayer(centerMarker);
 
