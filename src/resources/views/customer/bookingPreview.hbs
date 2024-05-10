@@ -115,6 +115,7 @@
     let startMarker;
     let centerMarker = new L.marker(map.getCenter(), {icon: destinationLocIcon}).addTo(map);
     let destinationMarker;
+    let summary;
 
     reverseGeocoder.getClientLocation(function(result) {
         document.getElementById('input-start-cabs').value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`;
@@ -181,11 +182,16 @@
 
         route.on('routesfound', function(e) {
             var routes = e.routes;
-            var summary = routes[0].summary;
+            summary = routes[0].summary;
             //alert('Total distance is ' + summary.totalDistance / 1000 + ' km and total time is ' + Math.round(summary.totalTime % 3600 / 60) + ' minutes');
             const price = (summary.totalDistance / 1000) * typePrice[`${document.getElementById('input-vehicle').value}`]
             document.getElementById('input-price').value = `${price/1000}`
         });
+    })
+    
+    document.getElementById('input-vehicle').addEventListener('change', function() {
+        const price = (summary.totalDistance / 1000) * typePrice[`${document.getElementById('input-vehicle').value}`]
+        document.getElementById('input-price').value = `${price/1000}`
     })
 
     document.querySelector(".btnBook").addEventListener("click", function() {
