@@ -17,7 +17,7 @@
                 <label class="name" for="input-start-cabs">Start point</label>
                 <input class="input" type="text" id="input-start-cabs" name="start-cabs" placeholder="Your current location" required readonly>
             </div>
-             <div class="group-61">
+            <div class="group-61">
                 <label class="name" for="input-end-cabs">Destination</label>
                 <input class="input" type="text" id="input-end-cabs" name="end-cabs" placeholder="Drag map to choose destination" required readonly>
             </div>
@@ -68,9 +68,12 @@
         '9 seats': 30000
     }
 
-    socket.on(`success${users._id}`, (postition) => {
-        console.log("postition:::", postition)
+    socket.emit("activityUser", users)
+    
+    socket.on(`success`, (driver) => {
+        alert(`Driver ${driver.fullname} is on the way to pick you up`)
 	})
+
 
     // Map initialization 
     var map = L.map('map').setView([10.762622, 106.660172], 12);
@@ -186,7 +189,7 @@
     })
 
     document.querySelector(".btnBook").addEventListener("click", function() {
-        socket.emit('requestUser', { id: users._id, start: startPoint, end: endPoint, car: document.querySelector(".TypeCar").value});
+        socket.emit('requestUser', { id: users._id, info: users, start: startPoint, end: endPoint, car: document.querySelector(".TypeCar").value, price: document.getElementById('input-price').value});
 
         map.off("moveend", geoCodingEndPoint);
         //map.dragging.disable();
@@ -198,6 +201,8 @@
 
         L.marker(L.latLng(endPoint.latitude, endPoint.longitude), {icon: destinationLocIcon}).addTo(map)
             .bindPopup("Destination").openPopup();
+
+        document.querySelector(".create-an-account").innerHTML = "Waiting driver"
     })
 
 </script>

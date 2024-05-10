@@ -4,14 +4,14 @@
     <div id="map" style="width: 100%; height: 100%; position: relative; border-top-left-radius: 30px; border-top-right-radius: 30px;">   
 		<div style="width: 100%; height: 20%; color: white; background-color: #343B71; z-index: 10000000000; position: absolute; bottom:0; border-top-left-radius: 30px; border-top-right-radius: 30px; ">
 			<div style="display:flex; justify-content: center;">
-				<div style="display: flex; margin: 30px;">
+				<div style="display: flex; padding: 10px 50px 10px 10px;">
 					<svg width="8" height="20" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<circle cx="4" cy="4" r="4" fill="#FF6B4A"/>
 					<path d="M3 10H5L4 20L3 10Z" fill="#FF6B4A"/>
 					</svg>
 					<div class="start" style="font-size: 14px; margin: 0px 0px 0px 10px">start</div>
 				</div>
-				<div style="display: flex; margin: 30px;">
+				<div style="display: flex; padding: 10px 10px 10px 50px;">
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_35_64)">
 					<path d="M15.9124 0.0965961C15.821 -0.000199775 15.68 -0.0271757 15.5607 0.0289977L0.180588 7.25854C0.0569523 7.31693 -0.0152459 7.45054 0.00272617 7.58891C0.0206983 7.72728 0.124503 7.83709 0.258674 7.85994L7.15717 9.04403L7.94578 15.7207C7.96251 15.8597 8.06631 15.9718 8.20111 15.9952C8.21877 15.9984 8.23612 16 8.25347 16C8.36967 16 8.47843 15.933 8.53111 15.8235L15.9678 0.458391C16.0261 0.33811 16.0038 0.193075 15.9124 0.0965961Z" fill="#FFAA2A"/>
@@ -24,6 +24,11 @@
 					</svg>
 					<div class="start" style="font-size: 14px; margin: 0px 0px 0px 10px">End</div>
 				</div>
+			</div>
+			<div style="display: flex; align-items: center; flex-direction: column;"> 
+				<p class="user">User: Hoang</p>
+				<p class="price">Price: 100.000</p>
+				<p class="phone">Phone: 0123213012</p>
 			</div>
 			<div style="display: flex; justify-content: center;">
 				<Button style="padding: 10px 100px 10px 100px;" class="finish">Finish Ride</Button>
@@ -57,10 +62,14 @@
 	let socket = io('//localhost:3000');
 	let position;
 	
-    socket.emit('accept', {idDriver: users._id})
+    socket.emit('accept', {idDriver: users._id, driver: users})
 	socket.on(`success${users._id}`, (data) => {
 		position = data;
 		console.log(data)
+
+		document.querySelector(".user").innerHTML = `User: ${data.user.info.fullname}`
+		document.querySelector(".price").innerHTML = `Price: ${data.user.price}`
+		document.querySelector(".phone").innerHTML = `Tel: ${data.user.info.tel}`
 
 		L.Routing.control({
             waypoints: [

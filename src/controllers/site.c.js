@@ -19,7 +19,8 @@ class siteController {
       driverId: data.idDriver,
       vehicle: data.user.car,
       start: data.user.start.value,
-      destination: data.user.end.value
+      destination: data.user.end.value,
+      fee: data.user.price
       })
     res.send("success");
   }

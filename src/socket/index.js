@@ -27,6 +27,7 @@ class PositionRealTime {
     static posDrivers = new Map();
     static numbersOfRun = new Map();
     static activityDriver = new Map();
+    static activityUser = new Map();
     static distances = [];
     static except = []
 
@@ -38,9 +39,13 @@ class PositionRealTime {
                     ids = [];
                 }
                 ids.push(socket.id);        
-                console.log("endpush socket:::", socket.id)
                 this.activityDriver.set(data.id, ids)
             })
+
+            socket.on('activityUser', data => {
+                this.activityUser.set(data._id, socket.id);
+            }) 
+
             socket.on('driverPosition', (data) => {
                 this.posDrivers.set(data.id, data.position);
             });
@@ -82,12 +87,8 @@ class PositionRealTime {
 
             socket.on('accept', (datas) => {
                 const temp = this.distances.find(data => data.idDriver == datas.idDriver)
-                const posDriver = this.posDrivers.get(datas.idDriver);
-
-                console.log(posDriver, temp.user.id)
-
                 socket.emit(`success${datas.idDriver}`, temp)
-                socket.emit(`success${temp.user.id}`, posDriver)
+                socket.to(this.activityUser.get(temp.user.id)).emit("success", datas.driver)
             })
 
             socket.on('getPositionDriver', (data) => {
