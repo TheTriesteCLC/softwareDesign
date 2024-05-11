@@ -1,9 +1,11 @@
+<link rel="stylesheet" href="/pages/setting.css">
+
 <div
   style="background-color: transparent; width: 100%; height: 760.08px; "
 >
     <div id="map" style="width: 100%; height: 100%; position: relative; border-top-left-radius: 30px; border-top-right-radius: 30px;">   
-		<div style="width: 100%; height: 20%; color: white; background-color: #343B71; z-index: 10000000000; position: absolute; bottom:0; border-top-left-radius: 30px; border-top-right-radius: 30px; ">
-			<div style="display:flex; justify-content: center;">
+		<div style="width: 100%; height: 38%; color: white; background-color: #343B71; z-index: 10000000000; position: absolute; bottom:0; border-top-left-radius: 30px; border-top-right-radius: 30px; ">
+			{{!-- <div style="display:flex; justify-content: center;">
 				<div style="display: flex; padding: 10px 50px 10px 10px;">
 					<svg width="8" height="20" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<circle cx="4" cy="4" r="4" fill="#FF6B4A"/>
@@ -24,14 +26,47 @@
 					</svg>
 					<div class="start" style="font-size: 14px; margin: 0px 0px 0px 10px">End</div>
 				</div>
-			</div>
-			<div style="display: flex; align-items: center; flex-direction: column;"> 
-				<p class="user">User: Hoang</p>
-				<p class="price">Price: 100.000</p>
-				<p class="phone">Phone: 0123213012</p>
+			</div> --}}
+			<div style="display: flex; align-items: center; flex-direction: column;" class="setting"> 
+				<div class="group-104" style>
+					<span class="phone-number" style="width: auto;">Customer</span>
+					<div class="group-103">
+						<span class="container-1 user" >Hoang</span>
+					</div>
+				</div>
+				<div class="group-104">
+					<span class="phone-number">Tel</span>
+					<div class="group-103">
+						<span class="container-1 tel">0123213012</span>
+					</div>
+				</div>
+				<div class="group-104">
+					<span class="phone-number">Price</span>
+					<div class="group-103">
+						<span class="container-1 price">100000</span>
+					</div>
+				</div>
 			</div>
 			<div style="display: flex; justify-content: center;">
-				<Button style="padding: 10px 100px 10px 100px;" class="finish">Finish Ride</Button>
+				{{!-- <Button style="padding: 10px 100px 10px 100px;" class="finish">Finish Ride</Button> --}}
+				<button class="sing-up-1 group-33" style="border-radius: 10px;
+                background: #FFFFFF;
+                position: relative;
+                margin: 0 20px 30px 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 11px 1px 11px 0;
+                width: calc(100% - 40px);
+                box-sizing: border-box;
+                overflow-wrap: break-word;
+                font-family: 'SF Pro Display', 'Roboto Condensed';
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 1.294;
+                text-transform: uppercase;
+                color: #343B71;"
+				class="finish"> Finish Ride </button>
 			</div>
 		</div>
 	</div>
@@ -58,6 +93,26 @@
 		maxZoom: 19,
 		attribution: '© OpenStreetMap contributors'
 	}).addTo(map);
+
+	const currentLocIcon = L.icon({
+        iconUrl: 'https://img.icons8.com/fluency/48/map-pin.png',
+
+        iconSize:     [50, 50], // size of the icon
+        iconAnchor:   [25, 50], // point of the icon which will correspond to marker's location
+        popupAnchor:  [0, -50] // point from which the popup should open relative to the iconAnchor
+    });
+    const destinationLocIcon = L.icon({
+        iconUrl: 'https://img.icons8.com/ultraviolet/40/filled-flag2.png',
+
+        iconSize:     [40, 40], // size of the icon
+        iconAnchor:   [5, 45], // point of the icon which will correspond to marker's location
+    });
+
+	let customerMarker;
+	let destinationMarker;
+	let routeToCustomer;
+	let routeCab;
+
 	const users = JSON.parse('{{{user}}}')
 	let socket = io('//localhost:3000');
 	let position;
@@ -67,11 +122,12 @@
 		position = data;
 		console.log(data)
 
-		document.querySelector(".user").innerHTML = `User: ${data.user.info.fullname}`
-		document.querySelector(".price").innerHTML = `Price: ${data.user.price}`
-		document.querySelector(".phone").innerHTML = `Tel: ${data.user.info.tel}`
+		document.querySelector(".user").innerHTML = `${data.user.info.fullname}`
+		document.querySelector(".price").innerHTML = `${data.user.price}`
+		document.querySelector(".tel").innerHTML = `${data.user.info.tel}`
 
-		L.Routing.control({
+
+		routeCab = L.Routing.control({
             waypoints: [
                 L.latLng(data.user.start.latitude, data.user.start.longitude),
                 L.latLng(data.user.end.latitude, data.user.end.longitude)
@@ -79,6 +135,8 @@
             routeWhileDragging: true,
             createMarker: function() { return null; }
         }).addTo(map);
+		customerMarker = L.marker([data.user.start.latitude, data.user.start.longitude], {icon: currentLocIcon}).addTo(map);
+		destinationMarker = L.marker([data.user.end.latitude, data.user.end.longitude], {icon: destinationLocIcon}).addTo(map);
 	})
 
 	let marker = null;
@@ -111,6 +169,18 @@
 		}
 
 		marker = L.marker([lat, lng], {icon: icon}).addTo(map);
+		if(routeToCustomer) {
+			routeToCustomer.remove();
+		}
+		routeToCustomer = L.Routing.control({
+            waypoints: [
+                L.latLng(lat, lng),
+                customerMarker.getLatLng()
+            ],
+            routeWhileDragging: true,
+            createMarker: function() { return null; }
+        }).addTo(map);
+
 		map.setView(new L.LatLng(lat, lng), map.getZoom());
 	}
 
