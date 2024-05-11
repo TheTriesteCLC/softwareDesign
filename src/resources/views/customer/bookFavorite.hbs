@@ -28,13 +28,17 @@
         <div style="display: flex; align-items: center; flex-direction: column">
             <div class="group-61">
                 <label class="name" for="input-vehicle">Your vehicle type:</label>
-                <select class="input" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();' name="vehicle" id="input-vehicle" required>
+                <select class="input TypeCar" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();' name="vehicle" id="input-vehicle" required>
                     <option value="Motorcycle">Motorcycle</option>
-                    <option value="Sedan">Sedan</option>
-                    <option value="SUV">SUV</option>
-                    <option value="MPV">MPV</option>
+                    <option value="4-5 seats">4-5 seats</option>
+                    <option value="7 seats">7 seats</option>
+                    <option value="9 seats">9 seats</option>
                 </select>
             </div>
+        </div>
+        <div class="group-61">
+            <label class="name" for="input-price">Price (thousand vnđ)</label>
+            <input class="input" type="text" id="input-price" name="price" placeholder="Cabs price" required readonly>
         </div>
         <button class="sing-up-1 group-33 btnBook"> Book </button>
     </div>
@@ -60,6 +64,19 @@
     let endPoint = {{{json endPoint}}}
     endPoint.latitude = parseFloat(endPoint.latitude);
     endPoint.longitude = parseFloat(endPoint.longitude);
+
+    const typePrice = {
+        'Motorcycle': 15000,
+        '4-5 seats': 20000,
+        '7 seats': 25000,
+        '9 seats': 30000
+    }
+
+    socket.emit("activityUser", users)
+
+    socket.on(`success`, (driver) => {
+        alert(`Driver ${driver.fullname} is on the way to pick you up`)
+	})
 
     // Map initialization 
     var map = L.map('map').setView([10.762622, 106.660172], 12);
@@ -94,21 +111,11 @@
         iconAnchor:   [5, 45], // point of the icon which will correspond to marker's location
     });
 
-    var currentMarker;
+    let route;
+    let startMarker;
     var destinationMarker = new L.marker(new L.latLng(endPoint.latitude, endPoint.longitude), 
     {icon: destinationLocIcon}).addTo(map);
-
-    document.getElementById('input-end-cabs').value = {{{json bookAddress}}};
-
-    function onLocationFound(e) {
-        var radius = e.accuracy;
-
-        currentMarker = L.marker(e.latlng, {icon: currentLocIcon}).addTo(map)
-            .bindPopup("You are here").openPopup();
-        //L.circle(e.latlng, radius).addTo(map);
-    }
-
-    map.on('locationfound', onLocationFound);
+    let summary;
 
     reverseGeocoder.getClientLocation(function(result) {
         document.getElementById('input-start-cabs').value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`;
@@ -116,27 +123,65 @@
         startPoint.longitude = result.longitude    
         console.log("setting start point"); 
         startPoint.value = `${result.plusCode}, ${result.locality}, ${result.city}, ${result.countryName}`
+
+        startMarker = new L.marker(L.latLng(result.latitude, result.longitude), {icon: currentLocIcon}).addTo(map)
+            .bindPopup("You are here").openPopup();
     });
+
+    document.getElementById('input-end-cabs').value = {{{json bookAddress}}};
+
+    function onLocationFound(e) {
+        var radius = e.accuracy;
+        if(startMarker) {
+            map.removeLayer(startMarker);
+        }
+
+        startMarker = L.marker(e.latlng, {icon: currentLocIcon}).addTo(map)
+            .bindPopup("You are here").openPopup();
+        //L.circle(e.latlng, radius).addTo(map);
+    }
+
+    map.on('locationfound', onLocationFound);
+
+    
         
     setTimeout(() => {
-        currentMarker = L.marker(new L.latLng(startPoint.latitude, startPoint.longitude), {icon: currentLocIcon}).addTo(map)
+        startMarker = L.marker(new L.latLng(startPoint.latitude, startPoint.longitude), {icon: currentLocIcon}).addTo(map)
             .bindPopup("You are here").openPopup();
             
         map.setView([(startPoint.latitude + endPoint.latitude) / 2,
          (startPoint.longitude + endPoint.longitude) / 2], 12);
         
-        L.Routing.control({
-        waypoints: [
-            L.latLng(startPoint.latitude, startPoint.longitude),
-            L.latLng(endPoint.latitude, endPoint.longitude)
-        ],
-        routeWhileDragging: true,
-        createMarker: function() { return null; }
-        }).addTo(map);
+        route = L.Routing.control({
+            waypoints: [
+                L.latLng(startPoint.latitude, startPoint.longitude),
+                L.latLng(endPoint.latitude, endPoint.longitude)
+            ],
+            routeWhileDragging: true,
+            createMarker: function() { return null; }
+            }).addTo(map);
+
+        route.on('routesfound', function(e) {
+            var routes = e.routes;
+            summary = routes[0].summary;
+            //alert('Total distance is ' + summary.totalDistance / 1000 + ' km and total time is ' + Math.round(summary.totalTime % 3600 / 60) + ' minutes');
+            const price = (summary.totalDistance / 1000) * typePrice[`${document.getElementById('input-vehicle').value}`]
+            document.getElementById('input-price').value = `${price/1000}`
+        });
     }, 100);
 
+    document.getElementById('input-vehicle').addEventListener('change', function() {
+        const price = (summary.totalDistance / 1000) * typePrice[`${document.getElementById('input-vehicle').value}`]
+        document.getElementById('input-price').value = `${price/1000}`
+    })
+
     document.querySelector(".btnBook").addEventListener("click", function() {
-        socket.emit('requestUser', { id: users._id, start: startPoint, end: endPoint});
+        socket.emit('requestUser', { id: users._id, info: users, start: startPoint, end: endPoint, car: document.querySelector(".TypeCar").value, price: document.getElementById('input-price').value});
+
+        map.setView([(startPoint.latitude + endPoint.latitude) / 2,
+         (startPoint.longitude + endPoint.longitude) / 2], 12);
+
+        document.querySelector(".create-an-account").innerHTML = "Waiting driver"
     })
 
 </script>
